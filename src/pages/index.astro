@@ -3,92 +3,141 @@ import Layout from '../layouts/Layout.astro';
 import { site, withBase } from '../config';
 
 const portals = [
-  { label: '博客', sub: 'WORDS', rune: 'ᚹ', path: 'blog/', angle: 0, counter: 0 },
-  { label: '摄影', sub: 'LIGHT', rune: 'ᛚ', path: 'photography/', angle: 120, counter: -120 },
-  { label: '项目', sub: 'WORKS', rune: 'ᛈ', path: 'projects/', angle: 240, counter: -240 },
+  { label: '博客', sub: 'WORDS', rune: '01', path: 'blog/' },
+  { label: '项目', sub: 'WORKS', rune: '02', path: 'projects/' },
+  { label: '摄影', sub: 'LIGHT', rune: '03', path: 'photography/' },
 ];
 ---
-<Layout immersive title="秘法档案" description={`${site.name} 的个人主页、博客、摄影与项目记录。`}>
-  <section class="portal-home" aria-labelledby="portal-title">
-    <div class="portal-noise" aria-hidden="true"></div>
-    <div class="portal-stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-    <div class="portal-copy">
-      <span class="portal-kicker"><b></b> THE PERSONAL SANCTUM · 001</span>
-      <h1 id="portal-title">打开我的<br /><em>秘法档案</em></h1>
-      <p>文字、光影与正在发生的事，<br />都在这里留下一个入口。</p>
+<Layout immersive title="时空档案" description={`${site.name} 的个人主页、博客、摄影与项目记录。`}>
+  <section class="blackhole-home" data-blackhole-home aria-labelledby="portal-title">
+    <div class="space-noise" aria-hidden="true"></div>
+    <div class="space-stars" aria-hidden="true">{Array.from({ length: 24 }).map((_, i) => <i style={`--i:${i};--x:${(i * 37 + 4) % 100};--y:${(i * 61 + 7) % 100};--alpha:${0.25 + (i % 5) * 0.12}`}></i>)}</div>
+    <div class="equation-stream stream-a" aria-hidden="true">∫ ψ̄γμ∂μψ · Rμν − ½Rgμν = 8πGTμν　 E = mc²　 ∇ × B = μ₀J</div>
+    <div class="equation-stream stream-b" aria-hidden="true">P(B) = ∫ e−S[φ] Dφ　 ΔG = ΔH − TΔS　 ℏ²/2m ∇²Ψ + VΨ = EΨ</div>
+    <div class="equation-stream stream-c" aria-hidden="true">Σ n² + λ∂t u = 0　 CO₂ + H₂O → H₂CO₃　 limₓ→∞ f(x) = 0</div>
+
+    <div class="blackhole-intro" data-intro>
+      <span class="portal-kicker"><b></b> {site.name.toUpperCase()} · 2026</span>
+      <h1 id="portal-title">进入<br /><em>我的引力场</em></h1>
+      <p>文字、作品与光影，<br />在这里留下各自的轨迹。</p>
     </div>
 
-    <div class="portal-stage" data-portal-stage>
-      <div class="portal-aura" aria-hidden="true"></div>
-      <div class="portal-rings" aria-hidden="true">
-        <span class="portal-ring ring-outer"></span>
-        <span class="portal-ring ring-middle"></span>
-        <span class="portal-ring ring-inner"></span>
-        <span class="portal-glyphs glyphs-outer">ᚠ · ᚱ · ᚦ · ᚨ · ᚷ · ᚹ · ᚺ · ᚾ · ᛃ · ᛇ · ᛈ · ᛉ</span>
-        <span class="portal-glyphs glyphs-inner">✦　ᛟ　✦　ᛞ　✦　ᛏ　✦　ᛒ　✦　ᛗ　✦　ᛋ</span>
-      </div>
+    <div class="blackhole-stage" data-portal-stage>
+      <div class="accretion-disk" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="blackhole-lens" aria-hidden="true"><span class="photon-ring"></span><span class="event-horizon"></span><span class="singularity"></span></div>
       <canvas class="portal-sparks" data-portal-canvas aria-hidden="true"></canvas>
-      <div class="portal-core" aria-hidden="true"><span>✦</span></div>
-      <nav class="portal-menu" aria-label="探索入口">
-        {portals.map((portal) => (
-          <a class="portal-rune" href={withBase(portal.path)} data-portal-link={portal.label} style={`--angle:${portal.angle}deg;--counter-angle:${portal.counter}deg`}>
-            <span class="rune-seal" aria-hidden="true">{portal.rune}</span>
-            <span class="rune-label">{portal.label}</span>
-            <span class="rune-sub">{portal.sub}</span>
-          </a>
-        ))}
+      <nav class="portal-menu" aria-label="探索入口" inert>
+        {portals.map((portal) => <a class="portal-rune" href={withBase(portal.path)} data-portal-link={portal.label}>
+          <span class="rune-seal" aria-hidden="true">{portal.rune}</span><span class="rune-label">{portal.label}</span><span class="rune-sub">{portal.sub}</span>
+        </a>)}
       </nav>
-      <p class="portal-hint"><span>⌁</span> 选择一个符文，开启传送 <span>⌁</span></p>
     </div>
 
-    <div class="portal-bottomline"><span>ARCHIVE OF {site.name.toUpperCase()}</span><span>SCROLL TO EXPLORE <b>↓</b></span><span>NO. 2026 / ONLINE</span></div>
+    <div class="blackhole-footer"><span>SCROLL / CLICK TO ENTER</span><span class="scroll-mark">↓</span><span>ARCHIVE 001</span></div>
     <p class="portal-status" data-portal-status role="status" aria-live="polite"></p>
   </section>
 </Layout>
 
 <script>
+  const home = document.querySelector<HTMLElement>('[data-blackhole-home]');
   const stage = document.querySelector<HTMLElement>('[data-portal-stage]');
   const canvas = document.querySelector<HTMLCanvasElement>('[data-portal-canvas]');
+  const menu = document.querySelector<HTMLElement>('.portal-menu');
   const status = document.querySelector<HTMLElement>('[data-portal-status]');
-  const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('[data-portal-link]'));
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let opening = false;
-  let particles: Array<{ angle: number; radius: number; size: number; speed: number; life: number; alpha: number; }> = [];
+  const context = canvas?.getContext('2d');
+  const particles = Array.from({ length: 260 }, () => ({
+    angle: Math.random() * Math.PI * 2, radius: 110 + Math.random() * 190,
+    speed: .001 + Math.random() * .008, size: .4 + Math.random() * 2.2,
+    alpha: .2 + Math.random() * .8,
+  }));
+  let awakened = false;
+  let settled = false;
+  let start = 0;
+  let last = performance.now();
+  let sceneTime = 0;
+  let frame = 0;
+  let width = 0;
+  let dpr = 1;
+  let animations: Animation[] = [];
 
-  function resizeCanvas() {
-    if (!stage || !canvas) return;
-    const size = stage.getBoundingClientRect().width;
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    canvas.width = size * dpr; canvas.height = size * dpr;
-    canvas.style.width = `${size}px`; canvas.style.height = `${size}px`;
+  function render(delta = 0) {
+    if (!canvas || !context) return;
+    context.setTransform(dpr, 0, 0, dpr, 0, 0);
+    context.clearRect(0, 0, width, width);
+    const scale = width / 700;
+    particles.forEach(p => {
+      p.angle += p.speed * delta / 16.667;
+      const r = (p.radius + Math.sin(sceneTime / 600 + p.angle * 2) * 3) * scale;
+      const x = width / 2 + Math.cos(p.angle) * r;
+      const y = width / 2 + Math.sin(p.angle) * r * .46;
+      context.beginPath();
+      context.fillStyle = `rgba(245,174,103,${p.alpha * .7})`;
+      context.shadowColor = '#f06a28';
+      context.shadowBlur = 6 * scale;
+      context.arc(x, y, p.size * scale, 0, Math.PI * 2);
+      context.fill();
+    });
   }
-  function seedParticles(count = 60) {
-    particles = Array.from({ length: count }, () => ({ angle: Math.random() * Math.PI * 2, radius: 25 + Math.random() * 10, size: .7 + Math.random() * 2.2, speed: .002 + Math.random() * .009, life: Math.random(), alpha: .25 + Math.random() * .75 }));
-  }
-  function drawSparks() {
+  function resize() {
     if (!canvas || !stage) return;
-    const context = canvas.getContext('2d'); if (!context) return;
-    const dpr = Math.min(window.devicePixelRatio || 1, 2); const size = stage.getBoundingClientRect().width; const scale = size / 480;
-    context.clearRect(0, 0, canvas.width, canvas.height); context.save(); context.scale(dpr, dpr);
-    for (const spark of particles) {
-      spark.angle += spark.speed * (opening ? 2.7 : 1); spark.life += opening ? .014 : .004;
-      if (spark.life > 1) { spark.life = 0; spark.angle = Math.random() * Math.PI * 2; spark.radius = opening ? 116 + Math.random() * 112 : 160 + Math.random() * 40; }
-      const radius = (spark.radius + Math.sin(performance.now() / 800 + spark.angle) * 3) * scale;
-      const x = size / 2 + Math.cos(spark.angle) * radius; const y = size / 2 + Math.sin(spark.angle) * radius;
-      context.beginPath(); context.fillStyle = `rgba(255, ${opening ? 94 + Math.round(Math.random() * 75) : 157}, 37, ${Math.sin(spark.life * Math.PI) * spark.alpha})`;
-      context.shadowColor = '#ff5a19'; context.shadowBlur = (opening ? 9 : 4) * scale; context.arc(x, y, spark.size * (opening ? 1.2 : .75) * scale, 0, Math.PI * 2); context.fill();
+    width = stage.offsetWidth;
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    canvas.width = width * dpr;
+    canvas.height = width * dpr;
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${width}px`;
+    render();
+  }
+  function tick(now: number) {
+    const elapsed = Math.min(now - last, 50);
+    last = now;
+    const progress = awakened ? Math.min((now - start) / 1500, 1) : 0;
+    const speed = (1 - progress) ** 2;
+    sceneTime += elapsed * speed;
+    render(elapsed * speed);
+    if (awakened) animations.forEach(animation => { animation.playbackRate = speed; });
+    if (progress === 1) {
+      animations.forEach(animation => animation.pause());
+      settle();
+      frame = 0;
+      return;
     }
-    context.restore(); if (!reduceMotion) requestAnimationFrame(drawSparks);
+    frame = requestAnimationFrame(tick);
   }
-  function openPortal(link: HTMLAnchorElement) {
-    if (opening || !stage) return;
-    opening = true; stage.dataset.selected = link.dataset.portalLink || ''; document.body.classList.add('portal-opening');
-    particles = Array.from({ length: 180 }, () => ({ angle: Math.random() * Math.PI * 2, radius: 105 + Math.random() * 150, size: .7 + Math.random() * 2.8, speed: .006 + Math.random() * .02, life: Math.random(), alpha: .45 + Math.random() * .55 }));
-    if (status) status.textContent = `正在开启${link.dataset.portalLink}传送门`;
-    window.setTimeout(() => { window.location.href = link.href; }, reduceMotion ? 120 : 1450);
+  function settle() {
+    settled = true;
+    home?.classList.add('is-settled');
+    menu?.removeAttribute('inert');
+    if (status) status.textContent = '档案已展开，可以选择博客、项目或摄影';
   }
-  if (stage && canvas) {
-    resizeCanvas(); seedParticles(); drawSparks(); window.addEventListener('resize', resizeCanvas);
-    links.forEach((link) => link.addEventListener('click', (event) => { event.preventDefault(); openPortal(link); }));
+  function awaken() {
+    if (awakened || !home) return;
+    awakened = true;
+    start = performance.now();
+    animations = home.getAnimations({ subtree: true }).filter(animation => animation instanceof CSSAnimation);
+    home.classList.add('is-awake');
+    if (reduceMotion) settle();
   }
+  resize();
+  if (!reduceMotion) frame = requestAnimationFrame(tick);
+  window.addEventListener('resize', resize);
+  window.addEventListener('wheel', event => { if (Math.abs(event.deltaY) > 2) awaken(); }, { passive: true });
+  window.addEventListener('keydown', event => {
+    if (!awakened && ['Enter', ' ', 'ArrowDown', 'PageDown'].includes(event.key)) {
+      event.preventDefault();
+      awaken();
+    }
+  });
+  home?.addEventListener('click', event => { if (!(event.target as HTMLElement).closest('a')) awaken(); });
+  let touchY = 0;
+  home?.addEventListener('touchstart', event => { touchY = event.touches[0].clientY; }, { passive: true });
+  home?.addEventListener('touchmove', event => { if (Math.abs(touchY - event.touches[0].clientY) > 25) awaken(); }, { passive: true });
+  document.addEventListener('visibilitychange', () => {
+    cancelAnimationFrame(frame);
+    if (!document.hidden && !settled && !reduceMotion) {
+      last = performance.now();
+      frame = requestAnimationFrame(tick);
+    }
+  });
 </script>
