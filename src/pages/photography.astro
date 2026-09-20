@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { withBase } from '../config';
+---
+<Layout title="摄影" description="光影记录与视觉片段。">
+  <header class="page-heading"><span class="eyebrow">LIGHT ARCHIVE</span><h1>摄影<span class="accent">。</span></h1><p>把经过眼睛的光，留成一页页可以回看的片段。</p></header>
+  <section class="photo-placeholder" aria-label="摄影作品占位区">
+    <div class="photo-tile tile-sun"><span>LIGHT / 001</span></div>
+    <div class="photo-tile tile-night"><span>STILL / 002</span></div>
+    <div class="photo-tile tile-wind"><span>WIND / 003</span></div>
+  </section>
+  <p class="section-note">这里会放入你的摄影作品。把图片放到 <code>public/media/</code> 后，在文章或这个页面中继续添加。</p>
+  <a class="text-link" href={withBase()}>← 回到秘法档案</a>
+</Layout>

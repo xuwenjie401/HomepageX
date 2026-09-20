@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { withBase } from '../config';
+---
+<Layout title="项目" description="正在制作的项目与实验。">
+  <header class="page-heading"><span class="eyebrow">WORKSHOP / EXPERIMENTS</span><h1>项目<span class="accent">。</span></h1><p>一些正在制作、测试，或者还在寻找方向的东西。</p></header>
+  <section class="project-list">
+    <article><span class="project-index">001</span><div><h2>HomepageX</h2><p>一个把文字、图片和短视频放在一起的个人空间。</p></div><span class="project-state">IN PROGRESS</span></article>
+    <article><span class="project-index">002</span><div><h2>下一次实验</h2><p>项目描述会在它准备好被分享时出现。</p></div><span class="project-state">COMING SOON</span></article>
+  </section>
+  <a class="text-link" href={withBase()}>← 回到秘法档案</a>
+</Layout>

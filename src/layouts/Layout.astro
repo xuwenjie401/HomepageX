@@ -1,8 +1,8 @@
 ---
 import '../styles/global.css';
 import { site, withBase } from '../config';
-interface Props { title?: string; description?: string; article?: boolean }
-const { title, description = site.description, article = false } = Astro.props;
+interface Props { title?: string; description?: string; article?: boolean; immersive?: boolean }
+const { title, description = site.description, article = false, immersive = false } = Astro.props;
 const pageTitle = title ? `${title} · ${site.title}` : `${site.name} · ${site.title}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const current = Astro.url.pathname.replace(/\/$/, '');
@@ -29,10 +29,10 @@ const nav = [
     <link rel="canonical" href={canonical} />
     <title>{pageTitle}</title>
   </head>
-  <body>
+  <body class:list={{ 'immersive-body': immersive }}>
     <a class="skip-link" href="#main">跳到正文</a>
-    <div class="shell">
-      <header class="site-header">
+    <div class:list={['shell', { 'immersive-shell': immersive }]}>
+      <header class:list={['site-header', { 'immersive-header': immersive }]}>
         <a class="brand" href={withBase()} aria-label={`${site.title} 首页`}>
           <span class="brand-mark" aria-hidden="true">x.</span>
           <span>{site.title}</span>
@@ -46,12 +46,11 @@ const nav = [
         </nav>
       </header>
       <main id="main"><slot /></main>
-      <footer class="site-footer">
+      {!immersive && <footer class="site-footer">
         <span>© {new Date().getFullYear()} {site.name}</span>
         <span>慢慢记录，持续生长。</span>
         <a href={site.github}>GitHub <span aria-hidden="true">↗</span></a>
-      </footer>
+      </footer>}
     </div>
   </body>
 </html>
-
