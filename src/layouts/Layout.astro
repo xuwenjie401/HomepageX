@@ -1,0 +1,57 @@
+---
+import '../styles/global.css';
+import { site, withBase } from '../config';
+interface Props { title?: string; description?: string; article?: boolean }
+const { title, description = site.description, article = false } = Astro.props;
+const pageTitle = title ? `${title} · ${site.title}` : `${site.name} · ${site.title}`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const current = Astro.url.pathname.replace(/\/$/, '');
+const nav = [
+  { label: '首页', path: '' },
+  { label: '文章', path: 'blog/' },
+  { label: '关于', path: 'about/' },
+];
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f8f7f3" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={article ? 'article' : 'website'} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+    <div class="shell">
+      <header class="site-header">
+        <a class="brand" href={withBase()} aria-label={`${site.title} 首页`}>
+          <span class="brand-mark" aria-hidden="true">x.</span>
+          <span>{site.title}</span>
+        </a>
+        <nav aria-label="主导航">
+          {nav.map(({ label, path }) => {
+            const target = withBase(path).replace(/\/$/, '');
+            const active = path ? current.startsWith(target) : current === target;
+            return <a href={withBase(path)} aria-current={active ? 'page' : undefined}>{label}</a>;
+          })}
+        </nav>
+      </header>
+      <main id="main"><slot /></main>
+      <footer class="site-footer">
+        <span>© {new Date().getFullYear()} {site.name}</span>
+        <span>慢慢记录，持续生长。</span>
+        <a href={site.github}>GitHub <span aria-hidden="true">↗</span></a>
+      </footer>
+    </div>
+  </body>
+</html>
+

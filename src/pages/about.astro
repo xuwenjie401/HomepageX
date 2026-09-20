@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { site, withBase } from '../config';
+---
+<Layout title="关于" description={`关于 ${site.name} 和这个小小的个人空间。`}>
+  <header class="page-heading"><span class="eyebrow">A LITTLE ABOUT ME</span><h1>很高兴，在这里遇见你<span class="accent">。</span></h1><p>我是 {site.name}，欢迎来到我的个人空间。</p></header>
+  <div class="about-grid">
+    <div class="prose">
+      <h2>关于这里</h2>
+      <p>这是一个用来积累与分享的地方：文字、图片、短片，都可以成为记录的一部分。</p>
+      <p>主页刚刚开始，内容会随着每一次记录慢慢丰富起来。</p>
+      <h2>保持联系</h2>
+      <p>你可以在 <a href={site.github}>GitHub ↗</a> 找到我，也可以从<a href={withBase('blog/')}>最近的文章</a>开始逛逛。</p>
+    </div>
+    <aside class="about-note"><span class="eyebrow">IN PROGRESS</span><p>留一块空白，<br />给下一次发现。</p><span class="note-line"></span></aside>
+  </div>
+</Layout>
+

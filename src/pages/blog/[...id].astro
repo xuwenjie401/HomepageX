@@ -1,0 +1,26 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { withBase } from '../../config';
+import { getPosts, formatDate } from '../../lib/posts';
+export async function getStaticPaths() {
+  return (await getPosts()).map(post => ({ params: { id: post.id }, props: { post } }));
+}
+interface Props { post: CollectionEntry<'blog'> }
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+<Layout title={post.data.title} description={post.data.description} article>
+  <article class="article">
+    <a class="text-link back-link" href={withBase('blog/')}>← 所有文章</a>
+    <header class="article-heading">
+      <div class="post-meta"><time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>{post.data.sample && <span class="sample-label">示例文章</span>}</div>
+      <h1>{post.data.title}</h1>
+      <p>{post.data.description}</p>
+      <div class="tags">{post.data.tags.map(tag => <span>{tag}</span>)}</div>
+    </header>
+    <div class="prose"><Content /></div>
+    <a class="text-link article-back" href={withBase('blog/')}>← 继续阅读其他文章</a>
+  </article>
+</Layout>
+

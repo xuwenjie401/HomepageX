@@ -1,0 +1,33 @@
+{
+  "name": "selfie",
+  "version": "1.0.0",
+  "description": "A personal homepage and Markdown blog built with Astro.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuwenjie401/HomepageX.git"
+  },
+  "keywords": [
+    "astro",
+    "blog",
+    "github-pages"
+  ],
+  "author": "xuwenjie401",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xuwenjie401/HomepageX/issues"
+  },
+  "homepage": "https://github.com/xuwenjie401/HomepageX#readme",
+  "dependencies": {
+    "astro": "^7.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^6.0.3"
+  }
+}

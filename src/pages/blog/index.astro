@@ -1,0 +1,42 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getPosts } from '../../lib/posts';
+const posts = await getPosts();
+---
+<Layout title="文章" description="学习笔记、实践记录与日常发现。">
+  <header class="page-heading">
+    <span class="eyebrow">THE JOURNAL</span>
+    <h1>文章与记录<span class="accent">。</span></h1>
+    <p>把零散的思考，慢慢整理成自己的文字。</p>
+  </header>
+  <div class="archive-toolbar">
+    <span>共 {posts.length} 篇文章</span>
+    <label class="search" hidden id="search-control"><span class="sr-only">搜索文章标题、摘要或标签</span><input type="search" id="post-search" placeholder="搜索标题、摘要、标签…" autocomplete="off" /></label>
+  </div>
+  <div id="post-list">
+    {posts.map(post => <div data-post data-search={`${post.data.title} ${post.data.description} ${post.data.tags.join(' ')}`.toLocaleLowerCase()}><PostCard post={post} /></div>)}
+  </div>
+  <p class="empty-state" id="search-empty" hidden>暂时没有匹配的文章，换个关键词试试。</p>
+  <p class="sr-only" id="search-status" role="status" aria-live="polite"></p>
+  {!posts.length && <p class="empty-state">第一篇文章正在酝酿中。</p>}
+</Layout>
+<script>
+  const input = document.querySelector<HTMLInputElement>('#post-search');
+  const rows = Array.from(document.querySelectorAll<HTMLElement>('[data-post]'));
+  const control = document.getElementById('search-control');
+  const empty = document.getElementById('search-empty');
+  const status = document.getElementById('search-status');
+  if (control) control.hidden = false;
+  input?.addEventListener('input', () => {
+    const query = input.value.trim().toLocaleLowerCase();
+    let count = 0;
+    for (const row of rows) {
+      row.hidden = !row.dataset.search?.includes(query);
+      if (!row.hidden) count++;
+    }
+    if (empty) empty.hidden = count > 0 || rows.length === 0;
+    if (status) status.textContent = `找到 ${count} 篇文章`;
+  });
+</script>
+
