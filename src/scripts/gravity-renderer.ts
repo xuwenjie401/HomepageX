@@ -25,7 +25,7 @@ void main() {
   // Match the poster's object-fit:cover and focal point, including portrait screens.
   vec2 uv = (screen - anchor) * u_cover + anchor;
   // A restrained camera drift comes gently to rest with the scene.
-  float zoom = 1.0 + 0.004 * sin(u_time * 0.11) + u_rest * 0.014;
+  float zoom = 1.0 + 0.006 * sin(u_time * 0.11) + u_rest * 0.014;
   uv = anchor + (uv - anchor) / zoom;
   vec2 p = (uv - anchor) * vec2(ASPECT, 1.0);
   float r = length(p);
@@ -36,34 +36,48 @@ void main() {
   float disk = exp(-diskDistance * diskDistance / 0.0015);
 
   // Keep the diagonal foreground disk anchored while circulating the back light.
-  float phase = u_time * 0.16;
+  // The larger angular displacement is what makes the filaments visibly flow
+  // around the horizon instead of reading as a static poster with a glow.
+  float phase = u_time * 0.32;
   float turn = ring * (1.0 - disk * 0.9) *
-    (0.035 * sin(phase + r * 23.0) + 0.013 * sin(phase * 1.6 + angle * 5.0));
+    (0.105 * sin(phase + r * 23.0) + 0.032 * sin(phase * 1.6 + angle * 5.0));
   float c = cos(turn), s = sin(turn);
   vec2 bent = mat2(c, -s, s, c) * p;
   vec2 flowUv = anchor + bent / vec2(ASPECT, 1.0);
+
+  // Continuous shearing along the two equation sheets. The deformation follows
+  // the sheets' perspective, so symbols travel with the ribbon rather than
+  // sliding as a flat layer over the image.
+  float sheetA = smoothstep(0.34, 0.82, uv.y) * (1.0 - smoothstep(0.02, 0.32, r));
+  float sheetB = smoothstep(0.42, 0.82, uv.x) * smoothstep(0.34, 0.8, uv.y);
+  float waveA = sin(uv.y * 30.0 - u_time * 1.35 + uv.x * 4.0);
+  float waveB = sin(uv.x * 22.0 + u_time * 0.92 - uv.y * 9.0);
+  flowUv += vec2(
+    (waveA * sheetA * 0.010) + (waveB * sheetB * 0.007),
+    (waveB * sheetA * 0.004) - (waveA * sheetB * 0.003)
+  );
 
   // Formula ribbons drift along their perspective planes, not across the sky.
   float lower = smoothstep(0.46, 0.86, uv.y);
   float diagonal = smoothstep(0.28, 0.60, uv.x - uv.y * 0.2);
   float sheet = max(lower, disk * diagonal * 0.45) * (1.0 - ring) * core;
   flowUv += sheet * vec2(
-    0.0035 * sin(u_time * 0.24 + uv.y * 9.0),
-    0.0012 * sin(u_time * 0.29 + uv.x * 10.0)
+    0.010 * sin(u_time * 0.48 + uv.y * 9.0),
+    0.004 * sin(u_time * 0.58 + uv.x * 10.0)
   );
   vec3 color = texture2D(u_image, clamp(flowUv, 0.001, 0.999)).rgb;
   float luminance = dot(color, vec3(0.2126, 0.7152, 0.0722));
   float material = smoothstep(0.05, 0.32, luminance);
 
   // Fine travelling illumination, restricted to existing gold filaments.
-  float filaments = sin(angle * 31.0 - u_time * 1.35 + r * 390.0);
-  float swell = sin(angle * 7.0 - u_time * 0.44 + r * 90.0);
-  color *= 1.0 + ring * material * (filaments * 0.055 + swell * 0.065);
-  float diskPulse = sin(p.x * 44.0 + u_time * 0.8 + p.y * 17.0);
-  color *= 1.0 + disk * material * diskPulse * 0.055;
+  float filaments = sin(angle * 31.0 - u_time * 2.4 + r * 390.0);
+  float swell = sin(angle * 7.0 - u_time * 0.8 + r * 90.0);
+  color *= 1.0 + ring * material * (filaments * 0.11 + swell * 0.10);
+  float diskPulse = sin(p.x * 44.0 + u_time * 1.45 + p.y * 17.0);
+  color *= 1.0 + disk * material * diskPulse * 0.10;
   // Very subtle starlight scintillation; black space remains black.
   float stars = (1.0 - smoothstep(0.38, 0.6, uv.y)) * (1.0 - ring) * (1.0 - disk);
-  color *= 1.0 + stars * material * sin(u_time * 0.7 + uv.x * 123.0 + uv.y * 371.0) * 0.07;
+  color *= 1.0 + stars * material * sin(u_time * 1.15 + uv.x * 123.0 + uv.y * 371.0) * 0.10;
   gl_FragColor = vec4(color, 1.0);
 }`;
 
