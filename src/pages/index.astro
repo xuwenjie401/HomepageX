@@ -1,143 +1,49 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { site, withBase } from '../config';
+import '../styles/gravity.css';
 
-const portals = [
-  { label: '博客', sub: 'WORDS', rune: '01', path: 'blog/' },
-  { label: '项目', sub: 'WORKS', rune: '02', path: 'projects/' },
-  { label: '摄影', sub: 'LIGHT', rune: '03', path: 'photography/' },
+const entries = [
+  { label: '博客', english: 'JOURNAL', path: 'blog/' },
+  { label: '项目', english: 'PROJECTS', path: 'projects/' },
+  { label: '摄影', english: 'PHOTOGRAPHY', path: 'photography/' },
 ];
+const background = withBase('media/gravity-reference.png');
 ---
-<Layout immersive title="时空档案" description={`${site.name} 的个人主页、博客、摄影与项目记录。`}>
-  <section class="blackhole-home" data-blackhole-home aria-labelledby="portal-title">
-    <div class="space-noise" aria-hidden="true"></div>
-    <div class="space-stars" aria-hidden="true">{Array.from({ length: 24 }).map((_, i) => <i style={`--i:${i};--x:${(i * 37 + 4) % 100};--y:${(i * 61 + 7) % 100};--alpha:${0.25 + (i % 5) * 0.12}`}></i>)}</div>
-    <div class="equation-stream stream-a" aria-hidden="true">∫ ψ̄γμ∂μψ · Rμν − ½Rgμν = 8πGTμν　 E = mc²　 ∇ × B = μ₀J</div>
-    <div class="equation-stream stream-b" aria-hidden="true">P(B) = ∫ e−S[φ] Dφ　 ΔG = ΔH − TΔS　 ℏ²/2m ∇²Ψ + VΨ = EΨ</div>
-    <div class="equation-stream stream-c" aria-hidden="true">Σ n² + λ∂t u = 0　 CO₂ + H₂O → H₂CO₃　 limₓ→∞ f(x) = 0</div>
-
-    <div class="blackhole-intro" data-intro>
-      <span class="portal-kicker"><b></b> {site.name.toUpperCase()} · 2026</span>
-      <h1 id="portal-title">进入<br /><em>我的引力场</em></h1>
-      <p>文字、作品与光影，<br />在这里留下各自的轨迹。</p>
+<Layout immersive title="时空档案" description={`${site.name} 的个人主页：文字、项目与摄影。`}>
+  <link slot="head" rel="preload" as="image" href={background} fetchpriority="high" />
+  <section class="gravity-home" data-gravity data-state="flowing" aria-label="黑洞与时空档案">
+    <div class="gravity-scene" aria-hidden="true">
+      <img class="gravity-poster" src={background} width="1672" height="941" alt="" fetchpriority="high" decoding="sync" />
+      <canvas class="gravity-canvas" data-gravity-canvas data-source={background}></canvas>
     </div>
+    <div class="gravity-shade" aria-hidden="true"></div>
 
-    <div class="blackhole-stage" data-portal-stage>
-      <div class="accretion-disk" aria-hidden="true"><span></span><span></span><span></span></div>
-      <div class="blackhole-lens" aria-hidden="true"><span class="photon-ring"></span><span class="event-horizon"></span><span class="singularity"></span></div>
-      <canvas class="portal-sparks" data-portal-canvas aria-hidden="true"></canvas>
-      <nav class="portal-menu" aria-label="探索入口" inert>
-        {portals.map((portal) => <a class="portal-rune" href={withBase(portal.path)} data-portal-link={portal.label}>
-          <span class="rune-seal" aria-hidden="true">{portal.rune}</span><span class="rune-label">{portal.label}</span><span class="rune-sub">{portal.sub}</span>
-        </a>)}
+    <button class="entry-trigger" data-enter aria-label="让画面静止，显示博客、项目和摄影入口">
+      <span class="entry-hint"><span class="hint-line" aria-hidden="true"></span>点击或滚动，进入<span class="hint-en" lang="en">ENTER THE STILLNESS</span></span>
+    </button>
+
+    <div class="gravity-archive" data-archive inert>
+      <p class="archive-eyebrow">A PERSONAL UNIVERSE <span aria-hidden="true">/</span> 01</p>
+      <h1>{site.name}<span class="name-dot">.</span></h1>
+      <p class="archive-description">记录思考，构建想法，收藏光影。</p>
+      <nav class="archive-entries" aria-label="探索我的档案">
+        {entries.map((entry, index) => (
+          <a class="archive-entry" href={withBase(entry.path)}>
+            <span class="entry-number" aria-hidden="true">0{index + 1}</span>
+            <span class="entry-label">{entry.label}</span>
+            <span class="entry-english" lang="en">{entry.english}</span>
+            <span class="entry-arrow" aria-hidden="true">↗</span>
+          </a>
+        ))}
       </nav>
+      <div class="archive-footnote"><span>文字 · 创造 · 目光</span><button data-replay class="replay" aria-label="重新播放黑洞动画">让时间继续 <span aria-hidden="true">↻</span></button></div>
     </div>
-
-    <div class="blackhole-footer"><span>SCROLL / CLICK TO ENTER</span><span class="scroll-mark">↓</span><span>ARCHIVE 001</span></div>
-    <p class="portal-status" data-portal-status role="status" aria-live="polite"></p>
+    <p class="sr-only" data-gravity-status aria-live="polite"></p>
   </section>
+  <noscript><style>.entry-trigger{display:none}.gravity-archive{opacity:1;visibility:visible;transform:none}.gravity-shade{opacity:1}.replay{display:none}</style><p class="gravity-noscript">请启用 JavaScript 观看动态画面。<a href={withBase('blog/')}>博客</a> · <a href={withBase('projects/')}>项目</a> · <a href={withBase('photography/')}>摄影</a></p></noscript>
 </Layout>
-
 <script>
-  const home = document.querySelector<HTMLElement>('[data-blackhole-home]');
-  const stage = document.querySelector<HTMLElement>('[data-portal-stage]');
-  const canvas = document.querySelector<HTMLCanvasElement>('[data-portal-canvas]');
-  const menu = document.querySelector<HTMLElement>('.portal-menu');
-  const status = document.querySelector<HTMLElement>('[data-portal-status]');
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const context = canvas?.getContext('2d');
-  const particles = Array.from({ length: 260 }, () => ({
-    angle: Math.random() * Math.PI * 2, radius: 110 + Math.random() * 190,
-    speed: .001 + Math.random() * .008, size: .4 + Math.random() * 2.2,
-    alpha: .2 + Math.random() * .8,
-  }));
-  let awakened = false;
-  let settled = false;
-  let start = 0;
-  let last = performance.now();
-  let sceneTime = 0;
-  let frame = 0;
-  let width = 0;
-  let dpr = 1;
-  let animations: Animation[] = [];
-
-  function render(delta = 0) {
-    if (!canvas || !context) return;
-    context.setTransform(dpr, 0, 0, dpr, 0, 0);
-    context.clearRect(0, 0, width, width);
-    const scale = width / 700;
-    particles.forEach(p => {
-      p.angle += p.speed * delta / 16.667;
-      const r = (p.radius + Math.sin(sceneTime / 600 + p.angle * 2) * 3) * scale;
-      const x = width / 2 + Math.cos(p.angle) * r;
-      const y = width / 2 + Math.sin(p.angle) * r * .46;
-      context.beginPath();
-      context.fillStyle = `rgba(245,174,103,${p.alpha * .7})`;
-      context.shadowColor = '#f06a28';
-      context.shadowBlur = 6 * scale;
-      context.arc(x, y, p.size * scale, 0, Math.PI * 2);
-      context.fill();
-    });
-  }
-  function resize() {
-    if (!canvas || !stage) return;
-    width = stage.offsetWidth;
-    dpr = Math.min(devicePixelRatio || 1, 2);
-    canvas.width = width * dpr;
-    canvas.height = width * dpr;
-    canvas.style.width = `${width}px`;
-    canvas.style.height = `${width}px`;
-    render();
-  }
-  function tick(now: number) {
-    const elapsed = Math.min(now - last, 50);
-    last = now;
-    const progress = awakened ? Math.min((now - start) / 1500, 1) : 0;
-    const speed = (1 - progress) ** 2;
-    sceneTime += elapsed * speed;
-    render(elapsed * speed);
-    if (awakened) animations.forEach(animation => { animation.playbackRate = speed; });
-    if (progress === 1) {
-      animations.forEach(animation => animation.pause());
-      settle();
-      frame = 0;
-      return;
-    }
-    frame = requestAnimationFrame(tick);
-  }
-  function settle() {
-    settled = true;
-    home?.classList.add('is-settled');
-    menu?.removeAttribute('inert');
-    if (status) status.textContent = '档案已展开，可以选择博客、项目或摄影';
-  }
-  function awaken() {
-    if (awakened || !home) return;
-    awakened = true;
-    start = performance.now();
-    animations = home.getAnimations({ subtree: true }).filter(animation => animation instanceof CSSAnimation);
-    home.classList.add('is-awake');
-    if (reduceMotion) settle();
-  }
-  resize();
-  if (!reduceMotion) frame = requestAnimationFrame(tick);
-  window.addEventListener('resize', resize);
-  window.addEventListener('wheel', event => { if (Math.abs(event.deltaY) > 2) awaken(); }, { passive: true });
-  window.addEventListener('keydown', event => {
-    if (!awakened && ['Enter', ' ', 'ArrowDown', 'PageDown'].includes(event.key)) {
-      event.preventDefault();
-      awaken();
-    }
-  });
-  home?.addEventListener('click', event => { if (!(event.target as HTMLElement).closest('a')) awaken(); });
-  let touchY = 0;
-  home?.addEventListener('touchstart', event => { touchY = event.touches[0].clientY; }, { passive: true });
-  home?.addEventListener('touchmove', event => { if (Math.abs(touchY - event.touches[0].clientY) > 25) awaken(); }, { passive: true });
-  document.addEventListener('visibilitychange', () => {
-    cancelAnimationFrame(frame);
-    if (!document.hidden && !settled && !reduceMotion) {
-      last = performance.now();
-      frame = requestAnimationFrame(tick);
-    }
-  });
+  import { initGravityHome } from '../scripts/gravity-home';
+  initGravityHome();
 </script>

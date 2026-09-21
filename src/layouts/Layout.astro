@@ -18,7 +18,7 @@ const nav = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#f8f7f3" />
+    <meta name="theme-color" content={immersive ? "#020202" : "#f8f7f3"} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={article ? 'article' : 'website'} />
@@ -28,6 +28,7 @@ const nav = [
     <meta name="twitter:description" content={description} />
     <link rel="canonical" href={canonical} />
     <title>{pageTitle}</title>
+    <slot name="head" />
   </head>
   <body class:list={{ 'immersive-body': immersive }}>
     <a class="skip-link" href="#main">跳到正文</a>
