@@ -25,6 +25,7 @@ export function initGravityHome() {
   function draw() { renderer?.render(sceneTime, rest); }
   function schedule() {
     if (frame || document.hidden || !active || state === 'still') return;
+    if (!renderer && state === 'flowing') return;
     if (motion.matches && state === 'flowing') return;
     last = performance.now();
     frame = requestAnimationFrame(tick);
@@ -57,7 +58,9 @@ export function initGravityHome() {
     home!.dataset.state = state;
     archive!.inert = false;
     if (status) status.textContent = '时间已静止。博客、项目与摄影入口已展开。';
-    if (keyboardEntry) archive!.querySelector<HTMLAnchorElement>('a')?.focus({ preventScroll: true });
+    if (keyboardEntry) requestAnimationFrame(() => {
+      if (state === 'still') archive!.querySelector<HTMLAnchorElement>('a')?.focus({ preventScroll: true });
+    });
   }
   function reveal(keyboard = false) {
     if (state !== 'flowing') return;
@@ -84,6 +87,15 @@ export function initGravityHome() {
   }
   enter.addEventListener('click', event => reveal(event.detail === 0));
   replay.addEventListener('click', resume);
+  home.addEventListener('pointermove', event => {
+    if (motion.matches || state !== 'flowing' || event.pointerType !== 'mouse') return;
+    const bounds = home.getBoundingClientRect();
+    renderer?.setPointer(
+      (event.clientX - bounds.left) / bounds.width * 2 - 1,
+      1 - (event.clientY - bounds.top) / bounds.height * 2,
+    );
+  }, { passive: true });
+  home.addEventListener('pointerleave', () => renderer?.setPointer(0, 0));
   home.addEventListener('wheel', event => { if (Math.abs(event.deltaY) > 3) reveal(); }, { passive: true });
   let startY = 0;
   home.addEventListener('touchstart', event => { startY = event.touches[0].clientY; }, { passive: true });
@@ -110,8 +122,13 @@ export function initGravityHome() {
   });
   canvas.addEventListener('webglcontextlost', event => {
     event.preventDefault();
+    cancelAnimationFrame(frame);
+    frame = 0;
     home.dataset.renderer = 'poster';
+    renderer?.dispose();
     renderer = null;
+    // Navigation must still settle if the graphics context disappears mid-entry.
+    if (state === 'settling') { rest = 1; finish(); }
   });
   async function loadRenderer() {
     try {

@@ -10,9 +10,9 @@ const entries = [
 ];
 const background = withBase('media/gravity-reference.png');
 ---
-<Layout immersive title="时空档案" description={`${site.name} 的个人主页：文字、项目与摄影。`}>
+<Layout immersive description={`${site.name} 的个人主页：文字、项目与摄影。`}>
   <link slot="head" rel="preload" as="image" href={background} fetchpriority="high" />
-  <section class="gravity-home" data-gravity data-state="flowing" aria-label="黑洞与时空档案">
+  <section class="gravity-home" data-gravity data-state="flowing" aria-label={site.title}>
     <div class="gravity-scene" aria-hidden="true">
       <img class="gravity-poster" src={background} width="1672" height="941" alt="" fetchpriority="high" decoding="sync" />
       <canvas class="gravity-canvas" data-gravity-canvas data-source={background}></canvas>
@@ -24,7 +24,7 @@ const background = withBase('media/gravity-reference.png');
     </button>
 
     <div class="gravity-archive" data-archive inert>
-      <p class="archive-eyebrow">A PERSONAL UNIVERSE <span aria-hidden="true">/</span> 01</p>
+      <p class="archive-eyebrow">PERSONAL HOMEPAGE <span aria-hidden="true">/</span> 01</p>
       <h1>{site.name}<span class="name-dot">.</span></h1>
       <p class="archive-description">记录思考，构建想法，收藏光影。</p>
       <nav class="archive-entries" aria-label="探索我的档案">
