@@ -24,7 +24,11 @@
   },
   "homepage": "https://github.com/xuwenjie401/HomepageX#readme",
   "dependencies": {
-    "astro": "^7.3.3"
+    "@astrojs/markdown-remark": "^7.3.1",
+    "@mathjax/mathjax-stix2-font": "^4.1.3",
+    "@mathjax/src": "^4.1.3",
+    "astro": "^7.3.3",
+    "remark-math": "^6.0.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",

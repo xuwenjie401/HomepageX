@@ -28,6 +28,8 @@ npm run preview # 本地预览构建结果
 
 ## 写文章
 
+论文讲解与科研笔记请先阅读 [论文详解技术博客原则](research-blog-style.md)：按动机、问题和改进展开，深入解释核心概念与损失，尽量完整覆盖原论文插图，并用自制图补足直觉。[制作与排查指南](research-blog-production.md)记录提图、公式、SVG、预览与手机验证的实际经验。仓库根目录 `AGENTS.md` 已将这两份文档列为后续 agent 的工作入口。
+
 在 `src/content/blog/` 新建 `my-first-post.md`：
 
 ```markdown

@@ -8,9 +8,26 @@ export async function getStaticPaths() {
 }
 interface Props { post: CollectionEntry<'blog'> }
 const { post } = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
+const sections = headings.filter(heading => heading.depth >= 2);
+const hasToc = sections.length >= 5;
 ---
 <Layout title={post.data.title} description={post.data.description} article>
+  <div class:list={['article-layout', { 'with-toc': hasToc }]}>
+    {hasToc && (
+      <aside class="article-sidebar" aria-label="文章目录">
+        <details class="article-toc" open>
+          <summary>文章目录 <span>CONTENTS</span></summary>
+          <nav class="toc-scroll" aria-label="各级标题">
+            <ol>{sections.map(section => (
+              <li style={`--depth:${section.depth - 2}`} data-depth={section.depth}>
+                <a href={`#${section.slug}`}>{section.text}</a>
+              </li>
+            ))}</ol>
+          </nav>
+        </details>
+      </aside>
+    )}
   <article class="article">
     <a class="text-link back-link" href={withBase('blog/')}>← 所有文章</a>
     <header class="article-heading">
@@ -22,5 +39,44 @@ const { Content } = await render(post);
     <div class="prose"><Content /></div>
     <a class="text-link article-back" href={withBase('blog/')}>← 继续阅读其他文章</a>
   </article>
+  </div>
 </Layout>
 
+<script>
+  const toc = document.querySelector<HTMLDetailsElement>('.article-toc');
+  if (toc) {
+    const mobile = window.matchMedia('(max-width: 1099px)');
+    const setMode = () => { toc.open = !mobile.matches; };
+    setMode();
+    mobile.addEventListener('change', setMode);
+    const links = Array.from(toc.querySelectorAll<HTMLAnchorElement>('a[href^="#"]'));
+    const entries = links.map(link => ({ link, heading: document.getElementById(decodeURIComponent(link.hash.slice(1))) }));
+    const scroller = toc.querySelector<HTMLElement>('.toc-scroll');
+    let active: HTMLAnchorElement | undefined;
+    let scheduled = false;
+    const update = () => {
+      scheduled = false;
+      let current = entries[0];
+      for (const entry of entries) {
+        if (entry.heading && entry.heading.getBoundingClientRect().top <= 120) current = entry;
+      }
+      if (!current || current.link === active) return;
+      active?.removeAttribute('aria-current');
+      active = current.link;
+      active.setAttribute('aria-current', 'location');
+      if (!mobile.matches && scroller) {
+        const item = active.getBoundingClientRect();
+        const view = scroller.getBoundingClientRect();
+        if (item.top < view.top + 12 || item.bottom > view.bottom - 12) {
+          scroller.scrollTop += item.top - view.top - view.height / 3;
+        }
+      }
+    };
+    window.addEventListener('scroll', () => {
+      if (!scheduled) { scheduled = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    window.addEventListener('hashchange', () => requestAnimationFrame(update));
+    links.forEach(link => link.addEventListener('click', () => { if (mobile.matches) toc.open = false; }));
+    update();
+  }
+</script>
