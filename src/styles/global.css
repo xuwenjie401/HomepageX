@@ -56,6 +56,18 @@ h1,h2{font-family:var(--serif);font-weight:500}
 .archive-toolbar{display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid var(--line);padding-bottom:18px;color:var(--muted);font-size:12px}
 .search input{border:1px solid var(--line);background:transparent;color:var(--ink);padding:8px 12px;border-radius:4px;width:260px;font-size:13px;max-width:100%}
 .empty-state{padding:45px 0;color:var(--muted)}
+.series-list{padding:26px 0 8px}
+.series-card{display:block;padding:26px 28px;border:1px solid var(--line);border-radius:5px;background:var(--soft)}
+.series-meta{display:flex;justify-content:space-between;gap:16px;color:var(--muted);font-size:11px;letter-spacing:.5px}
+.series-card h2{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin:14px 0 10px;font-size:clamp(23px,3vw,30px);line-height:1.4;overflow-wrap:anywhere}
+.series-card h2>span:last-child{flex-shrink:0;color:var(--accent);font:20px/1 sans-serif}
+.series-card:hover h2{color:var(--accent)}
+.series-card p{color:var(--muted);font-size:13px;margin:0}
+.series-heading h1{max-width:850px;overflow-wrap:anywhere}
+.series-heading .series-intro{font-size:12px;margin-bottom:0}
+.article-breadcrumb{flex-wrap:wrap;gap:5px 12px;font-size:12px;line-height:1.7}
+.article-breadcrumb a{padding:0;overflow-wrap:anywhere}
+@media(max-width:640px){.series-card{padding:22px 20px}}
 .article{max-width:740px;margin:auto;padding:45px 0 15px}
 .back-link{color:var(--muted)}
 .article-heading{margin:42px 0 35px;padding-bottom:30px;border-bottom:1px solid var(--line)}

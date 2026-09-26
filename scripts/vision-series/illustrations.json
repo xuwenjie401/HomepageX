@@ -1,0 +1,326 @@
+{
+  "gftt-conditioning": {
+    "article": "gftt-klt-sift",
+    "width": 1100,
+    "height": 470,
+    "caption": "按二次误差计算的等高线。平坦区两方向都不确定，直边有长而窄的谷，角点形成可定位的盆地。"
+  },
+  "klt-update": {
+    "article": "gftt-klt-sift",
+    "width": 1100,
+    "height": 470,
+    "caption": "数值例子的正规方程：G 乘以 (2,1) 得到 (5,4)，更新方向由残差符号和梯度共同决定。"
+  },
+  "klt-pyramid": {
+    "article": "gftt-klt-sift",
+    "width": 1100,
+    "height": 470,
+    "caption": "教学示意：原图 12 像素位移在两次二倍下采样后为 3 像素，逐层放大估计并优化残差。"
+  },
+  "sift-histogram": {
+    "article": "gftt-klt-sift",
+    "width": 1100,
+    "height": 470,
+    "caption": "示意梯度投票的空间布局；箭头与柱高是教学输入，展示 4×4×8 的组织方式，不是某张实测图的描述子。"
+  },
+  "matching-context": {
+    "article": "superglue-lightglue",
+    "width": 1100,
+    "height": 470,
+    "caption": "重复窗格产生一对多歧义；稳定邻域关系提供附加证据，但没有可区分结构时上下文也会失败。"
+  },
+  "matching-dustbin": {
+    "article": "superglue-lightglue",
+    "width": 1100,
+    "height": 470,
+    "caption": "一个满足 SuperGlue 扩展边缘约束的硬分配极限：a3 未匹配，空槽之间的质量用于平衡矩阵。"
+  },
+  "matching-supervision": {
+    "article": "superglue-lightglue",
+    "width": 1100,
+    "height": 470,
+    "caption": "教学概率矩阵展示标签与负对数监督；这些示意概率不代表 Sinkhorn 完整扩展矩阵。"
+  },
+  "lightglue-pruning": {
+    "article": "superglue-lightglue",
+    "width": 1100,
+    "height": 470,
+    "caption": "点剪枝并非直接删掉低匹配分数点；应结合对最终判断的置信度，防止过早删除尚未消歧的点。"
+  },
+  "localization-hierarchy": {
+    "article": "netvlad-hfnet",
+    "width": 1100,
+    "height": 470,
+    "caption": "全局检索缩小数据库范围，局部对应连接三维地图，最后几何估计输出位姿。"
+  },
+  "vlad-residuals": {
+    "article": "netvlad-hfnet",
+    "width": 1100,
+    "height": 470,
+    "caption": "两簇各有四个局部特征，VLAD 保留位置相对中心的残差信息；软分配版本再用归属概率加权。"
+  },
+  "retrieval-supervision": {
+    "article": "netvlad-hfnet",
+    "width": 1100,
+    "height": 470,
+    "caption": "NetVLAD 的弱监督不把所有 GPS 邻近照片都视作必然正对；视角不重叠的近邻可能不适合作为正样本。"
+  },
+  "hfnet-distillation": {
+    "article": "netvlad-hfnet",
+    "width": 1100,
+    "height": 470,
+    "caption": "共享骨干服务三个不同粒度的输出；虚线表示训练监督，推理只运行学生网络。"
+  },
+  "covisibility-retrieval": {
+    "article": "netvlad-hfnet",
+    "width": 1100,
+    "height": 470,
+    "caption": "共视聚类把检索出的图像按地图连接分组，防止将外观相似但空间不同的候选混入同一次位姿估计。"
+  },
+  "dino-tokens": {
+    "article": "dinov2-dinov3",
+    "width": 1100,
+    "height": 470,
+    "caption": "CLS 聚合全局信息，patch token 保留空间索引；有空间索引并不意味着已经达到像素级几何定位精度。"
+  },
+  "dino-teacher": {
+    "article": "dinov2-dinov3",
+    "width": 1100,
+    "height": 470,
+    "caption": "两个视图的分布对齐通过学生反传，教师参数缓慢跟随学生；EMA 路径不等同于对目标概率直接求梯度。"
+  },
+  "dino-collapse": {
+    "article": "dinov2-dinov3",
+    "width": 1100,
+    "height": 470,
+    "caption": "三种教学分布：全部占用一个原型与全部均匀都可能退化；温度、批次平衡和特征分散约束承担不同角色。"
+  },
+  "dino-masking": {
+    "article": "dinov2-dinov3",
+    "width": 1100,
+    "height": 470,
+    "caption": "虚线只连接同一裁剪坐标中的被遮挡位置；patch 目标与跨不同裁剪的 CLS 目标不能混为一项。"
+  },
+  "dino-gram": {
+    "article": "dinov2-dinov3",
+    "width": 1100,
+    "height": 470,
+    "caption": "三个单位 token 的数值例子：共同正交旋转改变特征坐标，却不改变 token–token Gram 矩阵。"
+  },
+  "foundation-task-map": {
+    "article": "foundation-model-vpr-features",
+    "width": 1100,
+    "height": 470,
+    "caption": "基础模型特征可以服务三个不同接口；全局检索、独立局部描述和成对匹配的计算与缓存成本不同。"
+  },
+  "salad-transport": {
+    "article": "foundation-model-vpr-features",
+    "width": 1100,
+    "height": 470,
+    "caption": "数值矩阵满足 SALAD 的容量直觉。与 NetVLAD 不同，SALAD 对降维后的特征加权求和，不聚合到中心的残差。"
+  },
+  "sparse-semantic-local": {
+    "article": "foundation-model-vpr-features",
+    "width": 1100,
+    "height": 470,
+    "caption": "粗语义特征与局部高分辨率结构互补；插值只能增加采样密度，不能凭空恢复骨干未保留的定位信息。"
+  },
+  "roma-multimodal": {
+    "article": "foundation-model-vpr-features",
+    "width": 1100,
+    "height": 470,
+    "caption": "按高斯混合计算的教学曲线：双峰分布的均值不一定对应真实匹配，解释粗分类与细回归分工。"
+  },
+  "tartan-paths": {
+    "article": "tartanair",
+    "width": 1100,
+    "height": 470,
+    "caption": "二维教学地图展示路径与朝向是两类设计变量；避障路径本身不保证真实机器人能够满足动力学约束。"
+  },
+  "tartan-reprojection": {
+    "article": "tartanair",
+    "width": 1100,
+    "height": 470,
+    "caption": "教学几何示意：相机 A 的像素沿射线恢复三维点，通过相对位姿投到 B；真实代码必须统一坐标和深度定义。"
+  },
+  "tartan-occlusion": {
+    "article": "tartanair",
+    "width": 1100,
+    "height": 470,
+    "caption": "第二帧的射线上先遇到遮挡物；用深度一致性检查可见性，不能只检查投影是否越界。"
+  },
+  "tartan-intrinsics": {
+    "article": "tartanair",
+    "width": 1100,
+    "height": 470,
+    "caption": "归一化射线把像素运动与相机内参联系起来；示例使用 100 和 200 像素焦距。"
+  },
+  "tartan-imu": {
+    "article": "tartanair",
+    "width": 1100,
+    "height": 470,
+    "caption": "同一正弦轨迹的位置（米）、速度（米每秒）和加速度（米每二次方秒），保留正负号和共同时间轴；轨迹光滑不等于满足执行器限制。"
+  },
+  "let-illumination": {
+    "article": "letnet",
+    "width": 1100,
+    "height": 470,
+    "caption": "同一条边在增益和偏置变化后的强度曲线，说明光度误差并不只由运动造成。"
+  },
+  "let-landscape": {
+    "article": "letnet",
+    "width": 1100,
+    "height": 470,
+    "caption": "二次代价与常量特征的教学对比：让所有对应相似并不足够，还要防止失去定位梯度。"
+  },
+  "let-unroll": {
+    "article": "letnet",
+    "width": 1100,
+    "height": 470,
+    "caption": "有限步优化的教学展开：红点逐步接近局部极小值，外层监督最终坐标；图不声称每次真实 LM 都采用该步长。"
+  },
+  "let-basin": {
+    "article": "letnet",
+    "width": 1100,
+    "height": 470,
+    "caption": "示意多极小值目标与局部初始化范围。LET-NET2 固定训练代码使用真值加标准差 2 像素的噪声，不能据此证明任意大运动可收敛。"
+  },
+  "aliked-sparse-cost": {
+    "article": "aliked",
+    "width": 1100,
+    "height": 470,
+    "caption": "点标记表示最终描述子需要被计算的位置；ALIKED 仍然需要密集共享特征与分数图。"
+  },
+  "aliked-subpixel": {
+    "article": "aliked",
+    "width": 1100,
+    "height": 470,
+    "caption": "按三个归一化权重计算得到 0.5 像素的连续位置；局部细化不等于 NMS 索引本身可微。"
+  },
+  "aliked-sampling": {
+    "article": "aliked",
+    "width": 1100,
+    "height": 470,
+    "caption": "教学示意中两幅图共享局部结构但发生剪切，支持采样位置跟随结构；真实偏移由描述损失间接学习。"
+  },
+  "aliked-supervision": {
+    "article": "aliked",
+    "width": 1100,
+    "height": 470,
+    "caption": "由三个相似度直接计算的 softmax 与负对数，展示温度以及困难负样本对稀疏描述训练的影响。"
+  },
+  "loop-overview": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "外观相似只产生候选；几何对应确认后才能添加约束，并把校正传播到地图。"
+  },
+  "loop-graphs": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "共享地标可以诱导相机间共视连接；共享点数本身不等于相对位姿测量及其信息矩阵。"
+  },
+  "loop-frames": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "变换复合遵循坐标路径。相机位姿的存储方向与投影时需要的方向相反，代码阅读必须先核对。"
+  },
+  "loop-local-ba": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "局部 BA 的观测不只来自活动相机，也来自看到这些地标的固定外围相机。"
+  },
+  "loop-imu": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "惯性因子的依赖关系示意；圆为位姿，方为速度/偏置，金色小方块代表联合惯性残差。"
+  },
+  "loop-schur": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "左图为块稀疏性示意，右侧数值来自正文手算例子；消元后仍保留原始非线性观测用于下一次迭代。"
+  },
+  "loop-marginalization": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "金色因子表示旧信息形成的先验；把状态移出窗口与只在一次线性求解中消元是不同操作。"
+  },
+  "loop-geometry": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "不同维度的对应决定几何问题：本质矩阵通常不提供米制平移，PnP 依赖已有地图尺度。"
+  },
+  "loop-error-spread": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "按正文约束最小二乘精确计算的误差分配。相等权重才对应平均摊开。"
+  },
+  "loop-false-edge": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "右图按公式计算 Huber 与平方损失。鲁棒核减缓大残差增长，不保证识别所有自洽的假回环。"
+  },
+  "loop-essential": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "稀疏全局传播图的教学示意；红为回环，绿为额外强共视连接，父子树保证基本连通。"
+  },
+  "loop-map-correction": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "保持参考关键帧中的点坐标，从而保持其投影；同一点应避免被多个邻居重复校正。"
+  },
+  "loop-fusion": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "地标融合改变观测关联结构；它使两段历史的像素真正约束同一个三维变量。"
+  },
+  "loop-async": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "横轴为时间；优化使用一个历史快照，提交时还要更新未参与该次优化的新关键帧与地图点。"
+  },
+  "loop-atlas": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "金色窗口示意两张地图接缝处参与联合优化的状态；外围状态作为边界，随后传播校正。"
+  },
+  "loop-vins-two-graphs": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "两种历史结构同时存在；独立 loop_fusion 的位姿图校正并不重建局部窗口已经丢弃的全部非线性测量。"
+  },
+  "loop-okvis-compress": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "Schur 消去地标后形成相对位姿因子；信息矩阵携带方向相关约束，但成对压缩仍可能重复计算共享观测。"
+  },
+  "loop-okvis-revive": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "压缩因子和原始数据归档承担不同职责；回环恢复的是保存下来的观测，不是从 Hessian 唯一反演出来的图像。"
+  },
+  "loop-submaps": {
+    "article": "loop-closure",
+    "width": 1100,
+    "height": 470,
+    "caption": "刚性移动子地图降低全局校正成本；若子地图内部已发生明显形变，只修改锚定位姿仍不够。"
+  }
+}

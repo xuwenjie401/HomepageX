@@ -1,0 +1,112 @@
+{
+  "orbslam2": {
+    "repo": "raulmur/ORB_SLAM2",
+    "sha": "f2e6f51cdc8d067655d90a78c06261378e07e8f3",
+    "articles": [
+      "loop-closure"
+    ],
+    "files": [
+      "src/KeyFrame.cc",
+      "src/LocalMapping.cc",
+      "src/LoopClosing.cc",
+      "src/Optimizer.cc"
+    ]
+  },
+  "orbslam3": {
+    "repo": "UZ-SLAMLab/ORB_SLAM3",
+    "sha": "4452a3c4ab75b1cde34e5505a36ec3f9edcdc4c4",
+    "articles": [
+      "loop-closure"
+    ],
+    "files": [
+      "src/LocalMapping.cc",
+      "src/LoopClosing.cc",
+      "src/Optimizer.cc"
+    ]
+  },
+  "vinsfusion": {
+    "repo": "HKUST-Aerial-Robotics/VINS-Fusion",
+    "sha": "be55a937a57436548ddfb1bd324bc1e9a9e828e0",
+    "articles": [
+      "loop-closure"
+    ],
+    "files": [
+      "loop_fusion/src/keyframe.cpp",
+      "loop_fusion/src/pose_graph.cpp",
+      "loop_fusion/src/pose_graph.h",
+      "vins_estimator/src/estimator/estimator.cpp",
+      "vins_estimator/src/factor/marginalization_factor.cpp"
+    ]
+  },
+  "okvis2": {
+    "repo": "ethz-mrl/okvis2",
+    "sha": "a2ea00688cd10988aae7bd52ab7935ce9a657ec0",
+    "articles": [
+      "loop-closure"
+    ],
+    "files": [
+      "README.md",
+      "okvis_ceres/src/ViSlamBackend.cpp",
+      "okvis_frontend/src/Frontend.cpp"
+    ]
+  },
+  "aliked": {
+    "repo": "Shiaoming/ALIKED",
+    "sha": "683d7c65197395c0b3f01ebe76e1084a27e73a65",
+    "articles": [
+      "aliked"
+    ],
+    "files": [
+      "README.md",
+      "nets/aliked.py",
+      "nets/blocks.py"
+    ]
+  },
+  "letnet": {
+    "repo": "linyicheng1/LET-NET",
+    "sha": "64dfae986d45a59e63ec58a83e96f7c79dbbeb41",
+    "articles": [
+      "letnet"
+    ],
+    "files": [
+      "README.md",
+      "tracking.cpp"
+    ]
+  },
+  "letnettrain": {
+    "repo": "linyicheng1/LET-NET-Train",
+    "sha": "72fd0106c909b1ff042b1a84ea75baadd8689be8",
+    "articles": [
+      "letnet"
+    ],
+    "files": [
+      "README.md",
+      "main.py"
+    ]
+  },
+  "letnet2": {
+    "repo": "linyicheng1/LET-NET2",
+    "sha": "4713802d256ecf3bb463837e80b9d3d0ccba5a1a",
+    "articles": [
+      "letnet"
+    ],
+    "files": [
+      "README.md",
+      "lk.py",
+      "model.py",
+      "tartanair.py",
+      "train.py"
+    ]
+  },
+  "lightglue": {
+    "repo": "cvg/LightGlue",
+    "sha": "eb42fee2d71449efb0aa5c10549752b5d75384d8",
+    "articles": [
+      "superglue-lightglue"
+    ],
+    "files": [
+      "README.md",
+      "lightglue/lightglue.py"
+    ]
+  }
+}

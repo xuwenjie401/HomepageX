@@ -1,0 +1,3238 @@
+{
+  "sift": {
+    "article": "gftt-klt-sift",
+    "title": "Lowe, SIFT (2004 author manuscript)",
+    "url": "https://www.cs.ubc.ca/~lowe/papers/ijcv04.pdf",
+    "sha256": "06f8acc68583e8b7a041d1fda84db83283e49f6cedc4638ea5cdd2f61caf8e3e",
+    "figures": [
+      {
+        "id": "1",
+        "page": 6,
+        "box": [
+          0.155,
+          0.09,
+          0.845,
+          0.4526
+        ],
+        "caption": "高斯金字塔与相邻尺度差分。"
+      },
+      {
+        "id": "2",
+        "page": 7,
+        "box": [
+          0.155,
+          0.09,
+          0.845,
+          0.2708
+        ],
+        "caption": "一个 DoG 候选与 26 个邻居比较。"
+      },
+      {
+        "id": "3",
+        "page": 8,
+        "box": [
+          0.13,
+          0.09,
+          0.89,
+          0.3132
+        ],
+        "caption": "尺度采样密度对重复率和点数量的不同影响。"
+      },
+      {
+        "id": "4",
+        "page": 9,
+        "box": [
+          0.155,
+          0.09,
+          0.845,
+          0.355
+        ],
+        "caption": "初始高斯平滑程度与重复性。"
+      },
+      {
+        "id": "5",
+        "page": 11,
+        "box": [
+          0.155,
+          0.09,
+          0.845,
+          0.4786
+        ],
+        "caption": "低对比度与边缘响应筛除前后的点。"
+      },
+      {
+        "id": "6",
+        "page": 14,
+        "box": [
+          0.155,
+          0.09,
+          0.845,
+          0.355
+        ],
+        "caption": "增加噪声后，检测、方向和描述匹配分别失去多少稳定性。"
+      },
+      {
+        "id": "7",
+        "page": 15,
+        "box": [
+          0.155,
+          0.09,
+          0.845,
+          0.3036
+        ],
+        "caption": "局部梯度如何聚合成分格方向直方图。"
+      },
+      {
+        "id": "8",
+        "page": 17,
+        "box": [
+          0.155,
+          0.09,
+          0.845,
+          0.355
+        ],
+        "caption": "空间格与方向数量对描述区分力的影响。"
+      },
+      {
+        "id": "9",
+        "page": 18,
+        "box": [
+          0.155,
+          0.09,
+          0.845,
+          0.355
+        ],
+        "caption": "平面视角倾斜下的检测和匹配退化。"
+      },
+      {
+        "id": "10",
+        "page": 19,
+        "box": [
+          0.155,
+          0.09,
+          0.845,
+          0.355
+        ],
+        "caption": "数据库干扰点增多后的匹配表现。"
+      },
+      {
+        "id": "11",
+        "page": 20,
+        "box": [
+          0.155,
+          0.09,
+          0.845,
+          0.355
+        ],
+        "caption": "正确和错误匹配的最近邻距离比值分布。"
+      },
+      {
+        "id": "12",
+        "page": 23,
+        "box": [
+          0.155,
+          0.09,
+          0.845,
+          0.2836
+        ],
+        "caption": "遮挡与杂乱背景中的多物体识别。"
+      },
+      {
+        "id": "13",
+        "page": 24,
+        "box": [
+          0.155,
+          0.09,
+          0.845,
+          0.5108
+        ],
+        "caption": "通过局部特征进行场景位置识别。"
+      }
+    ],
+    "label": "SIFT"
+  },
+  "shi-tomasi": {
+    "article": "gftt-klt-sift",
+    "title": "Shi & Tomasi, Good Features to Track (CVPR 1994)",
+    "url": "https://users.cs.duke.edu/~tomasi/papers/shi/shiCvpr94.pdf",
+    "sha256": "803f823584eb9300a2294e14f89dfc065b5cee311025e2d41e11ceca0d6ddab0",
+    "figures": [
+      {
+        "id": "1",
+        "page": 4,
+        "box": [
+          0.08,
+          0.417,
+          0.49,
+          0.497
+        ],
+        "caption": "交通标志随相机接近而变化。"
+      },
+      {
+        "id": "2",
+        "page": 4,
+        "box": [
+          0.08,
+          0.54,
+          0.49,
+          0.659
+        ],
+        "caption": "原图块与仿射校正后的图块。"
+      },
+      {
+        "id": "3",
+        "page": 4,
+        "box": [
+          0.5,
+          0.145,
+          0.92,
+          0.388
+        ],
+        "caption": "平移与仿射残差对正常形变和遮挡的反应。"
+      },
+      {
+        "id": "4",
+        "page": 4,
+        "box": [
+          0.5,
+          0.427,
+          0.92,
+          0.503
+        ],
+        "caption": "被逐步遮挡的背景窗口。"
+      },
+      {
+        "id": "5",
+        "page": 4,
+        "box": [
+          0.5,
+          0.55,
+          0.92,
+          0.674
+        ],
+        "caption": "仿射对齐不能恢复已被遮挡的内容。"
+      },
+      {
+        "id": "6",
+        "page": 5,
+        "box": [
+          0.09,
+          0.419,
+          0.483,
+          0.56
+        ],
+        "caption": "合成斑点的迭代仿射对齐。"
+      },
+      {
+        "id": "7",
+        "page": 5,
+        "box": [
+          0.5,
+          0.107,
+          0.92,
+          0.294
+        ],
+        "caption": "仿射参数的收敛轨迹。"
+      },
+      {
+        "id": "8",
+        "page": 5,
+        "box": [
+          0.5,
+          0.735,
+          0.92,
+          0.848
+        ],
+        "caption": "真实图块的拟合与收敛。"
+      },
+      {
+        "id": "9",
+        "page": 6,
+        "box": [
+          0.08,
+          0.11,
+          0.49,
+          0.251
+        ],
+        "caption": "在只有部分仿射自由度可观测时拟合。"
+      },
+      {
+        "id": "10",
+        "page": 6,
+        "box": [
+          0.51,
+          0.112,
+          0.899,
+          0.317
+        ],
+        "caption": "前向移动相机拍摄的第一帧；随后图像中的物体会逐渐变大。"
+      },
+      {
+        "id": "11",
+        "page": 6,
+        "box": [
+          0.51,
+          0.362,
+          0.899,
+          0.572
+        ],
+        "caption": "按局部纹理条件筛出的 102 个跟踪点，展示良好初始可定位性。"
+      },
+      {
+        "id": "12",
+        "page": 6,
+        "box": [
+          0.51,
+          0.62,
+          0.899,
+          0.863
+        ],
+        "caption": "只用平移残差监测长期跟踪时，多数曲线混在一起，难以区分好坏特征。"
+      },
+      {
+        "id": "13",
+        "page": 7,
+        "box": [
+          0.08,
+          0.217,
+          0.49,
+          0.428
+        ],
+        "caption": "后续监测曲线所对应的特征位置。"
+      },
+      {
+        "id": "14",
+        "page": 7,
+        "box": [
+          0.08,
+          0.465,
+          0.49,
+          0.721
+        ],
+        "caption": "不同特征随时间变化的图块。"
+      },
+      {
+        "id": "15",
+        "page": 7,
+        "box": [
+          0.5,
+          0.425,
+          0.92,
+          0.652
+        ],
+        "caption": "仿射监测区别稳定图块与失效图块。"
+      }
+    ],
+    "label": "Shi–Tomasi"
+  },
+  "superglue": {
+    "article": "superglue-lightglue",
+    "title": "SuperGlue",
+    "url": "https://openaccess.thecvf.com/content_CVPR_2020/papers/Sarlin_SuperGlue_Learning_Feature_Matching_With_Graph_Neural_Networks_CVPR_2020_paper.pdf",
+    "sha256": "79b367ea82e7eb3cdff2ddf4bf153d29acf4da8c4f18f1466ce877adc18bd383",
+    "figures": [
+      {
+        "id": "1",
+        "page": 1,
+        "box": [
+          0.4967,
+          0.25,
+          0.8987,
+          0.4432
+        ],
+        "source_caption": "Figure 1: Feature matching with SuperGlue. Our ap- proach establishes pointwise correspondences from off-the- shelf local features: it acts as a middle-end between hand- crafted or learned front-end and back-end. SuperGlue uses a graph neural network and attention to solve an assignment optimization problem, and handles partial point visibility and occlusion elegantly, producing a partial assignment.",
+        "caption": "局部检测器、SuperGlue 与几何后端的接口。SuperGlue 接收已有点和描述子，输出带未匹配判断的对应。"
+      },
+      {
+        "id": "2",
+        "page": 2,
+        "box": [
+          0.0739,
+          0.085,
+          0.476,
+          0.3264
+        ],
+        "source_caption": "Figure 2: SuperGlue correspondences. For these two challenging indoor image pairs, matching with SuperGlue results in accurate poses while other learned or handcrafted methods fail (correspondences colored by epipolar error).",
+        "caption": "困难室内图像对的匹配，连线按对极误差着色。看重复结构与视角变化中的错误连线，不能只比较总匹配数。"
+      },
+      {
+        "id": "3",
+        "page": 3,
+        "box": [
+          0.0739,
+          0.065,
+          0.8987,
+          0.2288
+        ],
+        "source_caption": "Figure 3: The SuperGlue architecture. SuperGlue is made up of two major components: the attentional graph neural network (Section 3.1), and the optimal matching layer (Section 3.2). The ﬁrst component uses a keypoint encoder to map keypoint positions p and their visual descriptors d into a single vector, and then uses alternating self- and cross-attention layers (repeated L times) to create more powerful representations f. The optimal matching layer creates an M by N score matrix, augments it with dustbins, then ﬁnds the optimal partial assignment using the Sinkhorn algorithm (for T iterations).",
+        "caption": "关键点编码、交替自注意力/交叉注意力和最优传输的完整结构。沿着描述子变化追踪上下文如何进入最终分配。"
+      },
+      {
+        "id": "4",
+        "page": 4,
+        "box": [
+          0.0739,
+          0.085,
+          0.476,
+          0.3011
+        ],
+        "source_caption": "Figure 4: Visualizing self- and cross-attention. Atten- tional aggregation builds a dynamic graph between key- points. Weights αij are shown as rays. Self-attention (top) can attend anywhere in the same image, e.g. distinctive lo- cations, and is thus not restricted to nearby locations. Cross- attention (bottom) attends to locations in the other image, such as potential matches that have a similar appearance.",
+        "caption": "自注意力与交叉注意力的权重可视化。自注意力能够连接同图远处的可区分区域，不受局部窗口限制。"
+      },
+      {
+        "id": "5",
+        "page": 6,
+        "box": [
+          0.496,
+          0.381,
+          0.899,
+          0.505
+        ],
+        "source_caption": "Figure 5: Indoor and outdoor pose estimation. Super- Glue works with SIFT or SuperPoint local features and con- sistently improves by a large margin the pose accuracy over OANet, a state-of-the-art outlier rejection neural network.",
+        "caption": "室内与室外位姿估计对比。应在相同局部特征与误差阈值下比较，避免把特征更换的收益都归因于匹配器。"
+      },
+      {
+        "id": "6",
+        "page": 8,
+        "box": [
+          0.075,
+          0.085,
+          0.9,
+          0.657
+        ],
+        "source_caption": "2867c6274d259fc81d6cf08a43d225 Figure 6: Qualitative image matches. We compare SuperGlue to the Nearest Neighbor (NN) matcher with two outlier rejectors, handcrafted and learned, in three environments. SuperGlue consistently estimates more correct matches (green lines) and fewer mismatches (red lines), successfully coping with repeated texture, large viewpoint, and illumination changes.",
+        "caption": "与最近邻加外点过滤的定性比较。绿色为正确对应、红色为错误对应，重点看重复纹理与视角变化下的内点覆盖。"
+      },
+      {
+        "id": "7",
+        "page": 8,
+        "box": [
+          0.0739,
+          0.706,
+          0.8987,
+          0.868
+        ],
+        "source_caption": "Figure 7: Visualizing attention. We show self- and cross-attention weights αij at various layers and heads. SuperGlue ex- hibits a diversity of patterns: it can focus on global or local context, self-similarities, distinctive features, or match candidates.",
+        "caption": "不同层和注意力头关注不同信息。图中同时出现局部、全局、自相似和候选匹配模式，不应给所有头赋予同一种语义。"
+      }
+    ],
+    "label": "SuperGlue"
+  },
+  "lightglue": {
+    "article": "superglue-lightglue",
+    "title": "LightGlue",
+    "url": "https://arxiv.org/pdf/2306.13643v1",
+    "sha256": "2d77fcdfdc38cc4704bee343092502f819e9c7119ca4fd907ef10f2efa47891f",
+    "figures": [
+      {
+        "id": "1",
+        "page": 1,
+        "box": [
+          0.4967,
+          0.25,
+          0.8992,
+          0.4643
+        ],
+        "source_caption": "Figure 1. LightGlue matches sparse features faster and better than existing approaches like SuperGlue. Its adaptive stopping mechanism gives a fine-grained control over the speed vs. accuracy trade-off. Our final, optimized model ⋆delivers an accuracy closer to the dense matcher LoFTR at an 8× higher speed, here in typical outdoor conditions.",
+        "caption": "匹配速度与位姿精度的折中。曲线上的不同点包含提前停止等设置，不能只取最快和最准的两端拼成一个配置。"
+      },
+      {
+        "id": "2",
+        "page": 2,
+        "box": [
+          0.0739,
+          0.08,
+          0.4765,
+          0.3093
+        ],
+        "source_caption": "Figure 2. Depth adaptivity. LigthGlue is faster at matching easy image pairs (top) than difficult ones (bottom) because it can stop at earlier layers when its predictions are confident.",
+        "caption": "容易与困难图像对需要不同深度。上方容易样本较早停止，下方难样本继续聚合上下文。"
+      },
+      {
+        "id": "3",
+        "page": 3,
+        "box": [
+          0.0739,
+          0.08,
+          0.8987,
+          0.2662
+        ],
+        "source_caption": "Figure 3. The LightGlue architecture. Given a pair of input local features (d, p), each layer augments the visual descriptors (•,•) with context based on self- and cross-attention units with positional encoding ⊙. A confidence classifier c helps decide whether to stop the inference. If few points are confident, the inference proceeds to the next layer but we prune points that are confidently unmatchable. Once a confident state if reached, LightGlue predicts an assignment between points based on their pariwise similarity and unary matchability.",
+        "caption": "每层既更新描述，也估计匹配与判断置信度。停止深度与点剪枝是两个不同的自适应维度。"
+      },
+      {
+        "id": "4",
+        "page": 4,
+        "box": [
+          0.4967,
+          0.08,
+          0.8987,
+          0.2343
+        ],
+        "source_caption": "Figure 4. Point pruning. As LigthGlue aggregates context, it can find out early that some points (•) are unmatchable and thus exclude them from subsequent layers. Other, non-repeatable points are excluded in later layers: • →• →•. This reduces the inference time and the search space (•) to ultimately find good matches fast.",
+        "caption": "逐层剔除不可匹配点。先排除视野不重叠区域，再逐渐识别不重复的检测点。"
+      },
+      {
+        "id": "5",
+        "page": 5,
+        "box": [
+          0.4967,
+          0.085,
+          0.9011,
+          0.2033
+        ],
+        "source_caption": "Figure 5. Ease of training. The LightGlue architecture vastly im- proves the speed of convergence of the pre-training on synthetic homographies. After 5M image pairs (only 2 GPU-days), LighGlue achieves -33% loss at the final layer and +4% match recall. Super- Glue requires over 7 days of training to reach a similar accuracy.",
+        "caption": "单应预训练的收敛速度比较。这里衡量训练图像对数量与训练目标，不是最终真实场景定位成功率。"
+      },
+      {
+        "id": "6",
+        "page": 8,
+        "box": [
+          0.09,
+          0.281,
+          0.46,
+          0.4968
+        ],
+        "source_caption": "Figure 6. Benefit of the matchability. The matchability helps filter out outliers (red) that are visually similar, retaining only inlier correspondences (green).",
+        "caption": "可匹配性对错误对应的过滤。视觉上相似的点也可能没有真实对应，matchability 提供额外拒绝能力。"
+      },
+      {
+        "id": "7",
+        "page": 8,
+        "box": [
+          0.496,
+          0.29,
+          0.899,
+          0.3981
+        ],
+        "source_caption": "Figure 7. Run time vs number of keypoints. The full LightGlue model is 35% faster than SuperGlue and the adaptive depth and width make it even faster. SGMNet is comparably fast only for 4k keypoints and above but is much slower for standard input sizes.",
+        "caption": "运行时间随关键点数变化。自适应深度与宽度共同影响耗时，点数不同不宜直接比较单个毫秒数。"
+      },
+      {
+        "id": "8",
+        "page": 9,
+        "box": [
+          0.0739,
+          0.085,
+          0.8987,
+          0.803
+        ],
+        "source_caption": "Figure 8. Visualization of adaptive depth and width. From top to bottom, we show three easy, medium and difficult image pairs. The left column shows how LightGlue reduces its width: it finds out early that some points (•) are unmatchable (mostly by visual overlap) and discards non-repeatable points in later layers: • →• →•. This is very effective on difficult pairs. LightGlue looks for matches only in the reduced search space (•). The matchability scores (middle column, from non-matchable • to likely matchable •), help find accurate correspondences and are almost binary. On the right we visualize predicted matches as epipolar in- or outliers. We report the run time and stopping layer for each pair. On easy samples, LightGlue stops after only 2-3 layers, running with close to 100 FPS.",
+        "caption": "由易到难的图像对，同时展示剪枝、可匹配性与最终连线。注意困难样本何时仍需后续层。"
+      },
+      {
+        "id": "9",
+        "page": 10,
+        "box": [
+          0.0739,
+          0.08,
+          0.9005,
+          0.8186
+        ],
+        "source_caption": "Figure 9. Comparison of features produced by LightGlue for different local features. We compare the outputs of SIFT+LightGlue (left), SuperPoint+LightGlue (middle) and DISK+LightGlue (right).",
+        "caption": "同一匹配框架接收 SIFT、SuperPoint、DISK 的结果。输入特征的检测覆盖不同，匹配器无法补回没有检测的点。"
+      },
+      {
+        "id": "10",
+        "page": 12,
+        "box": [
+          0.4967,
+          0.38,
+          0.8987,
+          0.6411
+        ],
+        "source_caption": "Figure 10. Failure cases on InLoc [70]. LightGlue sometimes matches repeated objects in the scene with strong texture, instead of the geometric structure.",
+        "caption": "InLoc 失败案例：重复物体和强纹理可能胜过真正的几何结构。高置信匹配仍需后端几何验证。"
+      },
+      {
+        "id": "11",
+        "page": 13,
+        "box": [
+          0.4967,
+          0.345,
+          0.9011,
+          0.473
+        ],
+        "source_caption": "layer Figure 11. Continuous detection of unmatchable points. After just a few layers the network detects many points which are un- matchable, and we exclude them from context aggregation.",
+        "caption": "不可匹配点随层数逐步被识别。曲线说明剪枝判断是在推理中累积证据，而非一次阈值筛除。"
+      },
+      {
+        "id": "12",
+        "page": 14,
+        "box": [
+          0.4967,
+          0.08,
+          0.9011,
+          0.21
+        ],
+        "source_caption": "Figure 12. Examples of synthetic homographies. We show the original images (left) and two augmented examples (center and right) resulting from strong perspective transformations and ex- treme photometric augmentations.",
+        "caption": "合成单应预训练样本，包含透视和强光度增强。平面变换监督仍不能覆盖真实三维遮挡的全部变化。"
+      },
+      {
+        "id": "13",
+        "page": 15,
+        "box": [
+          0.4967,
+          0.09,
+          0.9011,
+          0.1802
+        ],
+        "source_caption": "Figure 13. Run time breakdown. We evluate the runtime of self-, cross- and partial assignment layers on 1024 keypoints for Super- Glue and LightGlue. Most of LightGlue’s default inference time improvements stem from a significantly faster partial assignment layer and reuse of computations in bidirectional cross-attention.",
+        "caption": "固定 1024 点的模块耗时拆分。双向交叉注意力复用与更轻的分配层是速度收益的重要来源。"
+      }
+    ],
+    "label": "LightGlue"
+  },
+  "netvlad": {
+    "article": "netvlad-hfnet",
+    "title": "NetVLAD",
+    "url": "https://arxiv.org/pdf/1511.07247v3",
+    "sha256": "af87a777e5e7c9e8f9e7b93522f350df8b63d4367fd8afebf0913069b33c2141",
+    "figures": [
+      {
+        "id": "1",
+        "page": 1,
+        "box": [
+          0.4967,
+          0.245,
+          0.8987,
+          0.374
+        ],
+        "source_caption": "Figure 1. Our trained NetVLAD descriptor correctly recognizes the location (b) of the query photograph (a) despite the large amount of clutter (people, cars), changes in viewpoint and com- pletely different illumination (night vs daytime). Please see ap- pendix C for more examples.",
+        "caption": "夜间查询与白天数据库图像。地点识别需要跨照明、遮挡与视角保持全局描述的一致性。"
+      },
+      {
+        "id": "2",
+        "page": 4,
+        "box": [
+          0.0739,
+          0.08,
+          0.8987,
+          0.2066
+        ],
+        "source_caption": "Figure 2. CNN architecture with the NetVLAD layer. The layer can be implemented using standard CNN layers (convolutions, softmax, L2-normalization) and one easy-to-implement aggregation layer to perform aggregation in equation (4) (“VLAD core”), joined up in a directed acyclic graph. Parameters are shown in brackets.",
+        "caption": "NetVLAD 的可微计算路径。卷积特征经软分配、残差聚合与归一化，所有可训练部分都能接收检索目标梯度。"
+      },
+      {
+        "id": "3",
+        "page": 4,
+        "box": [
+          0.4967,
+          0.24,
+          0.8987,
+          0.3515
+        ],
+        "source_caption": "Figure 3. Beneﬁts of supervised VLAD. Red and green cir- cles are local descriptors from two different images, assigned to the same cluster (Voronoi cell). Under the VLAD encoding, their contribution to the similarity score between the two images is the scalar product (as ﬁnal VLAD vectors are L2-normalized) between the corresponding residuals, where a residual vector is computed as the difference between the descriptor and the cluster’s anchor point. The anchor point ck can be interpreted as the origin of a new coordinate system local to the the speciﬁc cluster k. In stan- dard VLAD, the anchor is chosen as the cluster centre (×) in order to evenly distribute the residuals across the database. However, in a supervised setting where the two descriptors are known to be- long to images which should not match, it is possible to learn a better anchor (⋆) which causes the scalar product between the new residuals to be small.",
+        "caption": "同一簇内的残差内积影响图像相似性。学习簇中心和分配可改变哪些局部变化被保留。"
+      },
+      {
+        "id": "4",
+        "page": 5,
+        "box": [
+          0.0739,
+          0.085,
+          0.476,
+          0.3274
+        ],
+        "source_caption": "(a) (b) (c) Figure 4. Google Street View Time Machine examples. Each column shows perspective images generated from panoramas from nearby locations, taken at different times. A well designed method can use this source of imagery to learn to be invariant to changes in viewpoint and lighting (a-c), and to moderate occlusions (b). It can also learn to suppress confusing visual information such as clouds (a), vehicles and people (b-c), and to chose to either ignore vegetation or to learn a season-invariant vegetation representation (a-c). More examples are given in appendix B.",
+        "caption": "Street View Time Machine 的近地点跨时刻图像。GPS 邻近提供弱标签，但不保证每一对都共享可见内容。"
+      },
+      {
+        "id": "5",
+        "page": 7,
+        "box": [
+          0.0739,
+          0.07,
+          0.8987,
+          0.2609
+        ],
+        "source_caption": "Figure 5. Comparison of our methods versus off-the-shelf networks and state-of-the-art. The base CNN architecture is denoted in brackets: (A)lexNet and (V)GG-16. Trained representations (red and magenta for AlexNet and VGG-16) outperform by a large margin off- the-shelf ones (blue, cyan, green for AlexNet, Places205, VGG-16), fV LAD (-o-) works better than fmax (-x-), and our fV LAD+whitening (-∗-) representation based on VGG-16 sets the state-of-the-art on all datasets. [80] only evaluated on Tokyo 24/7 as the method relies on depth data not available in other datasets. Additional results are shown in appendix C.",
+        "caption": "训练表示与现成分类特征在地点识别上的对比。读曲线时同时看骨干、聚合方式和候选数量。"
+      },
+      {
+        "id": "6",
+        "page": 8,
+        "box": [
+          0.07,
+          0.291,
+          0.486,
+          0.4762
+        ],
+        "source_caption": "Figure 6. What has been learnt? Each column corresponds to one image (top row) and the emphasis various networks (under fmax) give to different patches. Each pixel in the heatmap corre- sponds to the change in representation when a large gray occluding square (100 × 100) is placed over the image in the same position; all heatmaps have the same colour scale. Note that the original image and the heatmaps are not in perfect alignment as nearby patches overlap 50% and patches touching an image edge are dis- carded to prevent border effects. All images are from Pitts250k- val that the network hasn’t seen at training. Further examples are given in appendix C.",
+        "caption": "遮挡敏感性热图展示哪些区域影响表征。它不是注意力权重；每个值来自遮住对应区域后表示发生的变化。"
+      },
+      {
+        "id": "7",
+        "page": 13,
+        "box": [
+          0.0739,
+          0.085,
+          0.8987,
+          0.3444
+        ],
+        "source_caption": "(a) (b) (c) (d) (e) (f) Figure 7. Google Street View Time Machine examples. Each column shows perspective images generated from panoramas from nearby locations, taken at different times. The goal of this work is to learn from this imagery an image representation that: has a degree of invari- ance to changes in viewpoint and illumination (a-f); has tolerance to partial occlusions (c-f); suppresses confusing visual information such as clouds (a,c), vehicles (c-f) and people (c-f); and chooses to either ignore vegetation or learn a season-invariant vegetation representation (a-f).",
+        "caption": "更多跨时间、视角与遮挡的训练候选。植被、车辆和行人说明需要抑制随时间变化的干扰。"
+      },
+      {
+        "id": "8",
+        "page": 12,
+        "box": [
+          0.0739,
+          0.31,
+          0.476,
+          0.4532
+        ],
+        "source_caption": "(b) Tokyo 24/7 Figure 8. Place recognition accuracy versus dimensionality. Note the log scale of the x-axis. 128-D NetVLAD performs com- parably to the 4× larger 512-D fmax on Tokyo 24/7. For the same dimension (512-D) NetVLAD convincingly outperforms fmax.",
+        "caption": "维度与检索性能的折中，横轴为对数尺度。白化和降维可以节省数据库存储，但低维收益应按同一协议判断。"
+      },
+      {
+        "id": "9",
+        "page": 13,
+        "box": [
+          0.0739,
+          0.42,
+          0.8987,
+          0.6641
+        ],
+        "source_caption": "Figure 9. What has been learnt? Each column corresponds to one image (top row) and the emphasis various networks (under fmax) give to different patches. Each pixel in the heatmap corresponds to the change in representation when a large gray occluding square (100×100) is placed over the image in the same position; all heatmaps have the same colour scale. Note that the original image and the heatmaps are not in perfect alignment as nearby patches overlap 50% and patches touching an image edge are discarded to prevent border effects. All images are from Pitts250k-val that the network hasn’t seen at training.",
+        "caption": "更多遮挡敏感性热图。不同网络依赖区域不同，较强的建筑响应提供解释线索，但不能单独证明因果。"
+      },
+      {
+        "id": "10",
+        "page": 15,
+        "box": [
+          0.0739,
+          0.12,
+          0.8987,
+          0.8183
+        ],
+        "source_caption": "Figure 10. Comparison of our methods versus off-the-shelf networks and state-of-the-art. The base CNN architecture is denoted in brackets: (A)lexNet and (V)GG-16. Trained representations (red and magenta for AlexNet and VGG-16) outperform by a large margin off- the-shelf ones (blue, cyan, green for AlexNet, Places205, VGG-16), fV LAD (-o-) works better than fmax (-x-), and our fV LAD+whitening (-∗-) representation based on VGG-16 sets the state-of-the-art on all datasets. [80] only evaluated on Tokyo 24/7 as the method relies on depth data not available in other datasets.",
+        "caption": "多数据集完整检索曲线。分别比较相同骨干和表示维度，不把不同条件的最高点合成一个结论。"
+      },
+      {
+        "id": "11",
+        "page": 16,
+        "box": [
+          0.0739,
+          0.125,
+          0.8987,
+          0.7848
+        ],
+        "source_caption": "Figure 11. Examples of retrieval results for challenging queries on Tokyo 24/7. Each column corresponds to one test case: the query is shown in the ﬁrst row, the top retrieved image using our best method (trained VGG-16 NetVLAD + whitening) in the second, and the top retrieved image using the best baseline (RootSIFT + VLAD + whitening) in the last row. The green and red borders correspond to correct and incorrect retrievals, respectively. Note that our learnt descriptor can recognize the same place despite large changes in appearance due to illumination (day/night), viewpoint and partial occlusion by cars, trees and people.",
+        "caption": "Tokyo 24/7 的查询、NetVLAD 返回与传统基线返回；绿色边框为正确，红色为错误。跨昼夜也有明显失败列。"
+      },
+      {
+        "id": "12",
+        "page": 17,
+        "box": [
+          0.0739,
+          0.285,
+          0.8987,
+          0.6097
+        ],
+        "source_caption": "Figure 12. Examples of retrieval results for challenging queries on Tokyo 24/7. Each column corresponds to one test case: the query is shown in the ﬁrst row, the top retrieved image using our best method (trained VGG-16 NetVLAD + whitening) in the second, and the top retrieved image using the best baseline (RootSIFT + VLAD + whitening) in the last row. The green and red borders correspond to correct and incorrect retrievals, respectively. Note that our learnt descriptor can recognize the same place despite large changes in appearance due to illumination (day/night), viewpoint and partial occlusion by cars, trees and people. The last column corresponds to a difﬁcult query, which is hard for our method because of its overall very dark appearance.",
+        "caption": "额外困难检索样本保留了不利案例。外观变化和可见结构不足仍可能使最相似向量对应错误地点。"
+      }
+    ],
+    "label": "NetVLAD"
+  },
+  "hfnet": {
+    "article": "netvlad-hfnet",
+    "title": "HF-Net",
+    "url": "https://arxiv.org/pdf/1812.03506v2",
+    "sha256": "e4ad7449b2b501a929230861d7732f15982a3f6d1da659147ade5c89fa5c7166",
+    "figures": [
+      {
+        "id": "1",
+        "page": 1,
+        "box": [
+          0.4967,
+          0.245,
+          0.8987,
+          0.4259
+        ],
+        "source_caption": "Figure 1. Hierarchical localization. A global search ﬁrst retrieves candidate images, which are subsequently matched using powerful local features to estimate an accurate 6-DoF pose. This two-step process is both efﬁcient and robust in challenging situations.",
+        "caption": "先全局检索，再局部特征匹配求 6DoF 位姿。候选检索与几何定位解决不同粒度的问题。"
+      },
+      {
+        "id": "2",
+        "page": 3,
+        "box": [
+          0.0739,
+          0.085,
+          0.476,
+          0.2681
+        ],
+        "source_caption": "Figure 2. The hierarchical localization with HF-Net is signiﬁ- cantly simpler than concurrent approaches [43, 51], yet more ro- bust, accurate, and efﬁcient.",
+        "caption": "HF-Net 层次定位的模块与运行成本。沿图看检索、局部匹配和位姿估计，而不是把它当成单网络直接回归位姿。"
+      },
+      {
+        "id": "3",
+        "page": 4,
+        "box": [
+          0.0739,
+          0.085,
+          0.476,
+          0.2851
+        ],
+        "source_caption": "Figure 3. HF-Net generates three outputs from a single image: a global descriptor, a map of keypoint detection scores, and dense keypoint descriptors. All three heads are trained jointly with multi- task distillation from different teacher networks.",
+        "caption": "一个共享骨干产生全局描述、局部分数和局部描述图。三个头接受不同教师的联合蒸馏。"
+      },
+      {
+        "id": "4",
+        "page": 7,
+        "box": [
+          0.0739,
+          0.27,
+          0.8987,
+          0.4191
+        ],
+        "source_caption": "Figure 4. Cumulative distribution of position errors for the Aachen night (left), RobotCar night-all (center) and CMU suburban (right) datasets. On Aachen, HF-Net and NV+SP have similar performance and outperform approaches based on global retrieval and on feature matching. On RobotCar, HF+Net performs worse than NV+SP, which suggests a limitation of the distillation process. On CMU, the hierarchical localization shows a signiﬁcant boost over other methods, particularly for small distance thresholds.",
+        "caption": "Aachen、RobotCar 和 CMU 的位置误差累积分布。RobotCar 上学生落后于组合教师，提示蒸馏在困难条件下仍有损失。"
+      },
+      {
+        "id": "5",
+        "page": 8,
+        "box": [
+          0.0739,
+          0.085,
+          0.476,
+          0.3238
+        ],
+        "source_caption": "Figure 5. Successful localization with HF-Net on the Aachen Day-Night dataset. We show two queries (left) and the retrieved database images with the most inlier matches (right).",
+        "caption": "Aachen 昼夜定位成功例，左侧查询与右侧最多内点的数据库图像对应。成功需要检索和局部几何两环同时通过。"
+      },
+      {
+        "id": "6",
+        "page": 9,
+        "box": [
+          0.0739,
+          0.365,
+          0.476,
+          0.6206
+        ],
+        "source_caption": "Figure 6. Detail of the HF-Net architecture, consisting of a Mo- biletNet encoder and three heads predicting a global descriptor, a dense local descriptor map, and keypoint scores.",
+        "caption": "MobileNet 骨干和三个头的细节。局部输出与全局输出在不同分辨率上处理，避免把全部任务强压到同一张特征图。"
+      },
+      {
+        "id": "7",
+        "page": 13,
+        "box": [
+          0.0739,
+          0.12,
+          0.8987,
+          0.4211
+        ],
+        "source_caption": "Figure 7. Qualitative results on the HPatches dataset. Keypoints (green if repeatable, red if not repeatable, blue if not visible in the other image) and inlier matches are shown for SIFT (left), SuperPoint (center) and HF-Net (right).",
+        "caption": "HPatches 上的关键点重复性和匹配。绿色为可重复点、红色为不可重复点、蓝色为另一图不可见点，不能把蓝点当误检。"
+      },
+      {
+        "id": "8",
+        "page": 13,
+        "box": [
+          0.1685,
+          0.525,
+          0.8041,
+          0.8436
+        ],
+        "source_caption": "Figure 8. Qualitative results on the SfM dataset for SIFT (left), SuperPoint (center) and HF-Net (right).",
+        "caption": "SfM 图像对中 SIFT、SuperPoint、HF-Net 的局部结果。视角与纹理分布变化会改变可用对应的空间覆盖。"
+      },
+      {
+        "id": "9",
+        "page": 14,
+        "box": [
+          0.0739,
+          0.14,
+          0.8987,
+          0.3293
+        ],
+        "source_caption": "Figure 9. Localization with HF-Net on Aachen night. For each image pair, the left image is the query and the right image is the retrieved database image with the most inlier matches, as returned by PnP+RANSAC. We show challenging successful queries (left), failed queries due to an incorrect global retrieval (center), and failed queries due to incorrect or insufﬁcient local matches (right).",
+        "caption": "Aachen 夜间的成功、检索失败和局部匹配失败分别列出。先判断候选是否正确，再判断是否有足够几何内点。"
+      },
+      {
+        "id": "10",
+        "page": 14,
+        "box": [
+          0.0739,
+          0.48,
+          0.8987,
+          0.7978
+        ],
+        "source_caption": "Figure 10. Localization with HF-Net on RobotCar night and night-rain. For each image pair, the left image is the query and the right image is the retrieved database image with the most inlier matches, as returned by PnP+RANSAC. We show challenging successful queries (left), failed queries due to an incorrect global retrieval (center), and failed queries due to insufﬁcient local matches (right).",
+        "caption": "RobotCar 夜间和雨夜案例。错误全局检索与候选正确但局部对应不足是两种不同失败。"
+      },
+      {
+        "id": "11",
+        "page": 15,
+        "box": [
+          0.0739,
+          0.17,
+          0.8987,
+          0.4215
+        ],
+        "source_caption": "Figure 11. Localization with HF-Net on CMU suburban. For each image pair, the left image is the query and the right image is the retrieved database image with the most inlier matches, as returned by PnP+RANSAC. We show challenging successful queries (left), failed queries due to an incorrect global retrieval (center), and failed queries due to insufﬁcient local matches (right).",
+        "caption": "CMU 郊区定位中的光照与植被变化。检索命中也可能因局部特征不足而无法给出位姿。"
+      },
+      {
+        "id": "12",
+        "page": 15,
+        "box": [
+          0.0739,
+          0.64,
+          0.8987,
+          0.7396
+        ],
+        "source_caption": "Figure 12. Comparison between HF-Net and NV+SIFT on Aachen night, with one query for which HF-Net returns the correct location but NV+SIFT fails. We show the matches with one retrieved database image, labeled by PnP+RANSAC as inliers (green) and outliers (red). We show the inliers of HF-Net (left), all the matches of HF-Net (center), and all the matches of NV+SIFT (right). HF-Net generates signiﬁcantly fewer matches than SIFT, thus reducing the computational footprint of the local matching. At the same time, more of its matches are inliers, increasing the robustness of the localization. The higher inlier ratio reduces the number of required RANSAC iterations.",
+        "caption": "同一夜间查询的 HF-Net 与 NetVLAD+SIFT 对比。看 PnP 内点和全部匹配的差别，原始连线数量不是最终定位依据。"
+      }
+    ],
+    "label": "HF-Net"
+  },
+  "dinov2": {
+    "article": "dinov2-dinov3",
+    "title": "DINOv2",
+    "url": "https://arxiv.org/pdf/2304.07193v2",
+    "sha256": "3add205547f3ece5fb1ac7a91720aa9fabf02d9cde29a096643ff022449f3e91",
+    "figures": [
+      {
+        "id": "1",
+        "page": 2,
+        "box": [
+          0.1096,
+          0.09,
+          0.8907,
+          0.3579
+        ],
+        "source_caption": "Figure 1: Visualization of the first PCA components. We compute a PCA between the patches of the images from the same column (a, b, c and d) and show their first 3 components. Each component is matched to a different color channel. Same parts are matched between related images despite changes of pose, style or even objects. Background is removed by thresholding the first PCA component.",
+        "caption": "patch 特征的 PCA 颜色在相关物体部件间呈现一致性。PCA 颜色是可视化坐标，不是人工语义标签或精确匹配概率。"
+      },
+      {
+        "id": "2",
+        "page": 3,
+        "box": [
+          0.1096,
+          0.1,
+          0.8908,
+          0.3854
+        ],
+        "source_caption": "Figure 2: Evolution of performance when scaling in parameters. We show performance on eight types of vision tasks, as presented in Sec. 7, and average metrics with each type. Features are extracted from our self-supervised encoders, DINOv2 (dark blue), and we compare them with self-supervised methods (pale orange), as well as weakly-supervised methods (dark pink). We report the best-performing weakly- supervised model’s performance as a dashed horizontal line. Our family of models drastically improves over the previous state of the art in self-supervised learning and reaches performance comparable with weakly- supervised features. See Sec. 7 for a detailed analysis.",
+        "caption": "模型规模与八类视觉任务表现。冻结特征的可迁移性应通过多种任务观察，不能只看 ImageNet 分类。"
+      },
+      {
+        "id": "3",
+        "page": 4,
+        "box": [
+          0.1096,
+          0.1,
+          0.8907,
+          0.2945
+        ],
+        "source_caption": "Figure 3: Overview of our data processing pipeline. Images from curated and uncurated data sources are first mapped to embeddings. Uncurated images are then deduplicated before being matched to curated images. The resulting combination augments the initial dataset through a self-supervised retrieval system.",
+        "caption": "数据处理：嵌入、去重和基于已整理数据的检索扩充。数据分布设计与扩大模型共同影响通用性。"
+      },
+      {
+        "id": "4",
+        "page": 9,
+        "box": [
+          0.1096,
+          0.09,
+          0.8905,
+          0.1872
+        ],
+        "source_caption": "Figure 4: Model scale versus data scale. Evolution of performance as a function of model size for two different pretraining datasets: ImageNet-22k (14M images) and LVD-142M (142M images). The ViT-g trained on LVD-142M surpasses the ViT-g trained on ImageNet-22k on most benchmarks.",
+        "caption": "比较模型规模与训练数据规模。大模型在小数据集上并不会自动获得相同收益。"
+      },
+      {
+        "id": "5",
+        "page": 10,
+        "box": [
+          0.1096,
+          0.105,
+          0.8907,
+          0.3353
+        ],
+        "source_caption": "Figure 5: Effectiveness of knowledge distillation. Comparison between a ViT-L trained from scratch or distilled from DINOv2 using ViT-g/14. For reference, we also report the performance of the ViT-g/14 teacher. We show that a ViT-L model distilled from a frozen ViT-g outperforms a the same model trained from scratch on all benchmarks, sometimes even outperforming the distillation target.",
+        "caption": "固定大教师蒸馏与同尺寸模型从头训练的比较。学生偶尔超过教师的某个指标，不表示获得了更多训练信息。"
+      },
+      {
+        "id": "6",
+        "page": 10,
+        "box": [
+          0.1096,
+          0.45,
+          0.8907,
+          0.6043
+        ],
+        "source_caption": "Figure 6: Role of resolution. Performance of ViT-L/16 trained on ImageNet-1k at fixed resolution (“224” and “416”) or trained at 224 then 416 for a short duration (“224→416”). We train linear classifiers on top of frozen features at different resolutions and report Top-1 accuracy on ImageNet and mIoU on ADE-20k. We observe that performing SSL training at high resolution for a short duration achieve behavior and results close to training at the same high resolution for the full training, at a fraction of the cost.",
+        "caption": "训练与测试分辨率的关系。低分辨率预训练后短暂提高分辨率，可以改变高分辨率下的冻结特征质量。"
+      },
+      {
+        "id": "7",
+        "page": 17,
+        "box": [
+          0.1096,
+          0.095,
+          0.8904,
+          0.4247
+        ],
+        "source_caption": "Figure 7: Segmentation and depth estimation with linear classifiers. Examples from ADE20K, NYUd, SUN RGB-D and KITTI with a linear probe on frozen OpenCLIP-G and DINOv2-g features.",
+        "caption": "冻结特征上的线性分割与深度探针。结果体现特征包含可读取信息，仍使用了下游有监督探针。"
+      },
+      {
+        "id": "8",
+        "page": 17,
+        "box": [
+          0.1096,
+          0.48,
+          0.8905,
+          0.7269
+        ],
+        "source_caption": "Figure 8: Examples of out-of-distribution examples with frozen DINOv2-g features and a linear probe.",
+        "caption": "分布外图像的线性探针结果。需要同时观察细边界和错误区域，不只看大块语义颜色。"
+      },
+      {
+        "id": "9",
+        "page": 18,
+        "box": [
+          0.1096,
+          0.095,
+          0.8908,
+          0.4327
+        ],
+        "source_caption": "Figure 9: More visualization of the first PCA components. We compute the PCA between the patches from all of the images and show their first 3 components. Each component corresponds to a specific color channel. Same parts are matched between related images depsite changes of pose, style or even objects. Background is removed by removing patches with a negative score of the first PCA component.",
+        "caption": "更多 PCA 部件一致性结果。共同 PCA 与背景筛除属于可视化过程，不等同于模型直接输出这些颜色。"
+      },
+      {
+        "id": "10",
+        "page": 19,
+        "box": [
+          0.1096,
+          0.095,
+          0.8907,
+          0.489
+        ],
+        "source_caption": "Figure 10: Matching across images. We match patch-level features between images from different do- mains, poses and even objects that share similar semantic information. This exhibits the ability of our model to transfer across domains and understand relations between similar parts of different objects.",
+        "caption": "跨姿态、风格甚至不同物体的 patch 对应。语义相似不保证两点属于同一三维实体，不能直接作为 SLAM 地标关联。"
+      }
+    ],
+    "label": "DINOv2"
+  },
+  "dinov3": {
+    "article": "dinov2-dinov3",
+    "title": "DINOv3",
+    "url": "https://arxiv.org/pdf/2508.10104v1",
+    "sha256": "c68dc50b1f73e1641a592f777984fc360759e84b7fe65ac4f6e1377927f20b2e",
+    "figures": [
+      {
+        "id": "1",
+        "page": 2,
+        "box": [
+          0.1096,
+          0.09,
+          0.8907,
+          0.4674
+        ],
+        "source_caption": "Figure 1: (a) Evolution of linear probing results on ImageNet1k (IN1k) over the years, comparing fully- (SL), weakly- (WSL) and self-supervised learning (SSL) methods. Despite coming into the picture later, SSL has quickly progressed and now reached the Imagenet accuracy plateau of recent years. On the other hand, we demonstrate that SSL offers the unique promise of high-quality dense features. With DINOv3, we markedly improve over weakly-supervised models on dense tasks, as shown by the relative performance of the best-in-class WSL models to DINOv3 (b). We also produce PCA maps of features obtained from high resolution images with DINOv3 trained on natural (c) and aerial images (d).",
+        "caption": "分类、规模和稠密表示的整体结果。右侧可视化体现局部结构质量，不能由左侧分类分数单独推断。"
+      },
+      {
+        "id": "2",
+        "page": 3,
+        "box": [
+          0.1096,
+          0.09,
+          0.8908,
+          0.2956
+        ],
+        "source_caption": "Figure 2: Performance of the DINOv3 family of models, compared to other families of self- or weakly- supervised models, on different benchmarks. DINOv3 significantly surpasses others on dense benchmarks, including models that leverage mask annotation priors such as AM-RADIO (Heinrich et al., 2025).",
+        "caption": "DINOv3 家族与其他特征在多种任务中的规模比较。计算量和任务评价协议都需一起读。"
+      },
+      {
+        "id": "3",
+        "page": 4,
+        "box": [
+          0.1096,
+          0.095,
+          0.8907,
+          0.555
+        ],
+        "source_caption": "Figure 3: High-resolution dense features. We visualize the cosine similarity maps obtained with DI- NOv3 output features between the patches marked with a red cross and all other patches. Input image at 4096×4096. Please zoom in, do you agree with DINOv3?",
+        "caption": "4096×4096 图像中的特征余弦相似度。红十字选定查询 patch，亮区代表特征相似而非深度接近。"
+      },
+      {
+        "id": "4",
+        "page": 7,
+        "box": [
+          0.1096,
+          0.095,
+          0.8907,
+          0.2466
+        ],
+        "source_caption": "Figure 4: DINOv3 at very high resolution. We visualize dense features of DINOv3 by mapping the first three components of a PCA computed over the feature space to RGB. To focus the PCA on the subject, we mask the feature maps via background subtraction. With increasing resolution, DINOv3 produces crisp features that stay semantically meaningful. We visualize more PCAs in Sec. 6.1.1.",
+        "caption": "同一内容在越来越高分辨率下的 PCA。边界更细与语义保持同时重要，背景筛除属于展示处理。"
+      },
+      {
+        "id": "5",
+        "page": 10,
+        "box": [
+          0.1096,
+          0.1,
+          0.8907,
+          0.3787
+        ],
+        "source_caption": "Figure 5: Evolution of the cosine similarities (a) and of the accuracy on ImageNet1k linear (IN1k) and segmentation on VOC for ViT-g (b) and ViT-7B (c). We observe that the segmentation performance is maximal when the cosine similarities between the patch tokens and the class tokens are low. As training progresses, these similarities increase and the performance on dense tasks decreases.",
+        "caption": "训练中分类提升而局部分割退化的证据。patch 与 CLS 相似性变化提示局部特征逐渐过度全局化。"
+      },
+      {
+        "id": "6",
+        "page": 11,
+        "box": [
+          0.1096,
+          0.095,
+          0.8908,
+          0.3254
+        ],
+        "source_caption": "Figure 6: Evolution of the cosine similarity between the patch noted in red and all other patches. As training progresses, the features produced by the model become less localized and the similarity maps become noisier.",
+        "caption": "同一查询 patch 的相似度图随训练变得弥散。对照局部结构，才能看见单一分类指标掩盖的退化。"
+      },
+      {
+        "id": "7",
+        "page": 12,
+        "box": [
+          0.1096,
+          0.095,
+          0.8907,
+          0.3105
+        ],
+        "source_caption": "Figure 7: Evolution trough the training iterations of the patch-level iBOT loss, the global loss DINO (applied to the global crops) and the newly introduced Gram loss. We highlight the iterations of the refinement step LRef which uses the Gram objective.",
+        "caption": "iBOT、DINO 与 Gram 损失的训练过程。新增关系约束旨在修复局部结构，不要求替换原有全局目标。"
+      },
+      {
+        "id": "8",
+        "page": 13,
+        "box": [
+          0.1096,
+          0.095,
+          0.8908,
+          0.2844
+        ],
+        "source_caption": "Figure 8: Evolution of the results on different benchmarks after applying our proposed Gram anchoring method. We visualize results when continuing the original training with our refinement step, noted ‘LRef’. We also plot results obtained when using higher-resolution features for the Gram objective as introduced in following Sec. 4.3 and noted ‘LHRef’. We highlight the iterations which use the Gram objective.",
+        "caption": "Gram anchoring 与高分辨率教师的影响。分别比较 VOC、ADE20k 分割及 ObjectNet 分类，不从单一曲线推断所有任务同步改善。"
+      },
+      {
+        "id": "9",
+        "page": 14,
+        "box": [
+          0.1096,
+          0.095,
+          0.8907,
+          0.2848
+        ],
+        "source_caption": "Figure 9: Quantitative and qualitative study of the impact of high-resolution Gram. We show (a) the im- proved cosine maps after down-sampling the high-resolution maps into smaller ones, and (b) the quantitative improvements brought by varying the training iteration and the resolution of the Gram teacher.",
+        "caption": "高分辨率 Gram 教师下采样后的局部关系更清楚。右侧量化比较用于检验这一步是否真正有收益。"
+      },
+      {
+        "id": "10",
+        "page": 14,
+        "box": [
+          0.1096,
+          0.34,
+          0.8907,
+          0.698
+        ],
+        "source_caption": "Figure 10: Qualitative effect of Gram anchoring. We visualize cosine maps before and after using the refinement objective LHRef. The input resolution of the images is 1024 × 1024 pixels.",
+        "caption": "使用 Gram 约束前后的相似度图。改善应表现为相关物体局部集中，而不只是颜色对比增强。"
+      },
+      {
+        "id": "11",
+        "page": 15,
+        "box": [
+          0.1096,
+          0.095,
+          0.8907,
+          0.2352
+        ],
+        "source_caption": "Figure 11: Effect of high resolution adaptation. Results before (‘Pre-HR’) and after (‘Post-HR’) resolution scaling (Sec. 5.1) on (a) linear classification on ImageNet, (b) applied OOD to ObjectNet, (c) linear semantic segmentation on ADE20k, and (d) segmentation tracking on DAVIS at different evaluation resolutions.",
+        "caption": "分辨率后训练在多个测试分辨率上的影响。不同任务对输入分辨率的敏感程度不同。"
+      },
+      {
+        "id": "12",
+        "page": 16,
+        "box": [
+          0.1096,
+          0.105,
+          0.8908,
+          0.3856
+        ],
+        "source_caption": "Figure 12: Multi-student distillation procedure. In this diagram, we distill 3 students in parallel: we first share teacher inference across all T nodes to save compute, and gather inputs and results on all GPUs. Then, smaller groups perform student training. We adjust the size of these groups such that the training step has the same duration across all students Si, minimizing idle time waiting at the synchronization barrier.",
+        "caption": "多学生共享教师前向的蒸馏组织。减少重复教师计算属于训练效率设计，不是推理时必须同时运行多个学生。"
+      },
+      {
+        "id": "13",
+        "page": 18,
+        "box": [
+          0.1096,
+          0.095,
+          0.8907,
+          0.6748
+        ],
+        "source_caption": "Figure 13: Comparison of dense features. We compare several vision backbones by projecting their dense outputs using PCA and mapping them to RGB. From left to right: SigLIP 2 ViT-g/16, PEspatial ViT-G/14, DINOv2 ViT-g/14 with registers, DINOv3 ViT-7B/16. Images are forwarded at resolution 1280×960 for models using patch 16 and 1120×840 for patch 14, i.e. all feature maps have size 80×60.",
+        "caption": "多种骨干的稠密 PCA 比较。局部边界、跨区域一致性和背景泄漏需一起观察。"
+      },
+      {
+        "id": "14",
+        "page": 21,
+        "box": [
+          0.1096,
+          0.095,
+          0.8907,
+          0.3258
+        ],
+        "source_caption": "Figure 14: Unsupervised object discovery. We apply TokenCut (Wang et al., 2022c) on the output patch features of different backbones and report CorLoc metric. We also visualize predicted masks obtained with DINOv3 (red overlay on input images at res. 1024), obtained with no annotation and no post-processing.",
+        "caption": "TokenCut 在冻结 patch 特征上进行无监督物体发现，以 CorLoc 评估。红色掩码没有使用人工分割标注或后处理，不涉及文本查询。"
+      },
+      {
+        "id": "15",
+        "page": 22,
+        "box": [
+          0.1096,
+          0.39,
+          0.8907,
+          0.6115
+        ],
+        "source_caption": "Figure 15: Segmentation tracking example. Given the ground-truth instance segmentation masks for the initial frame, we propagate the instance labels to subsequent frames according to patch similarity in the feature space of DINOv3. The input resolution is 2048×1536 pixels, resulting in 128×96 patches.",
+        "caption": "视频中的分割传播。首帧掩码提供任务条件，后续帧通过特征关联传播，并非零提示自动得到实例身份。"
+      },
+      {
+        "id": "16",
+        "page": 30,
+        "box": [
+          0.1096,
+          0.095,
+          0.8907,
+          0.3481
+        ],
+        "source_caption": "Figure 16: (a) Presentation of the distilled models’ characteristics. CNX stands for ConvNeXT. We present per model the number of parameters and the GFLOPs estimated on images of size 256 × 256 and 512 × 512. (b) We compare DINOv3 ViT-H+ to its 7B-sized teacher; despite having almost 10× less parameters, the ViT-H+ is close to DINOv3 7B in performance.",
+        "caption": "蒸馏模型的参数、计算量和任务表现。卷积与 ViT 学生的收益需分别核对，不能直接继承大教师的所有指标。"
+      },
+      {
+        "id": "17",
+        "page": 31,
+        "box": [
+          0.1096,
+          0.095,
+          0.8908,
+          0.5043
+        ],
+        "source_caption": "Figure 17: Stability of the features at multiple resolutions for the DINOv3 ViT family of models. Top- to-bottom: ViT-S, S+, B, L, H+. We run inference on an image at multiple resolutions, then perform principal component analysis on the features computed on a 1792×1024 image (112×64 image tokens). We then project features at all resolutions onto the principal components 5–7 that we map to the RGB space for visualization. While the models are functional at all resolutions, we observe that the features remain consistent across a large range of resolutions before drifting: for example, ViT-S+ features are stable between 896 × 512 and 3584 × 2048 inputs, while ViT-L barely starts drifting on the largest resolution 7168 × 4096. ViT-H+ remains stable throughout the whole tested range.",
+        "caption": "不同尺寸 DINOv3 模型在不同分辨率下的 PCA。学生模型质量应逐项验证，不能从大教师结果自动继承。"
+      },
+      {
+        "id": "18",
+        "page": 35,
+        "box": [
+          0.1096,
+          0.44,
+          0.8907,
+          0.5942
+        ],
+        "source_caption": "Figure 18: Illustration of versatile applications in remote sensing made possible by a single DINOv3 model. The PCA on DINOv3 features shows finer details than DINOv2. The segmentation map was computed using only GEO-Bench chesapeake labels. The canopy height model decoder was trained on the Open-Canopy dataset using 4 channels (RGB + InfraRed), while inference was performed on RGB channels only.",
+        "caption": "卫星影像中的模型差异。领域适配数据改变了特征关注方式，说明通用预训练仍受数据分布影响。"
+      },
+      {
+        "id": "19",
+        "page": 36,
+        "box": [
+          0.1096,
+          0.335,
+          0.8905,
+          0.5102
+        ],
+        "source_caption": "Figure 19: A qualitative comparison of the DINOv3 7B satellite model to Tolan et al. (2024) on the Open Canopy dataset. For both models, the decoder is trained on 448×448 input images. It can be seen that DINOv3 produces more accurate maps, for example the accurate height for the trees on the field.",
+        "caption": "遥感冠层高度预测的示例。这里包含任务头和监督，不代表 patch 特征的颜色就是物理高度。"
+      },
+      {
+        "id": "20",
+        "page": 54,
+        "box": [
+          0.1096,
+          0.09,
+          0.8907,
+          0.3715
+        ],
+        "source_caption": "Figure 20: Impact of the different strategies to mitigate the presence of high-norm patch outliers, evaluated both (a) qualitatively and (b) quantitatively. We produce results with a 7B model trained with our recipe for 150k iterations, without any high-norm handling strategy ‘∅’, when using four register tokens (Darcet et al., 2024), or the attention bias and value gating strategies (An et al., 2025). In (a, first row), we plot the distribution of the output patch norms (sorted by ascending values) computed for three images. We also visualize the output patch norms per image (bottom two rows), with the same colormap–min and max values are computed per image over the different outlier strategies.",
+        "caption": "抑制高范数异常 patch 的策略消融。比较无处理、四个 register token、attention bias 与 value gating，观察范数和下游效果。"
+      },
+      {
+        "id": "21",
+        "page": 56,
+        "box": [
+          0.1096,
+          0.095,
+          0.8907,
+          0.4431
+        ],
+        "source_caption": "Figure 21: Results on five benchmarks using features from intermediate layers of DINOv3 7B. Evaluations (a-c) use a linear layer (see Secs. 6.1.2 and 6.2.1), while (d, e) use a non-parametric approach (see Secs. 6.1.3 and 6.1.5).",
+        "caption": "不同层特征的任务表现。最终层并非每个任务唯一最佳选择，选择层号也是下游设计变量。"
+      },
+      {
+        "id": "22",
+        "page": 62,
+        "box": [
+          0.1096,
+          0.135,
+          0.8907,
+          0.5561
+        ],
+        "source_caption": "Figure 22: Sampling clips for video classification. Choosing a clip for training or inference means determin- ing the coordinates of a spatial crop and which frames/timestamps to sample. At training time, we sample clips at random by choosing random frames from the whole video and by applying a spatial crop that covers ≥40% of the area. At inference time, we select clips in a deterministic way. Spatially, we take the three largest square crops aligned to the left, middle and right. Temporally, we take two overlapping sets of frames such that they cover as much of the video as possible and their timestamps interleave.",
+        "caption": "视频分类的时间和空间采样。训练片段与推理多视图采样不同，计算预算与结果必须按相同设置比较。"
+      }
+    ],
+    "label": "DINOv3"
+  },
+  "anyloc": {
+    "article": "foundation-model-vpr-features",
+    "title": "AnyLoc",
+    "url": "https://arxiv.org/pdf/2308.00688v2",
+    "sha256": "4cb8a2a58825d335abcf45bfb24c6f3823a0c7f9b43022a717da01eb6f02ed22",
+    "figures": [
+      {
+        "id": "1",
+        "page": 1,
+        "box": [
+          0.0802,
+          0.2,
+          0.9198,
+          0.3872
+        ],
+        "source_caption": "Fig. 1. AnyLoc enables universal visual place recognition (VPR) across a massively diverse set of environments (anywhere), temporal changes (anytime), and a wide range of viewpoint variations (anyview). AnyLoc achieves this by aggregating per-pixel features extracted from large-scale pretrained models (foundation models), without any training or finetuning. In the PCA panels (middle), notice how the features from MixVPR — a state-of-the-art method trained specifically for VPR — concentrate to a small region of the feature space, losing discriminative ability. On the other hand, AnyLoc uncovers distinct domains encompassing datasets with similar properties, marked with the same color. Using these domains to construct vocabularies for unsupervised VLAD aggregation enables AnyLoc to achieve up to 4× higher Recall@1, as seen in the polygonal areas in the radar chart (right), across structured (urban outdoors, indoors) and unstructured (underwater, aerial, subterranean, visually degraded) environments.",
+        "caption": "跨室内、城市、自然和其他域的统一检索思路。主张是冻结基础特征加无监督聚合的可迁移性。"
+      },
+      {
+        "id": "2",
+        "page": 3,
+        "box": [
+          0.0802,
+          0.055,
+          0.4962,
+          0.183
+        ],
+        "source_caption": "Fig. 2. Point correspondences (as markers) & similarity maps show the ro- bustness of foundation model features to various VPR challenges: (top) text and scale change, (middle) perceptually aliased features and viewpoint shift, and (bottom) low illumination combined with opposing viewpoint. The value facet has the highest contrast between the background and the matched points, which is vital for discarding distractors within an image.",
+        "caption": "冻结特征的余弦相似度图。跨视图的显著结构提供地点信息，但语义相似仍可能引发重复地点混淆。"
+      },
+      {
+        "id": "3",
+        "page": 3,
+        "box": [
+          0.5038,
+          0.055,
+          0.9198,
+          0.2017
+        ],
+        "source_caption": "Fig. 3. Qualitative ablation comparing the absolute-scale similarity maps of features from different DINOv2 ViT-G layers and facets. Layer 31 value facet has the sharpest contrast in the similarity map, which is crucial for robustness against distractors within an image.",
+        "caption": "更多区域对应展示基础特征的跨外观稳定性。高响应不等于已获得精确几何坐标。"
+      },
+      {
+        "id": "4",
+        "page": 6,
+        "box": [
+          0.5038,
+          0.22,
+          0.9198,
+          0.4327
+        ],
+        "source_caption": "Fig. 4. VLAD cluster assignment visualizations of the reference-query pairs highlight the intra-domain consistency of the domain-specific vocabulary. Similar colors across images of a specific domain indicate matched clusters.",
+        "caption": "不同环境中的特征聚类可视化。视觉域改变时词典的使用分布会变，词典数据选择需要单独考察。"
+      },
+      {
+        "id": "5",
+        "page": 7,
+        "box": [
+          0.0802,
+          0.055,
+          0.9198,
+          0.1778
+        ],
+        "source_caption": "Fig. 5. Design Choices for AnyLoc-VLAD: (a) Performance scales with the model size but saturates at ViT-L. (b) Performance peaks at intermediate layers instead of the final layer for both DINO & DINOv2. (c) On average, key & value perform the best respectively for DINO & DINOv2.",
+        "caption": "模型、层、facet 与词典等消融。冻结模型仍有关键配置，不是任选一个 token 平均就能得到同等结果。"
+      }
+    ],
+    "label": "AnyLoc"
+  },
+  "salad": {
+    "article": "foundation-model-vpr-features",
+    "title": "SALAD",
+    "url": "https://openaccess.thecvf.com/content/CVPR2024/papers/Izquierdo_Optimal_Transport_Aggregation_for_Visual_Place_Recognition_CVPR_2024_paper.pdf",
+    "sha256": "cf04d3b08854d4ceca2570a977309eaff1b42023bff2232bc23d0bda58371a1a",
+    "figures": [
+      {
+        "id": "1",
+        "page": 1,
+        "box": [
+          0.4967,
+          0.275,
+          0.8987,
+          0.6322
+        ],
+        "source_caption": "Figure 1. Illustration of a VPR baseline (left) and our contri- bution (right). The left column outlines a typical VPR baseline, a ResNet backbone followed by NetVLAD aggregation [4]. On the right column, we replace ResNet with a partially ﬁne-tuned DI- NOv2 [41] backbone, and incorporate SALAD, our novel optimal transport aggregation using the Sinkhorn Algorithm. Our model achieves unprecedented state-of-the-art results on common VPR benchmarks.",
+        "caption": "从 ResNet+NetVLAD 到 DINOv2+SALAD 的两处变化。最终性能不能只归因于新聚合头。"
+      },
+      {
+        "id": "2",
+        "page": 3,
+        "box": [
+          0.0739,
+          0.1,
+          0.8987,
+          0.3058
+        ],
+        "source_caption": "Figure 2. Overview of our method. First, the DINOv2 backbone extracts local features and a global token from an input image. Then, a small MLP, score projection, computes a score matrix for feature-to-cluster and dustbin relationships. The optimal transport module uses the Sinkhorn algorithm to transform this matrix into an assignment, and subsequently, dimensionality-reduced features are aggregated into the ﬁnal descriptor based on this assignment and concatenated with the global token.",
+        "caption": "局部 token 与全局 token 的路径：分数预测、最优传输、降维和聚合。聚合输出没有 VLAD 的中心残差项。"
+      },
+      {
+        "id": "3",
+        "page": 7,
+        "box": [
+          0.0739,
+          0.085,
+          0.8987,
+          0.2975
+        ],
+        "source_caption": "Figure 3. Heatmap of local features importance. Left images show the original pictures, their right counterparts represent the weights not assigned to the ‘dustbin’. Note how the network learns to discard uninformative regions like skies, roads or dynamic objects, and instead focus on distinctive patterns in buildings and vegetation. We attribute its focus on distant buildings to their invariance to viewpoint change.",
+        "caption": "未被 dustbin 丢弃的质量热图。网络倾向保留可识别结构，但植被也可能在某些地点提供区分线索。"
+      },
+      {
+        "id": "4",
+        "page": 8,
+        "box": [
+          0.0739,
+          0.085,
+          0.8987,
+          0.31
+        ],
+        "source_caption": "Figure 4. Illustration of feature-to-cluster assignments. See at the leftmost and rightmost part of the ﬁgure two different views of the same place. Framed by red and blue squares we highlight two corresponding patches in each of the images. The central part of the ﬁgure shows the feature-to-cluster assignments for these patches. Note how DINOv2 SALAD correctly assigns the features to the same bins for both views, even with different local texture.",
+        "caption": "同地点不同视图的 patch 到簇分配。红蓝框帮助追踪对应区域是否获得相似归属，不表示簇具有固定人工类别。"
+      },
+      {
+        "id": "5",
+        "page": 8,
+        "box": [
+          0.0739,
+          0.385,
+          0.8987,
+          0.8697
+        ],
+        "source_caption": "Figure 5. DINOv2 SALAD qualitative results at MSLS. The left column shows several queries and the three other ones shows the top-3 candidates retrieved by our DINOv2 SALAD. Candidates are framed in green if they correspond to the same place as the query, and in red if they do not. Note the correct retrievals under seasonal, weather, viewpoint and day-night changes. Note also a challenging failure case in the last row, due to non-discriminative image content.",
+        "caption": "MSLS 的 top-3 检索结果，绿色正确、红色错误。成功跨越天气与昼夜变化，仍有候选错误和排序失败。"
+      }
+    ],
+    "label": "SALAD"
+  },
+  "selavpr": {
+    "article": "foundation-model-vpr-features",
+    "title": "SelaVPR",
+    "url": "https://arxiv.org/pdf/2402.14505v2",
+    "sha256": "2a9b78ec6cfd4b66fc10df6a005facc60e455504931756457302e64d257a42ff",
+    "figures": [
+      {
+        "id": "1",
+        "page": 2,
+        "box": [
+          0.1685,
+          0.095,
+          0.8315,
+          0.2313
+        ],
+        "source_caption": "Figure 1: Attention map visualizations of the pre-trained foundation model (DINOv2) and our model. The pre-trained model pays attention to some regions (e.g. dynamic riders) that are use- less to identify places. Our method focuses on discriminative regions (buildings and trees).",
+        "caption": "适配前后的注意区域。目标是增强地点相关结构的利用，不是让原模型遗忘全部通用特征。"
+      },
+      {
+        "id": "2",
+        "page": 4,
+        "box": [
+          0.1685,
+          0.095,
+          0.8315,
+          0.2957
+        ],
+        "source_caption": "Figure 2: Illustration of the global adaptation. We add a serial adapter (b) after the MHA layer and a parallel adapter (c) in parallel to the MLP layer in each standard transformer block (a) to achieve global adaptation.",
+        "caption": "串行与并行 adapter 在 Transformer 中的位置。冻结主干不等于完全没有任务参数更新。"
+      },
+      {
+        "id": "3",
+        "page": 5,
+        "box": [
+          0.1685,
+          0.095,
+          0.8315,
+          0.2452
+        ],
+        "source_caption": "Figure 3: Illustration of the local adaptation and our two-stage VPR pipeline. The global adapted ViT backbone is applied to extract the feature map. We first use GeM to pool the feature map into the global feature for candidate retrieval. The local adaptation module after the backbone is achieved using up-conv layers, which upsample the feature map to yield dense local features. Then we cross- match the local features between the query image and each candidate for re-ranking.",
+        "caption": "全局检索与局部重排序。局部上采样特征通过匹配数量重排候选，尚未执行三维几何验证。"
+      },
+      {
+        "id": "4",
+        "page": 8,
+        "box": [
+          0.1685,
+          0.095,
+          0.8315,
+          0.3072
+        ],
+        "source_caption": "Figure 4: Qualitative results. In these challenging examples (containing condition changes, view- point changes, dynamic objects, etc.), the proposed SelaVPR successfully returns the right database images, while all other methods produce incorrect results.",
+        "caption": "跨昼夜、天气和视角的定性检索。逐行看错误返回，避免只统计最好看的查询。"
+      },
+      {
+        "id": "5",
+        "page": 8,
+        "box": [
+          0.574,
+          0.36,
+          0.805,
+          0.5043
+        ],
+        "source_caption": "Figure 5: R@1-runtime comparison.",
+        "caption": "特征提取、匹配和总耗时的比较。局部重排序成本随候选数变化，不能只报告全局向量前向。"
+      },
+      {
+        "id": "6",
+        "page": 18,
+        "box": [
+          0.1685,
+          0.095,
+          0.8315,
+          0.4218
+        ],
+        "source_caption": "Figure 6: Comparison of local matching between our SelaVPR and pre-trained DINOv2. (a) shows the local matching between images from the same place. The more matches the better, and the matches produced by ours are more than those of DINOv2. Note that some matches produced by DINOv2 are clearly inappropriate. (b) shows the local matching between images from different places. The fewer (wrong) matches the better, and our method has fewer (wrong) matches than pre- trained DINOv2.",
+        "caption": "适配局部特征与原始 DINOv2 的匹配对照。更多匹配有助于重排，但匹配数量并不保证满足相机几何。"
+      },
+      {
+        "id": "7",
+        "page": 19,
+        "box": [
+          0.1685,
+          0.11,
+          0.8315,
+          0.7484
+        ],
+        "source_caption": "Figure 7: Additional attention map visualizations of the pre-trained model (DINOv2) and our model. We compute the mean in the channel dimension of the output feature map and display it using the heat map. In the last example, although our method is also affected by the bus, this is because it is closer and takes up a larger region of the image, while the buildings and vegetation are far away and occupy a smaller region. However, our method can still avoid missing any discriminative landmark (building and vegetation) to help retrieve correct results, while the pre-trained model cannot.",
+        "caption": "更多注意区域示例。适配后建筑结构与地点证据更突出，图中热度不是可校准定位置信度。"
+      },
+      {
+        "id": "8",
+        "page": 20,
+        "box": [
+          0.1685,
+          0.095,
+          0.8315,
+          0.3354
+        ],
+        "source_caption": "Figure 8: Qualitative results on Tokyo24/7. These challenging examples exist severe condition (lighting) changes and viewpoint changes.",
+        "caption": "Tokyo24/7 的额外查询。日夜与视角同时变化时应检查 top-1 是否真正覆盖同一地点。"
+      },
+      {
+        "id": "9",
+        "page": 20,
+        "box": [
+          0.1685,
+          0.37,
+          0.8315,
+          0.5654
+        ],
+        "source_caption": "Figure 9: Qualitative results on MSLS. The first and second examples are dominated by vegetation (which tends to change over time). Most methods are prone to perceptual aliasing in these examples. The third example is extremely dark. All other methods return nighttime images but are wrong, only our method gets the correct image (but during daytime).",
+        "caption": "MSLS 的额外查询，包含明显困难返回。全局近邻结果仍受动态遮挡和外观重复影响。"
+      },
+      {
+        "id": "10",
+        "page": 20,
+        "box": [
+          0.178,
+          0.643,
+          0.82,
+          0.814
+        ],
+        "source_caption": "Figure 10: Qualitative results on Pitts30k. In the first and second examples, most of the image area is sky, and our method retrieves correct results using distinguishable landmarks that occupy only a small portion of the image region. The third example shows large viewpoint changes. Our approach is robust to these challenges.",
+        "caption": "Pitts30k 的额外查询。最后一行的重复结构说明地点相似与地点相同之间仍有差距。"
+      },
+      {
+        "id": "11",
+        "page": 22,
+        "box": [
+          0.1685,
+          0.095,
+          0.8315,
+          0.3684
+        ],
+        "source_caption": "Figure 11: The snapshot of MSLS place recognition challenge leaderboard. Our SelaVPR method named “anonymous02” (for double-blind policy) ranks 1st at the time of submission.",
+        "caption": "论文当时的 MSLS 排行榜快照，仅用于记录实验背景；不是 2026 年的实时排名。"
+      }
+    ],
+    "label": "SelaVPR"
+  },
+  "dedode": {
+    "article": "foundation-model-vpr-features",
+    "title": "DeDoDe",
+    "url": "https://arxiv.org/pdf/2308.08479v1",
+    "sha256": "0fc280d96616533fa466b13bc7e95a634a159576140a09c84bc88771f2067bcf",
+    "figures": [
+      {
+        "id": "1",
+        "page": 1,
+        "box": [
+          0.4967,
+          0.275,
+          0.8987,
+          0.53
+        ],
+        "source_caption": "Figure 1. DeDoDe closes the matching gap. There is a large gap in performance between traditional detector/descriptor mod- els and fully-fledged matching models. DeDoDe significantly re- duces this gap, demonstrating the untapped potential of the simple detector+descriptor approach.",
+        "caption": "独立检测/描述与完整匹配网络之间的差距。论文强调分离训练仍有潜力，而不是证明成对上下文永远没有价值。"
+      },
+      {
+        "id": "2",
+        "page": 2,
+        "box": [
+          0.0739,
+          0.08,
+          0.8987,
+          0.2133
+        ],
+        "source_caption": "Figure 2. Qualitative comparison. Left: Matches from the joint detector/descriptor DISK [32], Right: Matches from our decoupled detector/descriptor DeDoDe. DeDoDe shows substantial improvements in both detector precision and descriptor quality in comparison to previous approaches, performing well even under significant changes in viewpoint.",
+        "caption": "与联合检测描述方案的定性匹配对比。检查大视角下点的位置及连线，不能只按密度判断质量。"
+      },
+      {
+        "id": "3",
+        "page": 3,
+        "box": [
+          0.0739,
+          0.08,
+          0.8987,
+          0.2923
+        ],
+        "source_caption": "Figure 3. Previous detector/descriptor approaches compared to DeDoDe. Left: Traditional methods are typically two-stage, first detecting promising keypoints with a detector fθ, which are subsequently described by a descriptor gθ. This approach suffers from the lack of synergy between the detector and descriptor [7, 30]. Right: Later, learning-based methods using the joint learning paradigm were introduced. Here the objectives of the descriptor and the detector are aligned. However, this has other issues. One issue is that introducing inter-dependencies of the descriptor/detector often degrades performance [16]. For example, repeating complex patterns may constitute excellent keypoints, but fail to match, while unique textureless regions may match, but do not produce exact localization. Middle: In this paper we take a new approach and decouple the descriptor and detector learning while having aligned objectives. We do this by learning to detect and match 3D tracks from large-scale SfM. In Section 4 we describe how we create a training objective for the detector, and in Section 5 we describe the approach for the descriptor. Our approach leads to significant improvements to the state-of-the-art, as demonstrated in Section 6, showing the potential of detector based methods.",
+        "caption": "先以几何轨迹训练检测，再以匹配目标训练描述的解耦方式。检测器并非必须完全不使用其他描述器生成的 SfM 数据。"
+      },
+      {
+        "id": "4",
+        "page": 4,
+        "box": [
+          0.0739,
+          0.09,
+          0.8987,
+          0.3071
+        ],
+        "source_caption": "Figure 4. Training objective of DeDoDe for keypoint detection. We sample an image pair from a large-scale SfM + MVS reconstruction. (i) For this pair we find all covisible detections (from a base detector) that resulted in a 3D track. We take the union of tracks detected in the image (indicated by filled lines in the figure), and tracks not detected but covisible (indicated by dotted lines in the figure). See Section 4.2. (ii) We project these detections into the images. We then convert this point set into a softened distribution, which constitutes our prior for good keypoints, see Section 4.3. (iii) We then condition this distribution with the predictions of DeDoDe, as the base detector may have false negatives, see Section 4.4. (iv) Finally, we threshold this distribution at the k:th highest value, and compute the cross-entropy between DeDoDe and the target. Using top-k stabilizes the self-supervised objective. See Section 4.5.",
+        "caption": "SfM/MVS 可见轨迹形成检测监督。共视但未检测的点也可投影成为候选标签，减少只复制原检测器的偏差。"
+      },
+      {
+        "id": "5",
+        "page": 7,
+        "box": [
+          0.0739,
+          0.08,
+          0.8987,
+          0.3207
+        ],
+        "source_caption": "Figure 5. Qualitative example of DeDoDe matches. We picked a random pair in the MegaDepth-1500 testset and visualize confident DeDoDe matches. As can be seen in the figure, DeDoDe produces reliable keypoints and good matches, even in challenging situations. There are still outliers however, particularly for repeating structures such as similar statues, and identical pillars. Best viewed in high resolution.",
+        "caption": "MegaDepth 随机样例中的匹配。相似雕像和重复结构仍出现外点，独立描述子未消除全部歧义。"
+      },
+      {
+        "id": "6",
+        "page": 13,
+        "box": [
+          0.0739,
+          0.08,
+          0.8987,
+          0.2102
+        ],
+        "source_caption": "Figure 6. Issues with SiLK confidence. At tight confidence thresholds SiLK tends to produce too few but accurate correspondences. However, at looser thresholds a large number of outlier correspondences arise.",
+        "caption": "对比方法在不同置信阈值下的对应。过严阈值可能留下太少点，过松则引入大量错误。"
+      },
+      {
+        "id": "7",
+        "page": 13,
+        "box": [
+          0.0739,
+          0.3,
+          0.476,
+          0.4986
+        ],
+        "source_caption": "Figure 7. Top-10k Keypoints of DeDoDe. In contrast to previous methods, our method is able to produce a larger amount of repeat- able keypoints, leading to more accurate estimation results. Best viewed in high-resolution.",
+        "caption": "top-10k 关键点的空间分布。能输出很多点不等于几何估计应无限增加点数，还要考虑重复性和计算。"
+      },
+      {
+        "id": "8",
+        "page": 13,
+        "box": [
+          0.0739,
+          0.64,
+          0.476,
+          0.7796
+        ],
+        "source_caption": "Figure 8. Robustness of DeDoDe to large rotation. Despite not being trained on large rotations, and not having an equivariant net- work architecture, DeDoDe is able to match under even extreme changes in rotation. Rotations do however produce a larger num- ber of outlier correspondences as can be seen in the figure.",
+        "caption": "大旋转下的匹配。未显式保证旋转等变也可有一定泛化，但旋转增加时外点仍会增多。"
+      },
+      {
+        "id": "9",
+        "page": 14,
+        "box": [
+          0.0922,
+          0.14,
+          0.8804,
+          0.4341
+        ],
+        "source_caption": "Figure 9. DeDoDe matches on IMC-2022. We show matches of two publicly available image pairs from the IMC2022 benchmark.",
+        "caption": "IMC2022 的公开图像对，展示街景与视角变化中的局部匹配覆盖。"
+      },
+      {
+        "id": "10",
+        "page": 14,
+        "box": [
+          0.2762,
+          0.57,
+          0.6964,
+          0.8203
+        ],
+        "source_caption": "Figure 10. DeDoDe matches on the MegaDepth-1500 benchmark.",
+        "caption": "MegaDepth 的附录样例保留局部错误。几何验证仍是把描述相似变成相机约束的必要步骤。"
+      }
+    ],
+    "label": "DeDoDe"
+  },
+  "roma": {
+    "article": "foundation-model-vpr-features",
+    "title": "RoMa",
+    "url": "https://arxiv.org/pdf/2305.15404v1",
+    "sha256": "9243778869375cf98c1354ce9c6f196eee674fef12df20facb3c42539578832f",
+    "figures": [
+      {
+        "id": "1",
+        "page": 1,
+        "box": [
+          0.0739,
+          0.245,
+          0.8987,
+          0.4135
+        ],
+        "source_caption": "Figure 1. RoMa is robust, i.e., able to match under extreme changes. We propose RoMa, a model for dense feature matching that is robust to a wide variety of challenging real-world changes in scale, illumination, viewpoint, and texture. We show correspondences estimated by RoMa on the extremely challenging benchmark WxBS [35], where most previous methods fail, and on which we set a new state-of-the-art with an improvement of 36% mAA. The estimated correspondences are visualized by grid sampling coordinates bilinearly from the other image, using the estimated warp, and multiplying with the estimated confidence.",
+        "caption": "极端视角、照明、尺度和弱纹理下的匹配与重建示例。下游重建效果同时依赖几何后处理。"
+      },
+      {
+        "id": "2",
+        "page": 2,
+        "box": [
+          0.0739,
+          0.08,
+          0.8987,
+          0.2845
+        ],
+        "source_caption": "Figure 2. Illustration of our robust approach RoMa. Our contributions are shown with green highlighting and a checkmark, while previous approaches are indicated with gray highlights and a cross. Our first contribution is using a frozen foundation model for coarse features, compared to fine-tuning or training from scratch. DINOv2 lacks fine features, which are needed for accurate correspondences. To tackle this, we combine the DINOv2 coarse features with specialized fine features from a ConvNet, see Section 3.2. Second, we propose an improved coarse match decoder Dθ, which typically is a ConvNet, with a coordinate agnostic Transformer decoder that predicts anchor probabilities instead of directly regressing coordinates, see Section 3.3. Third, we revisit the loss functions used for dense feature matching. We argue from a theoretical model that the global matching stage needs to model multimodal distributions, and hence use a regression- by-classification loss instead of an L2 loss. For the refinement, we in contrast use a robust regression loss, as the matching distribution is locally unimodal. These losses are further discussed in Section 3.4. The impact of our contributions is ablated in our extensive ablation study in Table 2.",
+        "caption": "冻结基础模型提供粗特征，另配细尺度特征，粗层概率预测与细化目标分开设计。"
+      },
+      {
+        "id": "3",
+        "page": 5,
+        "box": [
+          0.5,
+          0.085,
+          0.91,
+          0.1876
+        ],
+        "source_caption": "Figure 3. Illustration of localizability of matches. At infinite resolution the match distribution can be seen as a 2D surface (il- lustrated as 1D lines in the figure), however at a coarser scale s this distribution becomes blurred due to motion boundaries. This means it is necessary to both use a model and an objective function capable of representing multimodal distributions.",
+        "caption": "粗尺度的匹配分布可有多个模式。直接回归均值可能落在两个合理候选之间的错误位置。"
+      },
+      {
+        "id": "4",
+        "page": 6,
+        "box": [
+          0.0739,
+          0.085,
+          0.476,
+          0.2798
+        ],
+        "source_caption": "Figure 4. Comparison of loss gradients. We use the general- ized Charbonnier [3] loss for refinement, which locally matches L2 gradients, but globally decays with |x|−1/2 toward zero.",
+        "caption": "不同损失的梯度随误差变化。稳健细化损失抑制大外点的影响，局部仍保留可用更新方向。"
+      },
+      {
+        "id": "5",
+        "page": 13,
+        "box": [
+          0.0739,
+          0.085,
+          0.476,
+          0.777
+        ],
+        "source_caption": "Figure 5. Evaluation of frozen features. From top to bottom: Image pair, VGG19 matches, RN50 matches, DINOv2 matches, RoMa matches. DINOv2 is significantly more robust than the VGG19 and RN50. Quantitative results are presented in Table 1.",
+        "caption": "冻结 VGG、ResNet、DINOv2 与完整 RoMa 的比较。基础特征提升鲁棒性，完整细化进一步恢复几何精度。"
+      },
+      {
+        "id": "6",
+        "page": 14,
+        "box": [
+          0.0902,
+          0.085,
+          0.8823,
+          0.8509
+        ],
+        "source_caption": "Figure 6. Qualitative comparison. RoMa is significantly more robust to extreme changes in viewpoint and illumination than DKM.",
+        "caption": "与 DKM 在极端变化下的对照。图中展示的是困难样本的定性证据，不能替代完整数据集的统一指标。"
+      }
+    ],
+    "label": "RoMa"
+  },
+  "tartanair": {
+    "article": "tartanair",
+    "title": "TartanAir",
+    "url": "https://arxiv.org/pdf/2003.14338v2",
+    "sha256": "e25d19e984374c14d1a39df39c99084e0ceb42259a4d00ea187ab21cc50dae16",
+    "figures": [
+      {
+        "id": "1",
+        "page": 2,
+        "box": [
+          0.0802,
+          0.065,
+          0.9198,
+          0.7452
+        ],
+        "source_caption": "Fig. 1: An overview of the environments. Our dataset is designed to cover a wide range of scenes, which are roughly categorized into urban, rural, nature, domestic, public, and sci-ﬁ. Environments in the same category also have diversity.",
+        "caption": "多环境、季节、材质和照明示例。环境多样性与轨迹运动多样性是两个独立设计维度。"
+      },
+      {
+        "id": "2",
+        "page": 3,
+        "box": [
+          0.5038,
+          0.055,
+          0.9198,
+          0.3924
+        ],
+        "source_caption": "Fig. 2: Examples of sensor data and ground truth labels. a) The data provided by the AirSim interface. b) The ground truth labels we calculated using the data.",
+        "caption": "RGB、深度、分割、光流及其他标注来自同一仿真状态。多模态监督的价值在于几何与时间对应一致。"
+      },
+      {
+        "id": "3",
+        "page": 4,
+        "box": [
+          0.0802,
+          0.24,
+          0.4962,
+          0.5389
+        ],
+        "source_caption": "(b) Our Dataset Fig. 3: Visualization of the motion pattern of one sequence from KITTI and TartanAir. The result shows that KITTI has one dominant axis in rotation and translation motion, while the motion pattern in our dataset is more diverse.",
+        "caption": "KITTI 与 TartanAir 的平移、旋转分布。运动方向过于单一时，网络可能依靠数据偏置而非通用几何。"
+      },
+      {
+        "id": "4",
+        "page": 4,
+        "box": [
+          0.6039,
+          0.24,
+          0.8196,
+          0.4932
+        ],
+        "source_caption": "Fig. 4: Challenging scenarios.",
+        "caption": "低照明、弱纹理、动态物体与恶劣天气等困难场景。它们应成为测试条件，而非仅作为渲染展示。"
+      },
+      {
+        "id": "5",
+        "page": 5,
+        "box": [
+          0.085,
+          0.06,
+          0.947,
+          0.18
+        ],
+        "source_caption": "Fig. 5: An overview of the data collection pipeline.",
+        "caption": "环境探索、路径采样、数据采集与验证的生成流程。可重复控制条件让失败原因更容易被隔离。"
+      },
+      {
+        "id": "6",
+        "page": 5,
+        "box": [
+          0.5038,
+          0.63,
+          0.9198,
+          0.7063
+        ],
+        "source_caption": "Fig. 6: Sample optical ﬂow. (a)(b) Reference and test images. (c) Optical ﬂow. (d) Color mapping.",
+        "caption": "由深度和位姿产生的光流示例。有效光流需排除视野外和不可见区域，动态物体还需要其自身运动信息。"
+      },
+      {
+        "id": "7",
+        "page": 6,
+        "box": [
+          0.0802,
+          0.055,
+          0.4962,
+          0.1451
+        ],
+        "source_caption": "Fig. 7: Optical ﬂow with masks. (a) Both masks. (b) Out-of- FOV mask only. (c) Occlusion mask only.",
+        "caption": "遮挡在光流真值中对应无效区域。它与几何投影超出图像边界是不同原因。"
+      },
+      {
+        "id": "8",
+        "page": 6,
+        "box": [
+          0.0802,
+          0.235,
+          0.4962,
+          0.3291
+        ],
+        "source_caption": "Fig. 8: Stereo disparity with masks. (a) Both masks. (b) Out- of-FOV mask only. (c) No masks. Color: Purplish and dark pixels have large disparity, reddish and bright pixels have small disparity, masked pixels are black.",
+        "caption": "相同视差在同时屏蔽遮挡与视野外、仅屏蔽视野外、不屏蔽时的差别。颜色解释和无效区域必须一起保留。"
+      },
+      {
+        "id": "9",
+        "page": 6,
+        "box": [
+          0.0802,
+          0.53,
+          0.4962,
+          0.6284
+        ],
+        "source_caption": "Fig. 9: Extracted LiDAR points. (a) Virtual environment. (b) 32-line LiDAR points.",
+        "caption": "模拟 LiDAR 的示例，原文将其作为额外模态。不同传感器采样规律不能仅靠重命名深度图代替。"
+      },
+      {
+        "id": "10",
+        "page": 6,
+        "box": [
+          0.5038,
+          0.37,
+          0.9198,
+          0.5304
+        ],
+        "source_caption": "Fig. 10: Selected environments for baseline comparison. a) Raining, lens ﬂare. b) Changing light condition (blinking lights). c) Low illumination, indoor/outdoor transition. d) Falling leaves. e) Less feature on the ground. f) Dynamic objects: ﬁsh and bubbles.",
+        "caption": "SLAM 基线实验选择的六个环境，分别强调雨与光晕、闪烁光、低照明、落叶、弱纹理和动态物体。"
+      },
+      {
+        "id": "11",
+        "page": 7,
+        "box": [
+          0.5038,
+          0.61,
+          0.9198,
+          0.7192
+        ],
+        "source_caption": "Fig. 11: Environments: a) Autumn-forest. b) Factory. c) Soul- city d) End-of-world. e) Abandoned-factory.",
+        "caption": "同一路径开启／关闭困难因素的对照：落叶、运动机械、雨、风暴与昼夜变化。用控制变量检查它们对跟踪成功率和误差的影响。"
+      }
+    ],
+    "label": "TartanAir"
+  },
+  "tartanvo": {
+    "article": "tartanair",
+    "title": "TartanVO",
+    "url": "https://arxiv.org/pdf/2011.00359v1",
+    "sha256": "5ec9a207a385eed00727b9c555cd4063ed8a9d06e1a179b4cf6ea59c52665bc1",
+    "figures": [
+      {
+        "id": "1",
+        "page": 2,
+        "box": [
+          0.1685,
+          0.765,
+          0.8315,
+          0.8823
+        ],
+        "source_caption": "Figure 1: The two-stage network architecture. The model consists of a matching network, which estimates optical ﬂow from two consecutive RGB images, followed by a pose network predicting camera motion from the optical ﬂow.",
+        "caption": "匹配网络、位姿网络和相机内参输入的分工。运动估计需要知道同样像素位移对应何种射线变化。"
+      },
+      {
+        "id": "2",
+        "page": 4,
+        "box": [
+          0.1685,
+          0.08,
+          0.8315,
+          0.2185
+        ],
+        "source_caption": "Figure 2: a) Illustration of the FoV and image resolution in TartanAir, EuRoC, and KITTI datasets. b) Calculation of the intrinsics layer.",
+        "caption": "不同相机视野与内参层的解释。固定训练相机的像素统计不应被误当成通用几何。"
+      },
+      {
+        "id": "3",
+        "page": 5,
+        "box": [
+          0.1685,
+          0.08,
+          0.8315,
+          0.1789
+        ],
+        "source_caption": "Figure 3: The data augmentation procedure of random cropping and resizing. In this way we gener- ate a wide range of camera intrinsics (FoV 40◦to 90◦).",
+        "caption": "随机裁剪和缩放形成相机变化增强。内参和光流必须随图像变换同步更新。"
+      },
+      {
+        "id": "4",
+        "page": 6,
+        "box": [
+          0.1685,
+          0.08,
+          0.8315,
+          0.2256
+        ],
+        "source_caption": "Figure 4: Generalization ability with respect to different quantities of training data. Model Pφ is trained on true optical ﬂow. Blue: training loss, orange: testing loss on three unseen environments. Testing loss drops constantly with increasing quantity of training data.",
+        "caption": "不同训练数据量与组合的收敛。训练损失下降不等同于跨域误差必然下降。"
+      },
+      {
+        "id": "5",
+        "page": 6,
+        "box": [
+          0.1685,
+          0.27,
+          0.8315,
+          0.417
+        ],
+        "source_caption": "Figure 5: Comparison of the loss curve w/ and w/o up-to-scale loss function. a) The training and testing loss w/o the up-to-scale loss. b) The translation and rotation loss of a). Big gap exists between the training and testing translation losses (orange arrow in b)). c) The training and testing losses w/ up-to-scale loss. d) The translation and rotation losses of c). The translation loss gap decreases.",
+        "caption": "不同损失及其超参数对训练/泛化的影响。尺度处理改变平移目标的含义，不能与米制误差混写。"
+      },
+      {
+        "id": "6",
+        "page": 8,
+        "box": [
+          0.1685,
+          0.265,
+          0.8315,
+          0.3614
+        ],
+        "source_caption": "Figure 6: The visualization of 6 EuRoC trajectories in Table 3. Black: ground truth trajectory, orange: estimated trajectory.",
+        "caption": "EuRoC 轨迹可视化。对照黑色真值检查转弯和闭合段，定量判断还需查看论文的对齐与尺度协议。"
+      },
+      {
+        "id": "7",
+        "page": 8,
+        "box": [
+          0.1685,
+          0.49,
+          0.8315,
+          0.5966
+        ],
+        "source_caption": "Figure 7: TartanVO outputs competitive results on D345i IR data compared to T265 (equipped with ﬁsh-eye stereo camera and an IMU). a) The hardware setup. b) Trail 1: smooth and slow motion. c) Trail 2: smooth and medium speed. d) Trail 3: aggressive and fast motion. See videos for details.",
+        "caption": "作者系统与商品跟踪设备的定性对照。相机、输入模态和失效处理不同，不能作为纯算法等条件排名。"
+      },
+      {
+        "id": "8",
+        "page": 12,
+        "box": [
+          0.1685,
+          0.265,
+          0.8315,
+          0.809
+        ],
+        "source_caption": "Figure 8: Visualization of the 16 testing trajectories in the TartanAir dataset. The black dashed line represents the ground truth. The estimated trajectories by TartanVO and the ORB-SLAM monocular algorithm are shown in orange and blue lines, respectively. The ORB-SLAM algorithm frequently loses tracking in these challenging cases. It fails in 9/16 testing trajectories. Note that we run full-ﬂedge ORB-SLAM with local bundle adjustment, global bundle adjustment, and loop closure components. In contrast, although TartanVO only takes in two images, it is much more robust than ORB-SLAM.",
+        "caption": "更多 TartanAir 测试轨迹，包含不同环境中的偏差。保留这些结果有助于观察泛化收益与残余失败。"
+      }
+    ],
+    "label": "TartanVO"
+  },
+  "letnet": {
+    "article": "letnet",
+    "title": "LET-NET",
+    "url": "https://arxiv.org/pdf/2310.15655v1",
+    "sha256": "04f22b0d3d899f5572a929f15b6ad2542bc8f70217d952406a64f4148cdc76c1",
+    "figures": [
+      {
+        "id": "1",
+        "page": 1,
+        "box": [
+          0.5038,
+          0.19,
+          0.9198,
+          0.4281
+        ],
+        "source_caption": "Fig. 1. Examples of dynamic lighting scene images. We collected images under different directions of light to demonstrate the robustness of the proposed method to illumination. Among them, forward optical flow refers to extracting corners in the first image and tracking them in the second image. The backward optical flow is the opposite.",
+        "caption": "亮度变化下灰度 LK 与学习特征跟踪的对比。关注光照变化处的跟踪失效，而不只是角点数量。"
+      },
+      {
+        "id": "2",
+        "page": 2,
+        "box": [
+          0.0802,
+          0.065,
+          0.9198,
+          0.2528
+        ],
+        "source_caption": "Fig. 2. The pipeline of the proposed hybrid optical flow method. A shared encoder is first used to extract local features of the image, and then the features are decoded into score maps S and features map F. The score map S is used to extract the tracking corners. The feature map F is used to construct the pyramid optical flow, which is used to track the corners.",
+        "caption": "浅网络分别产生跟踪特征和角点分数；金字塔 LK 与前后向检查在网络输出后执行。"
+      },
+      {
+        "id": "3",
+        "page": 4,
+        "box": [
+          0.0802,
+          0.065,
+          0.9198,
+          0.2968
+        ],
+        "source_caption": "Fig. 3. The network training process. A shallow network is first used to extract the score map S and feature map F. Then, in order to supervise the reliability of the training corners, a deep convolution is used to extract the dense descriptor map D. Finally, we calculate the corner loss and matching loss based on the results of [S, F, D].",
+        "caption": "训练时的深描述分支提供可靠性监督，推理移除；它与浅三通道跟踪特征的职责不同。"
+      },
+      {
+        "id": "4",
+        "page": 4,
+        "box": [
+          0.0802,
+          0.35,
+          0.4962,
+          0.4479
+        ],
+        "source_caption": "Fig. 4. Visualisation of the weights of the four line models. Four line models represent vertical, horizontal, left oblique, and right oblique lines, respectively. The weight values shown in the figure are the product of the distance d(i, j) and the formula 9.",
+        "caption": "直线形高响应与峰状响应的区别。line peaky 约束针对沿边缘延伸的分数脊，而不是任意提高分数。"
+      },
+      {
+        "id": "5",
+        "page": 5,
+        "box": [
+          0.5038,
+          0.055,
+          0.9198,
+          0.2998
+        ],
+        "source_caption": "Fig. 5. Examples of dynamic lighting scene images. The collected data contains four typical scenes, indoor light source changes, outdoor sunlight changes, active light sources and image blur caused by light scattering. The gray scale assumption is not satisfied in all image pairs.",
+        "caption": "室内、室外、主动光源和散射模糊的测试图像。饱和造成的信息丢失仍不能靠不变性恢复。"
+      },
+      {
+        "id": "6",
+        "page": 6,
+        "box": [
+          0.0802,
+          0.06,
+          0.4962,
+          0.2985
+        ],
+        "source_caption": "Fig. 6. Corner tracking rejection rate. In the sequence with active light source, the number of outliers in the optical flow matching is counted and divided by the total number of feature points to obtain the rejection rate. Compared with the original LK optical flow method, the proposed method can effectively reduce the number of outliers, thereby improving the accuracy of optical flow. And the difference between two optical flow tracking performance is shown in the form of pictures below.",
+        "caption": "跟踪存活比例随序列推进变化，并附帧示例。长期保留的点还应通过几何检查，存活比例不是单独的正确率。"
+      },
+      {
+        "id": "7",
+        "page": 6,
+        "box": [
+          0.5038,
+          0.06,
+          0.9198,
+          0.2785
+        ],
+        "source_caption": "Fig. 7. Sequence 1 trajectory graph of UMA-VI [32]. The starting point and end point of the sequence coincide, and it can be seen that the improved method can effectively improve the accuracy of the trajectory in the dynamic lighting scene. The two set of pictures corresponding to the two parts of the rapid accumulation of trajectory error are displayed above the curve, which verifies that the rapid change of lighting is the main source of error.",
+        "caption": "在 VINS-Mono 中更换前端后的 HDR 轨迹。系统结果同时受跟踪、外点和后端影响，不等于单个损失的因果消融。"
+      }
+    ],
+    "label": "LET-NET"
+  },
+  "aliked": {
+    "article": "aliked",
+    "title": "ALIKED",
+    "url": "https://arxiv.org/pdf/2304.03608v2",
+    "sha256": "8ade7c4cc5752254a1da1dc3db4fc18fc42e037b646b995a742021b1d36ed8cd",
+    "figures": [
+      {
+        "id": "1",
+        "page": 3,
+        "box": [
+          0.0721,
+          0.065,
+          0.9279,
+          0.4344
+        ],
+        "source_caption": "Fig. 1: The network architecture of ALIKED. The input image I is initially encoded into multi-scale features {F 1, F 2, F 3, F 4} with encoding block1 to block4, and the number of channels of F i is ci (detailed settings are listed in Table II). Then, the multi-scale features are aggregated with upsample blocks (ublock4 to ublock1), and the output features F u",
+        "caption": "多尺度编码、聚合、可微检测和稀疏描述头。共享特征是密集的，最终描述子只在关键点上构造。"
+      },
+      {
+        "id": "2",
+        "page": 5,
+        "box": [
+          0.0721,
+          0.065,
+          0.9279,
+          0.2615
+        ],
+        "source_caption": "Fig. 2: The SDDH estimates M deformable sample positions on K × K keypoint feature patches (K = 5 in this example), samples M supporting features on the feature map based on the deformable sample positions, encodes the supporting features, and aggregates them with convM for descriptor extraction.",
+        "caption": "SDDH 先预测支持位置，再双线性采样、编码并融合。预测位置数 M 与初始小块边长 K 分别控制不同成本。"
+      },
+      {
+        "id": "3",
+        "page": 5,
+        "box": [
+          0.0721,
+          0.325,
+          0.4982,
+          0.467
+        ],
+        "source_caption": "Fig. 3: The DMH extracts a dense descriptor map by perform- ing convolutions on the dense feature map F . The descriptors are then sampled from the dense descriptor map at keypoint locations.",
+        "caption": "作为对照的密集描述头 DMH：先在全图做卷积，再读取关键点。它突出 SDDH 避免的冗余计算。"
+      },
+      {
+        "id": "4",
+        "page": 9,
+        "box": [
+          0.0721,
+          0.3,
+          0.9279,
+          0.8476
+        ],
+        "source_caption": "Fig. 4: Visualization of the results of stereo matching and multiview reconstruction on IMW-val [11]. For image matching (the ﬁrst and third rows), the inliers are colored from green to yellow if they are correct (0 to 5 pixels in reprojection error) and red if they are incorrect (more than 5 pixels in reprojection error). For multiview reconstruction (the second and fourth rows), the red and blue points in the image denote the detected and registered keypoints, respectively. Best viewed in color and zoomed in at 400%.",
+        "caption": "IMW 验证集的双视匹配与多视重建。正确匹配按误差由绿到黄，错误为红；重建覆盖与匹配精度应分开看。"
+      },
+      {
+        "id": "5",
+        "page": 10,
+        "box": [
+          0.5018,
+          0.49,
+          0.9279,
+          0.6019
+        ],
+        "source_caption": "Fig. 5: A failure case for image pairs with uneven textures. The green circles represent matched keypoints, the red and blue lines denote the ground truth and estimated epipolar lines.",
+        "caption": "纹理分布不均的失败例。即使局部匹配较多，点集中在有限区域也会损害对极几何估计。"
+      },
+      {
+        "id": "6",
+        "page": 11,
+        "box": [
+          0.5018,
+          0.07,
+          0.9279,
+          0.3708
+        ],
+        "source_caption": "Fig. 6: Matching accuracy at different rotation angles (above) and scale differences (below).",
+        "caption": "旋转角度与尺度差异增加时的匹配精度。可变形支持区域提升部分鲁棒性，但曲线仍会下降。"
+      },
+      {
+        "id": "7",
+        "page": 12,
+        "box": [
+          0.0721,
+          0.065,
+          0.9279,
+          0.3944
+        ],
+        "source_caption": "Fig. 7: Visualization of the focus areas of deformable descriptors on (a) rotation, (b) scale, (c) homography, and (d) perspective image pairs. The detected keypoints and sample positions of the SDDH are marked as blue and red crosses, respectively, and the respective ﬁelds of deformable convolutions on the image are overlaid by green masks. Best viewed in color and zoomed in at 400%.",
+        "caption": "旋转、尺度、单应与透视变换下的采样位置和有效关注区域。蓝色为关键点、红色为支持位置、绿色为影响区域。"
+      },
+      {
+        "id": "8",
+        "page": 14,
+        "box": [
+          0.5018,
+          0.065,
+          0.9279,
+          0.2142
+        ],
+        "source_caption": "Fig. 8: Matching results of SOTA methods for images with large differences in scale and viewpoint. The matches are colored from green to yellow based on their reprojection error, which ranges from 0 to 5 pixels. False matches are marked in red. Best viewed in color and zoomed in at 400%.",
+        "caption": "尺度和视角同时剧变的困难样例。可变形描述子仍有限，增加匹配器或多尺度策略属于额外能力。"
+      }
+    ],
+    "label": "ALIKED"
+  },
+  "orbslam2": {
+    "article": "loop-closure",
+    "title": "ORB-SLAM2",
+    "url": "https://arxiv.org/pdf/1610.06475v2",
+    "sha256": "2b94552a20378d6dfbe863ba7317d4a86874fe54e43ca8b918abefcbdc64ce24",
+    "figures": [
+      {
+        "id": "1",
+        "page": 2,
+        "box": [
+          0.5018,
+          0.2,
+          0.9279,
+          0.7645
+        ],
+        "source_caption": "Fig. 1. ORB-SLAM2 processes stereo and RGB-D inputs to estimate camera trajectory and build a map of the environment. The system is able to close loops, relocalize, and reuse its map in real-time on standard CPUs with high accuracy and robustness.",
+        "caption": "双目与 RGB-D 轨迹和地图示例。地图复用、重定位与闭环在同一系统中协作。"
+      },
+      {
+        "id": "2",
+        "page": 4,
+        "box": [
+          0.0721,
+          0.065,
+          0.9279,
+          0.3247
+        ],
+        "source_caption": "Fig. 2. ORB-SLAM2 is composed of three main parallel threads: tracking, local mapping and loop closing, which can create a fourth thread to perform full BA after a loop closure. The tracking thread pre-processes the stereo or RGB-D input so that the rest of the system operates independently of the input sensor. Although it is not shown in this ﬁgure, ORB-SLAM2 also works with a monocular input as in [1].",
+        "caption": "Tracking、Local Mapping、Loop Closing 三线程与闭环后的 GBA。局部跟踪和后台全局优化具有不同变量范围。"
+      },
+      {
+        "id": "3",
+        "page": 6,
+        "box": [
+          0.0721,
+          0.065,
+          0.4982,
+          0.1788
+        ],
+        "source_caption": "Fig. 3. Tracked points in KITTI 01 [2]. Green points have a depth less than 40 times the stereo baseline, while blue points are further away. In this kind of sequences it is important to insert keyframes often enough so that the amount of close points allows for accurate translation estimation. Far points contribute to estimate orientation but provide weak information for translation and scale.",
+        "caption": "KITTI 01 的近点和远点。远点对旋转较有用，对平移约束弱，说明内点数量不能代替几何分布检查。"
+      },
+      {
+        "id": "4",
+        "page": 6,
+        "box": [
+          0.5018,
+          0.32,
+          0.9279,
+          0.5603
+        ],
+        "source_caption": "Fig. 4. Estimated trajectory (black) and ground-truth (red) in KITTI 00, 01, 05 and 07.",
+        "caption": "KITTI 多条序列的轨迹对照。黑色估计与红色真值的局部差异应结合各序列运动条件阅读。"
+      },
+      {
+        "id": "5",
+        "page": 7,
+        "box": [
+          0.0721,
+          0.065,
+          0.4982,
+          0.1993
+        ],
+        "source_caption": "Fig. 5. Estimated trajectory (black) and ground-truth (red) in KITTI 08. Left: monocular ORB-SLAM [1], right: ORB-SLAM2 (stereo). Monocular ORB- SLAM suffers from severe scale drift in this sequence, especially at the turns. In contrast the proposed stereo version is able to estimate the true scale of the trajectory and map without scale drift.",
+        "caption": "KITTI 08 的单目尺度漂移与双目结果。尺度可观性来自传感器信息，不是仅靠更强回环检索。"
+      },
+      {
+        "id": "6",
+        "page": 7,
+        "box": [
+          0.5018,
+          0.285,
+          0.9279,
+          0.5275
+        ],
+        "source_caption": "Fig. 6. Estimated trajectory (black) and groundtruth (red) in EuRoC V1 02 medium, V2 02 medium, MH 03 medium and MH 05 difﬁcutlt.",
+        "caption": "EuRoC 的不同运动序列。轨迹形状是定性证据，准确度还需结合表中统一误差度量。"
+      },
+      {
+        "id": "7",
+        "page": 8,
+        "box": [
+          0.0721,
+          0.065,
+          0.9279,
+          0.5314
+        ],
+        "source_caption": "Fig. 7. Dense pointcloud reconstructions from estimated keyframe poses and sensor depth maps in TUM RGB-D fr3 ofﬁce, fr1 room, fr2 desk and fr3 nst.",
+        "caption": "以关键帧位姿和 RGB-D 深度生成的稠密点云。输出的清晰度依赖位姿与深度，ORB-SLAM2 的优化地图本身仍是稀疏地标。"
+      }
+    ],
+    "label": "ORB-SLAM2"
+  },
+  "orbslam3": {
+    "article": "loop-closure",
+    "title": "ORB-SLAM3",
+    "url": "https://arxiv.org/pdf/2007.11898v2",
+    "sha256": "4d119517be7565c9651fbf1e36a330d605b7a534d738558858c96feca7b99156",
+    "figures": [
+      {
+        "id": "1",
+        "page": 5,
+        "box": [
+          0.505,
+          0.069,
+          0.922,
+          0.351
+        ],
+        "source_caption": "Figure 1: Main system components of ORB-SLAM3.",
+        "caption": "ORB-SLAM3 的 Atlas、多传感器跟踪与地点识别结构。跨地图关联引出地图合并而非普通单图回环。"
+      },
+      {
+        "id": "2",
+        "page": 8,
+        "box": [
+          0.094,
+          0.065,
+          0.912,
+          0.2127
+        ],
+        "source_caption": "Figure 2: Factor graph representation for different optimizations along the system",
+        "caption": "视觉、惯性与初始化阶段的不同因子图。注意速度、偏置、尺度和重力的变量范围随优化阶段变化。"
+      },
+      {
+        "id": "3",
+        "page": 10,
+        "box": [
+          0.5018,
+          0.065,
+          0.9279,
+          0.4921
+        ],
+        "source_caption": "Figure 3: Factor graph representation for the welding BA, with reprojection error terms (blue squares), IMU preintegration terms (yellow squares) and bias random walk (purple squares).",
+        "caption": "welding BA 在两张地图接缝处联合使用视觉、IMU 和偏置随机游走约束。外围固定状态提供边界。"
+      },
+      {
+        "id": "4",
+        "page": 11,
+        "box": [
+          0.0721,
+          0.08,
+          0.4982,
+          0.3061
+        ],
+        "source_caption": "Figure 4: Colored squares represent the RMS ATE for ten different execution in each sequence of the EuRoC dataset.",
+        "caption": "EuRoC 每序列十次运行的 ATE 分布。多次执行体现系统随机性，不能只摘最好一次代表稳定性能。"
+      },
+      {
+        "id": "5",
+        "page": 14,
+        "box": [
+          0.0967,
+          0.075,
+          0.9033,
+          0.337
+        ],
+        "source_caption": "Figure 5: Multi-session stereo-inertial result with several sequences from TUM-VI dataset (front, side and top views).",
+        "caption": "TUM-VI 多会话立体惯性地图的不同视角。历史会话增加了约束，不能直接与无历史单次运行视作同条件。"
+      },
+      {
+        "id": "6",
+        "page": 14,
+        "box": [
+          0.0721,
+          0.38,
+          0.4982,
+          0.7215
+        ],
+        "source_caption": "Figure 6: Multi-session stereo-inertial. In red, the trajectory estimated after single-session processing of outdoors1. In blue, multi-session processing of magistrale2 ﬁrst, and then outdoors1.",
+        "caption": "先处理一条历史轨迹再处理户外轨迹的多会话改善。地图复用帮助抑制长程漂移，仍依赖可靠公共区域。"
+      }
+    ],
+    "label": "ORB-SLAM3"
+  },
+  "vinsmono": {
+    "article": "loop-closure",
+    "title": "VINS-Mono",
+    "url": "https://arxiv.org/pdf/1708.03852v1",
+    "sha256": "1f44f92f057cbb05a6570f14d2fe5cae2b9736198a8eeca7c93438adbc38a087",
+    "figures": [
+      {
+        "id": "1",
+        "page": 1,
+        "box": [
+          0.5018,
+          0.21,
+          0.9279,
+          0.5998
+        ],
+        "source_caption": "Fig. 1. Outdoor experimental results of the proposed monocular visual-inertial state estimator. Data is collected by a hand-held monocular camera-IMU setup under normal walking condition. It includes two complete circles inside the ﬁeld and two semicircles on the nearby driveway. Total trajectory length is 2.5 km. A video of the experiment can be found in the multimedia attachment.",
+        "caption": "长距离步行轨迹及地理叠加。回环把远时刻的估计连接起来，但地图叠图不替代精确测量真值。"
+      },
+      {
+        "id": "2",
+        "page": 3,
+        "box": [
+          0.08,
+          0.067,
+          0.914,
+          0.341
+        ],
+        "source_caption": "Fig. 2. A block diagram illustrating the full pipeline of the proposed monocular visual-inertial state estimator.",
+        "caption": "VINS-Mono 的完整流水线，作为 VINS-Fusion 同源设计的背景。具体独立回环节点行为仍以 Fusion 代码为准。"
+      },
+      {
+        "id": "3",
+        "page": 5,
+        "box": [
+          0.0721,
+          0.065,
+          0.9279,
+          0.2297
+        ],
+        "source_caption": "Fig. 3. An illustration of the sliding window monocular VIO with relocalization. It is a tightly-coupled formulation with IMU, visual, and loop measurements.",
+        "caption": "带重定位的局部视觉惯性窗口。不同颜色表示历史、窗口与新测量依赖，不能缩成只有位置的图。"
+      },
+      {
+        "id": "4",
+        "page": 6,
+        "box": [
+          0.0721,
+          0.065,
+          0.4982,
+          0.1877
+        ],
+        "source_caption": "Fig. 4. An illustration of the visual-inertial alignment process for estimator initialization.",
+        "caption": "视觉惯性初始化中的对齐。尺度、重力、速度与偏置尚未稳定时，闭环允许的变换不能直接套成熟阶段。"
+      },
+      {
+        "id": "5",
+        "page": 7,
+        "box": [
+          0.0721,
+          0.065,
+          0.4982,
+          0.1988
+        ],
+        "source_caption": "Fig. 5. Illustration of 2 DOF parameterization of gravity. Since the magnitude of gravity is known, g lies on a sphere with radius g ≈9.81m/s2. The gravity is parameterized around current estimate as g · ˆ¯g + w1b1 + w2b2, where b1 and b2 are two orthogonal basis spanning the tangent space.",
+        "caption": "重力大小已知时的二维切空间。约束重力方向与固定完整相机姿态是不同事情。"
+      },
+      {
+        "id": "6",
+        "page": 8,
+        "box": [
+          0.5018,
+          0.065,
+          0.8791,
+          0.1871
+        ],
+        "source_caption": "Fig. 6. An illustration of the visual residual on a unit sphere. ˆ¯P",
+        "caption": "单位球上的视觉残差。鱼眼等模型可以用射线几何表达误差，不能无条件套针孔像素 Jacobian。"
+      },
+      {
+        "id": "7",
+        "page": 8,
+        "box": [
+          0.5018,
+          0.265,
+          0.9279,
+          0.4425
+        ],
+        "source_caption": "Fig. 7. An illustration of our marginalization strategy. If the second latest frame is a keyframe, we will keep it in the window, and marginalize the oldest frame and its corresponding visual and inertial measurements. Marginalized measurements are turned into a prior. If the second latest frame is not a keyframe, we will simply remove the frame and all its corresponding visual measurements. However, pre-integrated inertial measurements are kept for non-keyframes, and the pre-integration process is continued towards the next frame.",
+        "caption": "关键帧与非关键帧对应的两种滑窗维护路径。边缘化旧帧与移除次新非关键帧涉及不同测量处理。"
+      },
+      {
+        "id": "8",
+        "page": 9,
+        "box": [
+          0.0721,
+          0.065,
+          0.4982,
+          0.1796
+        ],
+        "source_caption": "Fig. 8. An illustration of motion-only bundle adjustment for camera-rate outputs.",
+        "caption": "为相机频率输出进行的 motion-only 优化。只改当前运动状态与局部联合 BA 的成本和作用不同。"
+      },
+      {
+        "id": "9",
+        "page": 10,
+        "box": [
+          0.0721,
+          0.065,
+          0.4982,
+          0.5024
+        ],
+        "source_caption": "Fig. 9. A diagram illustrating the relocalization and pose graph optimization procedure. Fig. 9(a) shows the relocalization procedure. It starts with VIO- only pose estimates (blue). Past states are recorded (green). If a loop is detected for the newest keyframe (Sect. VII-A), as shown by the red line in the second plot, a relocalization occurred. Note that due to the use of feature-level correspondences for relocalization, we are able to incorporate loop closure constraints from multiple past keyframes (Sect. VII-C), as indicated in the last three plots. The pose graph optimization is illustrated in Fig. 9(b). A keyframe is added into the pose graph when it is marginalized out from the sliding window. If there is a loop between this keyframe and any other past keyframes, the loop closure constraints, formulated as 4-DOF relative rigid body transforms, will also be added to the pose graph. The pose graph is optimized using all relative pose constraints (Sect. VIII-B) in a separate thread, and the relocalization module always runs with respect to the newest pose graph conﬁguration.",
+        "caption": "重定位与四自由度全局图优化的分工。把当前窗口对齐旧地图与把全历史误差摊开是两个阶段。"
+      },
+      {
+        "id": "10",
+        "page": 10,
+        "box": [
+          0.5018,
+          0.065,
+          0.9279,
+          0.4302
+        ],
+        "source_caption": "Fig. 10. Descriptor matching and outlier removal for feature retrieval during loop closure.",
+        "caption": "回环特征检索中的逐级外点去除。描述匹配只是几何验证的起点，PnP 后支持范围也要检查。"
+      },
+      {
+        "id": "11",
+        "page": 12,
+        "box": [
+          0.09,
+          0.065,
+          0.485,
+          0.272
+        ],
+        "source_caption": "Fig. 11. Trajectory in MH 03 median, compared with OKVIS.",
+        "caption": "MH03 的轨迹比较。闭环版本应与未闭环版本分别标注，观察较长时段的漂移。"
+      },
+      {
+        "id": "12",
+        "page": 12,
+        "box": [
+          0.0721,
+          0.31,
+          0.36,
+          0.6522
+        ],
+        "source_caption": "Fig. 12. Translation error plot in MH 03 median.",
+        "caption": "MH03 的分轴误差与随路程变化。闭环消除的是累计偏差，不表示每一时刻的局部误差都变小。"
+      },
+      {
+        "id": "13",
+        "page": 12,
+        "box": [
+          0.5018,
+          0.065,
+          0.867,
+          0.2766
+        ],
+        "source_caption": "Fig. 13. Trajectory in MH 05 difﬁcult, compared with OKVIS..",
+        "caption": "MH05 的困难运动轨迹。局部跟踪稳健性和全局回环分别决定能否持续估计及最终一致性。"
+      },
+      {
+        "id": "14",
+        "page": 12,
+        "box": [
+          0.5018,
+          0.31,
+          0.8907,
+          0.4954
+        ],
+        "source_caption": "Fig. 14. Translation error and rotation error plot in MH 05 difﬁcult.",
+        "caption": "MH05 的平移与旋转误差。回环前后变化帮助理解四自由度全局校正针对的漂移。"
+      },
+      {
+        "id": "15",
+        "page": 13,
+        "box": [
+          0.0721,
+          0.065,
+          0.4982,
+          0.2423
+        ],
+        "source_caption": "Fig. 15. The device we used for the indoor experiment. It contains one forward-looking global shutter camera (MatrixVision mvBlueFOX- MLC200w) with 752×480 resolution. We use the built-in IMU (ADXL278 and ADXRS290, 100Hz) for the DJI A3 ﬂight controller.",
+        "caption": "室内实验相机与 IMU 装置。传感器视野、同步和采样频率是比较结果的必要条件。"
+      },
+      {
+        "id": "16",
+        "page": 13,
+        "box": [
+          0.09,
+          0.307,
+          0.485,
+          0.547
+        ],
+        "source_caption": "Fig. 16. Sample images for the challenging indoor experiment.",
+        "caption": "低纹理、光照变化与运动模糊的室内样例。失败来源应与对应的轨迹片段联系起来。"
+      },
+      {
+        "id": "17",
+        "page": 13,
+        "box": [
+          0.5018,
+          0.065,
+          0.9261,
+          0.4337
+        ],
+        "source_caption": "Fig. 17. Results of the indoor experiment with comparison against OKVIS.",
+        "caption": "室内轨迹中 OKVIS 与不同 VINS 设置。比较前要确认是否启用回环，避免把系统职责差异归于局部估计器。"
+      },
+      {
+        "id": "18",
+        "page": 14,
+        "box": [
+          0.0721,
+          0.065,
+          0.4982,
+          0.2618
+        ],
+        "source_caption": "Fig. 18. The estimated trajectory of the mixed indoor and outdoor experiment aligned with Google Map. The yellow line is the ﬁnal estimated trajectory from VINS-Mono after loop closure. Red lines indicate loop closure.",
+        "caption": "室内外混合路径与回环连接的地理示意。红线显示约束位置，不代表沿途每一点都取得绝对位置真值。"
+      },
+      {
+        "id": "19",
+        "page": 14,
+        "box": [
+          0.0721,
+          0.355,
+          0.4982,
+          0.6537
+        ],
+        "source_caption": "Fig. 19. Estimated trajectories for the mixed indoor and outdoor experiment. In Fig. 19(a), results from OKVIS went bad during tracking lost in texture-less region (staircase). Figs. 19(b) 19(c) shows results from VINS-Mono without and with loop closure. Red lines indicate loop closures. The spiral-shaped blue line shows the trajectory when going up and down the stairs. We can see that VINS-Mono performs well (subject to acceptable drift) even without loop closure.",
+        "caption": "同一混合路径上无回环与有回环的差异。楼梯和无纹理区域暴露前端困难，闭环修正仍要求先存活到重访时刻。"
+      },
+      {
+        "id": "20",
+        "page": 15,
+        "box": [
+          0.0721,
+          0.065,
+          0.9279,
+          0.3731
+        ],
+        "source_caption": "Fig. 20. The estimated trajectory of the very large-scale environment aligned with Google map. The yellow line is the estimated trajectory from VINS-Mono. Red lines indicates loop closure.",
+        "caption": "更大尺度路线上的闭环分布。它展示系统覆盖范围，精确误差仍需独立地面真值。"
+      },
+      {
+        "id": "21",
+        "page": 15,
+        "box": [
+          0.0721,
+          0.415,
+          0.4982,
+          0.7662
+        ],
+        "source_caption": "Fig. 21. Fig 21(a): The self-developed aerial robot with a forward-looking ﬁsheye camera (MatrixVision mvBlueFOX-MLC200w, 190 FOV) and an DJI A3 ﬂight controller (ADXL278 and ADXRS290, 100Hz). Fig. 21(b): The designed trajectory. Four known obstacles are placed. The yellow line is the predeﬁned ﬁgure eight-ﬁgure pattern which the aerial robot should follow. The robot follows the trajectory four times with loop closure disabled. A video of the experiment can be found in the multimedia attachment.",
+        "caption": "飞行平台与参考轨迹。",
+        "omit": "本文聚焦回环与图优化；21–25 为飞控和移动端 AR 应用，机制与本篇主线不重复展开。"
+      },
+      {
+        "id": "22",
+        "page": 15,
+        "box": [
+          0.5018,
+          0.415,
+          0.9279,
+          0.6893
+        ],
+        "source_caption": "Fig. 22. The trajectory of loop closure-disabled VINS-Mono on the MAV platform and its comparison against the ground truth. The robot follows the trajectory four times. VINS-Mono estimates are used as real-time position feedback for the controller. Ground truth is obtained using OptiTrack. Total length is 61.97m. Final drift is 0.18m.",
+        "caption": "控制实验轨迹。",
+        "omit": "本文聚焦回环与图优化；21–25 为飞控和移动端 AR 应用，机制与本篇主线不重复展开。"
+      },
+      {
+        "id": "23",
+        "page": 16,
+        "box": [
+          0.0721,
+          0.08,
+          0.9279,
+          0.4065
+        ],
+        "source_caption": "Fig. 23. Position, orientation and their corresponding errors of loop closure-disabled VINS-Mono compared with OptiTrack. A sudden in pitch error at the 60s is caused by aggressive breaking at the end of the designed trajectory, and possible time misalignment error between VINS-Mono and OptiTrack.",
+        "caption": "控制实验误差。",
+        "omit": "本文聚焦回环与图优化；21–25 为飞控和移动端 AR 应用，机制与本篇主线不重复展开。"
+      },
+      {
+        "id": "24",
+        "page": 16,
+        "box": [
+          0.0721,
+          0.52,
+          0.4982,
+          0.5815
+        ],
+        "source_caption": "Fig. 24. A simple holder that we used to mount the Google Tango device (left) and the iPhone7 Plus (right) that runs our VINS-Mobile implementation.",
+        "caption": "移动端设备。",
+        "omit": "本文聚焦回环与图优化；21–25 为飞控和移动端 AR 应用，机制与本篇主线不重复展开。"
+      },
+      {
+        "id": "25",
+        "page": 16,
+        "box": [
+          0.5018,
+          0.52,
+          0.9279,
+          0.7616
+        ],
+        "source_caption": "Fig. 25. From left to right: AR image from VINS-Mobile, estimated trajectory from VINS-Mono, estimated trajectory from Tango Fig: 25(a): Both VINS- Mobile and Tango are initialized at the start location and a virtual box is inserted on the plane which extracted from estimated features. Fig. 25(b): A challenging case in which the camera is facing a moving door. The drift of Tango trajectory is highlighted. Fig. 25(c): The ﬁnal trajectory of both VINS-Mobile and Tango. The total length is about 264m.",
+        "caption": "移动端 AR。",
+        "omit": "本文聚焦回环与图优化；21–25 为飞控和移动端 AR 应用，机制与本篇主线不重复展开。"
+      }
+    ],
+    "label": "VINS-Mono"
+  },
+  "okvis": {
+    "article": "loop-closure",
+    "title": "OKVIS",
+    "url": "https://www.roboticsproceedings.org/rss09/p37.pdf",
+    "sha256": "a2adf7c39fdc8519d9bb9afb1ab24ad8245252cf18f1fd1351bce15559cc6f52",
+    "figures": [
+      {
+        "id": "1",
+        "page": 1,
+        "box": [
+          0.5018,
+          0.29,
+          0.9154,
+          0.4928
+        ],
+        "source_caption": "Fig. 1. Synchronized stereo vision and IMU hardware prototype and indoor results obtained walking up a staircase.",
+        "caption": "原始 OKVIS 的同步双目/IMU 硬件与楼梯轨迹。紧耦合估计的传感器条件在图中明确给出。"
+      },
+      {
+        "id": "2",
+        "page": 2,
+        "box": [
+          0.5018,
+          0.12,
+          0.9154,
+          0.2374
+        ],
+        "source_caption": "Fig. 2. Graphs of the state variables and measurements involved in the visual SLAM problem (left) versus visual-inertial SLAM (right)",
+        "caption": "纯视觉与视觉惯性的状态、测量图比较。IMU 把相邻运动状态联系起来并引入速度和偏置。"
+      },
+      {
+        "id": "3",
+        "page": 2,
+        "box": [
+          0.54,
+          0.715,
+          0.88,
+          0.852
+        ],
+        "source_caption": "Fig. 3. Coordinate frames involved in the hardware setup used: two cam- eras are placed as a stereo setup with respective frames, F − →Ci, i ∈{0, 1}. IMU data is acquired in F − →S. F − →S is estimated with respect to F − →W .",
+        "caption": "相机、IMU 与世界的坐标系。外参方向必须与重投影和惯性方程统一。"
+      },
+      {
+        "id": "4",
+        "page": 4,
+        "box": [
+          0.175,
+          0.679,
+          0.412,
+          0.729
+        ],
+        "source_caption": "Fig. 4. Different rates of IMU and camera: one IMU term uses all accelerometer and gyro readings between successive camera measurements.",
+        "caption": "相机帧之间的多次 IMU 测量组成一个惯性项。预积分降低优化时重复处理高频数据的成本。"
+      },
+      {
+        "id": "5",
+        "page": 5,
+        "box": [
+          0.1082,
+          0.21,
+          0.4703,
+          0.3222
+        ],
+        "source_caption": "Fig. 5. Frames kept for matching and subsequent optimization.",
+        "caption": "保留用于匹配和优化的帧。关键帧选择考虑空间约束，而非只按固定时间截取。"
+      },
+      {
+        "id": "6",
+        "page": 6,
+        "box": [
+          0.0846,
+          0.12,
+          0.4982,
+          0.2526
+        ],
+        "source_caption": "Fig. 6. Graph showing the initial marginalization on the ﬁrst N +1 frames.",
+        "caption": "最初窗口的边缘化结构。移走旧状态后，剩余变量之间出现新的先验关联。"
+      },
+      {
+        "id": "7",
+        "page": 6,
+        "box": [
+          0.0846,
+          0.4,
+          0.4982,
+          0.5408
+        ],
+        "source_caption": "Fig. 7. Graph illustration with N = 3 keyframes and an IMU/temporal node size S = 3. A regular frame is slipping out of the temporal window.",
+        "caption": "关键帧与时间窗口共同维护。普通帧离开时间窗口时，需要处理与其相连的惯性及视觉信息。"
+      },
+      {
+        "id": "8",
+        "page": 6,
+        "box": [
+          0.504,
+          0.125,
+          0.893,
+          0.25
+        ],
+        "source_caption": "Fig. 8. Graph for marginalization of xc−S",
+        "caption": "具体边缘化步骤中的状态依赖。新先验是已线性化历史信息的摘要，不是可任意重新线性化的原图。"
+      },
+      {
+        "id": "9",
+        "page": 7,
+        "box": [
+          0.0846,
+          0.12,
+          0.4982,
+          0.345
+        ],
+        "source_caption": "Fig. 9. Comparison with respect to Vicon ground truth. The same keypoint measurements and associations were used in all cases. The 5th and 95th percentiles as well as the means within 10 m bins are shown.",
+        "caption": "相同关键点测量下与 Vicon 真值的误差比较，包含均值和分位范围。固定关联有助于隔离估计器差异。"
+      },
+      {
+        "id": "10",
+        "page": 7,
+        "box": [
+          0.0949,
+          0.48,
+          0.4879,
+          0.6891
+        ],
+        "source_caption": "Fig. 10. Car trajectory reconstructions versus Applanix ground truth.",
+        "caption": "车辆轨迹与 Applanix 真值。不同运动模式改变尺度与偏置的可观性。"
+      },
+      {
+        "id": "11",
+        "page": 7,
+        "box": [
+          0.5018,
+          0.12,
+          0.9154,
+          0.2875
+        ],
+        "source_caption": "Fig. 11. Quantitative performance evaluation of the estimation approaches with respect to 6D Applanix ground truth.",
+        "caption": "六自由度地面真值下的误差统计。坐标与误差条需保留，不能只按轨迹外观判断。"
+      },
+      {
+        "id": "12",
+        "page": 8,
+        "box": [
+          0.0848,
+          0.12,
+          0.9152,
+          0.2601
+        ],
+        "source_caption": "Fig. 12. Ortho-normal top view of the building paths as computed by the different approaches. These are manually aligned with an architectural plan.",
+        "caption": "建筑路径与平面图的人工对齐。提供定性结构参考，人工平面对齐不能替代全程高精度三维真值。"
+      }
+    ],
+    "label": "OKVIS"
+  },
+  "okvis2": {
+    "article": "loop-closure",
+    "title": "OKVIS2",
+    "url": "https://arxiv.org/pdf/2202.09199v1",
+    "sha256": "acb47c3dfc9c92003490f5d153f3bcc3de13c6fd1bd6ccfaf8ef45d78f09eab9",
+    "figures": [
+      {
+        "id": "1",
+        "page": 3,
+        "box": [
+          0.08,
+          0.057,
+          0.496,
+          0.26
+        ],
+        "source_caption": "Fig. 1: Overview of OKVIS2: the frontend takes a multi- frame and associated IMU messages to initialise the new state, match keypoints, triangulate new landmarks, and to try place recognition, relocalisation, and loop closure. The realtime estimator will then optimise the underlying factor graph and take care of posegraph maintainance and ﬁxation of old states. A full graph optimisation around detected loops is carried out asynchronously and later synchronised.",
+        "caption": "实时估计器维护有界混合图，全图估计器在回环后异步优化。两个图需要同步而非互相独立输出。"
+      },
+      {
+        "id": "2",
+        "page": 4,
+        "box": [
+          0.5038,
+          0.065,
+          0.9198,
+          0.3406
+        ],
+        "source_caption": "Fig. 2: Initially a full batch VI factor graph (Fig. 2a) is created and optimised. Later (Fig. 2b), frames with least overlap with the live frame and current keyframe are turned into posegraph poses by construction of relative pose errors under marginalisation of common observations; also, old poses and speed/bias variables are ﬁxed (dashed lines) to keep the problem realtime capable. When a loop-closure occurs (Fig. 2c), respective observations and landmarks are re-activated.",
+        "caption": "从完整视觉惯性图，到压缩位姿节点，再到回环恢复观测。虚线区分固定参数与活动变量。"
+      },
+      {
+        "id": "3",
+        "page": 5,
+        "box": [
+          0.0802,
+          0.055,
+          0.4962,
+          0.4143
+        ],
+        "source_caption": "Fig. 3: Posegraph edge creation scheme: when keyframe r is selected for conversion into a posegraph node, because of least overlap with the current (key-)frame (Fig. 3a), a Maximum Spanning Tree (MST) is computed 3b) from the poses in the set T (nodes with posegraph edges and node with most visual overlap), after which all MST edges connected to r are created (Fig. 3c).",
+        "caption": "最大生成树选择待压缩节点的连接。权重来自共同观测数，以较稀疏结构保留有用关系。"
+      },
+      {
+        "id": "4",
+        "page": 6,
+        "box": [
+          0.5038,
+          0.465,
+          0.9198,
+          0.7878
+        ],
+        "source_caption": "Fig. 4: TUM-VI outdoors1 example sky classiﬁcations (red) vs. used keypoints: indoors (top), and outdoors (bot- tom). Notice how some erroneous sky classiﬁcations occur also indoors. Further it can be seen that most of the sky keypoints are identiﬁed correctly outdoors, but there are some false negatives (on the rightmost cloud) and false positives (close to the horizon, especially on the leaf-less tree branches).",
+        "caption": "天空分割与使用的特征，保留误分类样例。语义筛点也会有假阳性和假阴性，不能作为完美静态掩码。"
+      },
+      {
+        "id": "5",
+        "page": 7,
+        "box": [
+          0.5038,
+          0.065,
+          0.9198,
+          0.3241
+        ],
+        "source_caption": "Fig. 5: Relative trajectory error statistics for different sub-trajectory lengths (y-axis) of the exemplary EuRoC MH 05 difficult sequence.",
+        "caption": "EuRoC MH05 不同子轨迹长度的相对误差分布。随距离变化的统计比一条最终 ATE 更能显示漂移性质。"
+      }
+    ],
+    "label": "OKVIS2"
+  },
+  "okvis2x": {
+    "article": "loop-closure",
+    "title": "OKVIS2-X",
+    "url": "https://arxiv.org/pdf/2510.04612v1",
+    "sha256": "a44d892f35e9a71f9100d573fdf6439749ea4a6364f478dfbc0d071908dc69eb",
+    "figures": [
+      {
+        "id": "1",
+        "page": 2,
+        "box": [
+          0.5018,
+          0.2,
+          0.9279,
+          0.5756
+        ],
+        "source_caption": "Fig. 1. 3D reconstruction from a run of OKVIS2-X on the Spagna sequence of the VBR dataset [1]. Reconstruction with a LiDAR sensor (top) or with a depth network (bottom) to showcase the versatility of the presented system to different sensor modalities. The estimated trajectory is visualized in black. Furthermore, different colors per submap are used.",
+        "caption": "同一环境用 LiDAR 与学习深度构建的体积子地图。颜色区分子地图，黑色表示轨迹。"
+      },
+      {
+        "id": "2",
+        "page": 3,
+        "box": [
+          0.0721,
+          0.065,
+          0.9279,
+          0.4471
+        ],
+        "source_caption": "Fig. 2. System architecture of our proposed multi-sensor state-estimator OKVIS2-X. Components with a grey background correspond to original elements from OKVIS2 [2] and components with a white background are the extensions for the multi-sensor setup.",
+        "caption": "多传感器系统结构，灰色为原 OKVIS2 模块、白色为新增部分。密集地图与估计器通过约束交换信息。"
+      },
+      {
+        "id": "3",
+        "page": 7,
+        "box": [
+          0.5018,
+          0.065,
+          0.9279,
+          0.2449
+        ],
+        "source_caption": "Fig. 3. Predicted inverse depth (top) and its corresponding standard deviation (bottom) of (a) stereo network with the 11 cm baseline, (b) MVS network with the 50 cm maximum baseline among 8 views, and (c) depth fusion in the EuRoC dataset. (Adopted from [14].)",
+        "caption": "不同深度来源及不确定性。深度预测不是无噪声几何真值。",
+        "omit": "延伸章节聚焦闭环图与子地图同步；本图专门展开深度、网格精度、GNSS 示例或标定实验，本文以对应主文解释边界，不逐项展开。"
+      },
+      {
+        "id": "4",
+        "page": 9,
+        "box": [
+          0.0721,
+          0.065,
+          0.4982,
+          0.3856
+        ],
+        "source_caption": "Fig. 4. Initially a full batch VI factor graph (a) is created and optimized. Later (b), frames with least overlap with the live frame and current keyframe are turned into posegraph poses by construction of relative pose errors under marginalization of common observations; also, old poses and speed/bias variables are fixed to keep the problem realtime capable. When a loop- closure occurs (c), respective observations and landmarks are re-activated. The proposed system furthermore supports online calibration of the IMU- camera extrinsics (d). ((a-c) Adopted from [2].)",
+        "caption": "多传感器扩展下的实时与回环图维护。观测压缩和恢复沿用 OKVIS2 思路，并引入额外状态/测量。"
+      },
+      {
+        "id": "5",
+        "page": 10,
+        "box": [
+          0.0721,
+          0.065,
+          0.4982,
+          0.1661
+        ],
+        "source_caption": "Fig. 5. Factor Graph including dense submap alignment. Left: The realtime estimator connects set of current keyframe and non-keyframe states by IMU errors and visual reprojection errors. For every state in the optimization window, frame-to-map factors are formulated between every live state and the keyframe state associated to the last completed submap. Right: Measurements between frames can be aggregated and map-to-map factors can be added to the factor graph between submap keyframe states if the geometric overlap surpasses a threshold. (Adopted from [13].)",
+        "caption": "实时 frame-to-map 与跨子地图 map-to-map 因子。稠密几何不只被显示，也进入位姿估计。"
+      },
+      {
+        "id": "6",
+        "page": 10,
+        "box": [
+          0.5018,
+          0.065,
+          0.9279,
+          0.1752
+        ],
+        "source_caption": "Fig. 6. To evaluate the global position residual, the propagated state ˆxj at time step j of the measurement is propagated from the state vector xi at time step i of the camera frame by leveraging IMU preintegration. This intermediate state is only used for evaluation of the global factor. (Adopted from [12].)",
+        "caption": "GNSS 测量时刻与相机时刻不重合时，用 IMU 传播得到中间状态评估全局残差。"
+      },
+      {
+        "id": "7",
+        "page": 13,
+        "box": [
+          0.0721,
+          0.34,
+          0.4982,
+          0.5079
+        ],
+        "source_caption": "Fig. 7. Reconstructed mesh with mesh-to-point error encoding in V102 sequence. (Left) Ours-vid and (Right) Simplemapping [58].",
+        "caption": "稠密网格误差。",
+        "omit": "延伸章节聚焦闭环图与子地图同步；本图专门展开深度、网格精度、GNSS 示例或标定实验，本文以对应主文解释边界，不逐项展开。"
+      },
+      {
+        "id": "8",
+        "page": 13,
+        "box": [
+          0.5018,
+          0.69,
+          0.9279,
+          0.9169
+        ],
+        "source_caption": "Fig. 8. Failure case in exp03 in the Hilti-Oxford dataset where the LiDAR compensates the vision failure in a dark room.",
+        "caption": "暗室中视觉退化而 LiDAR 提供补充的失败案例。多传感器价值取决于失效模式是否互补。"
+      },
+      {
+        "id": "9",
+        "page": 16,
+        "box": [
+          0.0721,
+          0.065,
+          0.9279,
+          0.42
+        ],
+        "source_caption": "Fig. 9. 3D reconstructions obtained from the volumetric submaps of OKVIS2-X. The left column showcases reconstructions when leveraging learned-depth while the ones on the right use a LiDAR sensor. The top row is obtained from the Hilti22 exp06 sequence, the bottom row is extracted from VBR’s Ciampino0 sequence. A line with a distance indicates the different scales of the sequences.",
+        "caption": "多场景稠密重建。",
+        "omit": "延伸章节聚焦闭环图与子地图同步；本图专门展开深度、网格精度、GNSS 示例或标定实验，本文以对应主文解释边界，不逐项展开。"
+      },
+      {
+        "id": "10",
+        "page": 16,
+        "box": [
+          0.0721,
+          0.535,
+          0.9279,
+          0.6775
+        ],
+        "source_caption": "Fig. 10. Reconstruction of the Campus1 (VBR) is visualized as overlay of all submaps. Causal Trajectory Estimates for our Visual-Inertial-Depth (blue) and Visual-Inertial-LiDAR (yellow) configurations with GNSS fusion are drawn together with ground-truth measurements in GNSS-accessible (dashed green) and GNSS-denied regions (dashed red). While the LiDAR-based setup aligns accurately with the ground-truth even in GNSS-denied areas, the vision-based configuration drifts significantly. The visible jump in the trajectory at the end of the GNSS dropout highlights the global alignment strategy of our approach.",
+        "caption": "Campus1 的因果轨迹、GNSS 可用/不可用区与子地图。视觉深度配置在 GNSS 缺失区仍可明显漂移。"
+      },
+      {
+        "id": "11",
+        "page": 17,
+        "box": [
+          0.0721,
+          0.065,
+          0.4982,
+          0.3278
+        ],
+        "source_caption": "Fig. 11. SPP Solution of GNSS and OKVIS2-X estimated trajectories overlaid in Google Maps in the complex environment in the GVINS dataset.",
+        "caption": "GNSS 城市轨迹。",
+        "omit": "延伸章节聚焦闭环图与子地图同步；本图专门展开深度、网格精度、GNSS 示例或标定实验，本文以对应主文解释边界，不逐项展开。"
+      },
+      {
+        "id": "12",
+        "page": 18,
+        "box": [
+          0.0721,
+          0.065,
+          0.9279,
+          0.2831
+        ],
+        "source_caption": "Fig. 12. Timing breakdown of OKVIS2-X with different configurations in ms per frame. Each bar represents a thread, and multiple threads run in parallel, therefore, the total timing is not the sum of each bar. The networks, depth fusion, and map integration do not necessarily have to be performed for every frame or LiDAR scan. Also, HILTI-Oxford uses five cameras on the rig, and VBR employs high-resolution cameras amenable to higher keypoint numbers.",
+        "caption": "不同配置的多线程耗时拆分。并行线程柱高不能直接相加当作每帧延迟。"
+      },
+      {
+        "id": "13",
+        "page": 18,
+        "box": [
+          0.0721,
+          0.34,
+          0.4982,
+          0.7152
+        ],
+        "source_caption": "Fig. 13. Parameter study on OKVIS2-X (a) across all sequences in EuRoC and (b) Campus0 in the VBR dataset with the number of keyframes kf, imu frames if, submap factors ns, and the voxel resolution res in cm. Each vertical bar represents 10, 50, 90 precentiles in non-causal ATE, while the horizontal bar means 10, 50, 90 percentiles in the real-time optimization timings per frame. The statistics comes from 10 independent runs.",
+        "caption": "关键帧数、IMU 帧数、地图因子数与体素分辨率的参数研究。精度与实时图耗时必须一起取舍。"
+      },
+      {
+        "id": "14",
+        "page": 23,
+        "box": [
+          0.0721,
+          0.375,
+          0.9279,
+          0.9169
+        ],
+        "source_caption": "Fig. 14. Camera-IMU extrinsic perturbation study in exp06, Hilti-Oxford dataset for 5 cameras. Each line represents the difference between online calibration and the post-calibrated extrinsics in 10 independent runs.",
+        "caption": "相机外参扰动实验。",
+        "omit": "延伸章节聚焦闭环图与子地图同步；本图专门展开深度、网格精度、GNSS 示例或标定实验，本文以对应主文解释边界，不逐项展开。"
+      }
+    ],
+    "label": "OKVIS2-X"
+  },
+  "lucas-kanade": {
+    "article": "gftt-klt-sift",
+    "title": "Lucas & Kanade, An Iterative Image Registration Technique with an Application to Stereo Vision (1981 author scan)",
+    "url": "https://www.ri.cmu.edu/pub_files/pub3/lucas_bruce_d_1981_2/lucas_bruce_d_1981_2.pdf",
+    "sha256": "335699d85e93861bae3037e2385c166d784456b02d54c27f0bc2d5af1ecbe9be",
+    "figures": [
+      {
+        "id": "1",
+        "page": 1,
+        "box": [
+          0.591,
+          0.431,
+          0.835,
+          0.574
+        ],
+        "caption": "两幅图像的局部位移关系，是迭代图像配准的起点。"
+      },
+      {
+        "id": "2",
+        "page": 2,
+        "box": [
+          0.6,
+          0.52,
+          0.837,
+          0.66
+        ],
+        "caption": "用局部梯度把强度差换算成位移修正，说明一阶近似的几何直觉。"
+      },
+      {
+        "id": "3",
+        "page": 5,
+        "box": [
+          0.584,
+          0.4,
+          0.823,
+          0.563
+        ],
+        "caption": "立体相机与三维点的几何关系；同一迭代思想也可用于深度和相机参数。"
+      },
+      {
+        "id": "4",
+        "page": 7,
+        "box": [
+          0.153,
+          0.476,
+          0.839,
+          0.737
+        ],
+        "caption": "原始立体图像对，为后续分频段配准提供同一组输入。"
+      },
+      {
+        "id": "5",
+        "page": 8,
+        "box": [
+          0.14,
+          0.1,
+          0.85,
+          0.364
+        ],
+        "caption": "较低频带的初始深度猜测，对应位置尚有误差。"
+      },
+      {
+        "id": "6",
+        "page": 8,
+        "box": [
+          0.14,
+          0.5,
+          0.85,
+          0.752
+        ],
+        "caption": "较低频带迭代后修正对应位置，为更高频带提供初值。"
+      },
+      {
+        "id": "7",
+        "page": 9,
+        "box": [
+          0.14,
+          0.1,
+          0.85,
+          0.39
+        ],
+        "caption": "提高一个频带，继承上一阶段深度并增加新的细节点。"
+      },
+      {
+        "id": "8",
+        "page": 9,
+        "box": [
+          0.14,
+          0.5,
+          0.85,
+          0.767
+        ],
+        "caption": "这一频带完成深度修正后的对应，展示逐级细化。"
+      },
+      {
+        "id": "9",
+        "page": 10,
+        "box": [
+          0.14,
+          0.1,
+          0.85,
+          0.375
+        ],
+        "caption": "再提高一个频带，检查更精细图像结构下的初始对应。"
+      },
+      {
+        "id": "10",
+        "page": 10,
+        "box": [
+          0.14,
+          0.5,
+          0.85,
+          0.754
+        ],
+        "caption": "最后一阶段深度修正后的结果；原始实验仍需要人工选点和初值。"
+      }
+    ],
+    "label": "Lucas–Kanade"
+  }
+}

@@ -3,11 +3,13 @@ import { render, type CollectionEntry } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { withBase } from '../../config';
 import { getPosts, formatDate } from '../../lib/posts';
+import { getPostSeries } from '../../lib/blog-series';
 export async function getStaticPaths() {
   return (await getPosts()).map(post => ({ params: { id: post.id }, props: { post } }));
 }
 interface Props { post: CollectionEntry<'blog'> }
 const { post } = Astro.props;
+const series = getPostSeries(post.id);
 const { Content, headings } = await render(post);
 const sections = headings.filter(heading => heading.depth >= 2);
 const hasToc = sections.length >= 5;
@@ -29,7 +31,10 @@ const hasToc = sections.length >= 5;
       </aside>
     )}
   <article class="article">
-    <a class="text-link back-link" href={withBase('blog/')}>← 所有文章</a>
+    <nav class="article-breadcrumb" aria-label="文章位置">
+      <a href={withBase('blog/')}>← 所有文章</a>
+      {series && <><span aria-hidden="true">/</span><a href={withBase(`blog/${series.slug}/`)} lang="en">{series.title}</a></>}
+    </nav>
     <header class="article-heading">
       <div class="post-meta"><time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>{post.data.sample && <span class="sample-label">示例文章</span>}</div>
       <h1>{post.data.title}</h1>
@@ -37,7 +42,7 @@ const hasToc = sections.length >= 5;
       <div class="tags">{post.data.tags.map(tag => <span>{tag}</span>)}</div>
     </header>
     <div class="prose"><Content /></div>
-    <a class="text-link article-back" href={withBase('blog/')}>← 继续阅读其他文章</a>
+    <a class="text-link article-back" href={withBase(series ? `blog/${series.slug}/` : 'blog/')}>← {series ? '返回专题目录' : '继续阅读其他文章'}</a>
   </article>
   </div>
 </Layout>

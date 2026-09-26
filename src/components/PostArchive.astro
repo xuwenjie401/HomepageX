@@ -1,0 +1,43 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import PostCard from './PostCard.astro';
+interface Props {
+  posts: CollectionEntry<'blog'>[];
+  hideNested?: boolean;
+}
+const { posts, hideNested = false } = Astro.props;
+---
+<div class="archive-toolbar">
+  <span>共 {posts.length} 篇文章</span>
+  <label class="search" hidden id="search-control"><span class="sr-only">搜索文章标题、摘要或标签</span><input type="search" id="post-search" placeholder="搜索标题、摘要、标签…" autocomplete="off" /></label>
+</div>
+<slot />
+<div id="post-list">
+  {posts.map(post => {
+    const visible = !hideNested || !post.id.includes('/');
+    return <div data-post data-default-visible={String(visible)} hidden={!visible} data-search={`${post.data.title} ${post.data.description} ${post.data.tags.join(' ')}`.toLocaleLowerCase()}><PostCard post={post} /></div>;
+  })}
+</div>
+<p class="empty-state" id="search-empty" hidden>暂时没有匹配的文章，换个关键词试试。</p>
+<p class="sr-only" id="search-status" role="status" aria-live="polite"></p>
+{!posts.length && <p class="empty-state">第一篇文章正在酝酿中。</p>}
+<script>
+  const input = document.querySelector<HTMLInputElement>('#post-search');
+  const rows = Array.from(document.querySelectorAll<HTMLElement>('[data-post]'));
+  const control = document.getElementById('search-control');
+  const empty = document.getElementById('search-empty');
+  const status = document.getElementById('search-status');
+  const series = document.getElementById('blog-series');
+  if (control) control.hidden = false;
+  input?.addEventListener('input', () => {
+    const query = input.value.trim().toLocaleLowerCase();
+    let count = 0;
+    for (const row of rows) {
+      row.hidden = query ? !row.dataset.search?.includes(query) : row.dataset.defaultVisible !== 'true';
+      if (!row.hidden) count++;
+    }
+    if (series) series.hidden = Boolean(query);
+    if (empty) empty.hidden = !query || count > 0;
+    if (status) status.textContent = query ? `找到 ${count} 篇文章` : '';
+  });
+</script>

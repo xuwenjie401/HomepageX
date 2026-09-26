@@ -7,11 +7,12 @@ import { MathJaxStix2Font } from '@mathjax/mathjax-stix2-font/js/svg.js';
 import '@mathjax/src/js/util/asyncLoad/esm.js';
 import '@mathjax/src/js/input/tex/ams/AmsConfiguration.js';
 import '@mathjax/src/js/input/tex/newcommand/NewcommandConfiguration.js';
+import '@mathjax/src/js/input/tex/boldsymbol/BoldsymbolConfiguration.js';
 
 const adaptor = liteAdaptor();
 RegisterHTMLHandler(adaptor);
 const document = mathjax.document('', {
-  InputJax: new TeX({ packages: ['base', 'ams', 'newcommand'], formatError: (_jax, error) => { throw error; } }),
+  InputJax: new TeX({ packages: ['base', 'ams', 'newcommand', 'boldsymbol'], formatError: (_jax, error) => { throw error; } }),
   OutputJax: new SVG({ fontData: MathJaxStix2Font, fontCache: 'none', linebreaks: { inline: false } }),
 });
 export const escapeHTML = value => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
