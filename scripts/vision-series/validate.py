@@ -1,4 +1,4 @@
-"""Post-build integrity checks for the nine research articles (stdlib + Pillow).
+"""Post-build integrity checks for the ten research articles (stdlib + Pillow).
 Check generated HTML, not merely Astro's exit status: content errors may be logged
 while Astro still writes an empty article page and exits successfully.
 """
@@ -23,10 +23,11 @@ class Page(HTMLParser):
   if a.get('role')=='math':self.math+=1
   if a.get('data-mml-node')=='merror':self.errors.append(a)
 counts=[]
-for slug in dict.fromkeys(s['article'] for s in sources.values()):
+for slug in [*dict.fromkeys(s['article'] for s in sources.values()), 'superpoint']:
  src=(ROOT/'src/content/blog/sparse-feature-and-visual-recognition'/(slug+'.md')).read_text()
  assert '<!-- figure:' not in src,('Unresolved marker',slug)
  expected=sum(not f.get('omit') for s in sources.values() if s['article']==slug for f in s['figures'])+sum(v['article']==slug for v in own.values())
+ if slug=='superpoint':expected=30
  path=ROOT/'dist/blog/sparse-feature-and-visual-recognition'/slug/'index.html';html=path.read_text();p=Page();p.feed(html)
  assert p.figures==expected,(slug,'figures',p.figures,expected)
  assert p.headings>15 and p.math>20 and not p.errors,(slug,'Missing body or invalid math')

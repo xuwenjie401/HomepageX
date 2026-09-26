@@ -1,6 +1,6 @@
 # SuperPoint 文章素材与复现
 
-文章：`src/content/blog/superpoint.md`。页面共 30 张图：原论文 Figure 1–15，加上 15 张自制解释图。原始论文 PDF、临时渲染和检查截图留在仓库外。
+文章：`src/content/blog/sparse-feature-and-visual-recognition/superpoint.md`。页面共 30 张图：原论文 Figure 1–15，加上 15 张自制解释图。原始论文 PDF、临时渲染和检查截图留在仓库外。
 
 ## 原论文图
 

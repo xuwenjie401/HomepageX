@@ -2,9 +2,11 @@
 
 九篇正文、配图、素材记录和复现脚本已完成，已做本地构建及浏览器检查。制作与核查日期：2026-09-26 至 2026-09-27。
 
-2026-09-27 按用户要求归入 **Sparse Feature and Visual Recognition** 专题。源码目录为 `src/content/blog/sparse-feature-and-visual-recognition/`，公开入口为 [专题目录](https://xuwenjie401.github.io/HomepageX/blog/sparse-feature-and-visual-recognition/)。博客首页显示专题入口，专题内按九篇阅读顺序排列；正文交叉引用和返回导航均使用新路径。发布通过仓库既有 GitHub Pages 工作流执行。
+2026-09-27 按用户要求归入 **Sparse Feature and Visual Recognition** 专题。源码目录为 `src/content/blog/sparse-feature-and-visual-recognition/`，公开入口为 [专题目录](https://xuwenjie401.github.io/HomepageX/blog/sparse-feature-and-visual-recognition/)。博客首页显示专题入口，专题内按阅读顺序排列；正文交叉引用和返回导航均使用新路径。发布通过仓库既有 GitHub Pages 工作流执行。
 
-读者入口见 [九篇阅读导航](vision-series-reading-guide.md)。写作依据为 [论文详解原则](research-blog-style.md)、[制作指南](research-blog-production.md) 与 [SuperPoint 范文](../src/content/blog/superpoint.md)。
+同日补充将 SuperPoint 纳入专题，排在 GFTT/KLT/SIFT 之后、SuperGlue/LightGlue 之前。专题现有 10 篇、328 幅图；以下制作统计保留新增九篇的原始验收口径，SuperPoint 素材详见其独立记录。旧 SuperPoint 地址保留跳转到新地址。
+
+读者入口见 [十篇阅读导航](vision-series-reading-guide.md)。写作依据为 [论文详解原则](research-blog-style.md)、[制作指南](research-blog-production.md) 与 [SuperPoint 范文](../src/content/blog/sparse-feature-and-visual-recognition/superpoint.md)。
 
 ## 交付范围
 

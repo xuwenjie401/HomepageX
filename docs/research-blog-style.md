@@ -4,7 +4,7 @@
 
 目标：让读者沿着**动机 → 初步思路 → 遇到的问题 → 改进机制 → 实验验证 → 剩余边界**理解论文，既看得懂直觉，也能追到关键数学与实现。不能只做机械翻译、论文摘要扩写，或把原文换成更口语的表达。
 
-参考成品：[SuperPoint 文章](../src/content/blog/superpoint.md)。技术实现与踩坑处理见 [论文博客制作与排查指南](research-blog-production.md)；该文素材出处、提示词与生成参数见 [SuperPoint 素材记录](superpoint-assets.md)。
+参考成品：[SuperPoint 文章](../src/content/blog/sparse-feature-and-visual-recognition/superpoint.md)。技术实现与踩坑处理见 [论文博客制作与排查指南](research-blog-production.md)；该文素材出处、提示词与生成参数见 [SuperPoint 素材记录](superpoint-assets.md)。
 
 ## 1. 从具体问题出发，让每个模块有来由
 

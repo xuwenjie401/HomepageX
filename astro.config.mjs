@@ -8,5 +8,8 @@ export default defineConfig({
   base: '/HomepageX',
   trailingSlash: 'always',
   output: 'static',
+  redirects: {
+    '/blog/superpoint/': '/HomepageX/blog/sparse-feature-and-visual-recognition/superpoint/',
+  },
   markdown: { processor: unified({ remarkPlugins: [remarkMath, remarkPaperMath] }) },
 });

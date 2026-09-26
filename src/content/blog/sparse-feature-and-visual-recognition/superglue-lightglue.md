@@ -7,7 +7,7 @@ tags: [论文精读, 特征匹配, Transformer, 几何视觉]
 
 拍摄一栋楼的两张照片，每扇窗都有四个相似的角。局部描述子已经很强，最近邻仍然可能把第三扇窗的左上角配到第五扇窗。问题不一定是这个小图块描述得不够好，而是我们把“楼顶在哪、隔壁窗格怎么排列、另一个点已选择谁”这些证据都丢了。
 
-[SuperPoint](/HomepageX/blog/superpoint/)负责产生点和描述子，[SIFT](/HomepageX/blog/sparse-feature-and-visual-recognition/gftt-klt-sift/)通过规范化局部坐标增强可比较性。SuperGlue 和 LightGlue 接过这些稀疏集合，回答另一个问题：**能否让两张图里的点交换信息，再共同决定对应关系和拒绝关系？**
+[SuperPoint](/HomepageX/blog/sparse-feature-and-visual-recognition/superpoint/)负责产生点和描述子，[SIFT](/HomepageX/blog/sparse-feature-and-visual-recognition/gftt-klt-sift/)通过规范化局部坐标增强可比较性。SuperGlue 和 LightGlue 接过这些稀疏集合，回答另一个问题：**能否让两张图里的点交换信息，再共同决定对应关系和拒绝关系？**
 
 > 来源：[SuperGlue，CVPR 2020](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sarlin_SuperGlue_Learning_Feature_Matching_With_Graph_Neural_Networks_CVPR_2020_paper.pdf)及[作者实现](https://github.com/magicleap/SuperGluePretrainedNetwork)；[LightGlue，ICCV 2023，arXiv v1 含附录](https://arxiv.org/abs/2306.13643v1)及[作者实现](https://github.com/cvg/LightGlue)。
 

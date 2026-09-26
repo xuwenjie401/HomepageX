@@ -50,7 +50,7 @@ draft: false
 
 ### 专题子目录
 
-`Sparse Feature and Visual Recognition` 的九篇文章放在 `src/content/blog/sparse-feature-and-visual-recognition/`，文章地址相应为 `/HomepageX/blog/sparse-feature-and-visual-recognition/<文件名>/`。专题入口使用同名目录的 `index.astro`，阅读顺序与介绍在 `src/lib/blog-series.ts` 维护。
+`Sparse Feature and Visual Recognition` 的十篇文章放在 `src/content/blog/sparse-feature-and-visual-recognition/`，文章地址相应为 `/HomepageX/blog/sparse-feature-and-visual-recognition/<文件名>/`。专题入口使用同名目录的 `index.astro`，阅读顺序与介绍在 `src/lib/blog-series.ts` 维护。
 
 博客首页按专题收纳这些文章；首页搜索仍可找到子目录内文章。专题页搜索仅作用于当前专题。移动文章时同步更新正文交叉引用、素材记录、制作脚本和产物检查路径。媒体继续使用 `public/media/<文章名>/`，不依赖正文所在目录。
 

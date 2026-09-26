@@ -9,7 +9,7 @@ tags: [论文精读, 局部特征, 光流, 计算机视觉]
 
 这两种场景对应两种不同的问题：**跟踪，是利用时间连续性继续找一个已知点；匹配，是在不确定它在哪里的情况下重新认出它。** GFTT 选择适合跟踪的点，KLT 求这些点的短时运动，SIFT 则通过尺度、方向和描述子支持更大范围的重新识别。它们不是必须首尾相接的三个网络层。
 
-本文与 [SuperPoint 精读](/HomepageX/blog/superpoint/)互相补充。先从经典方法看清“什么叫好点”，再看学习方法究竟改变了哪里。
+本文与 [SuperPoint 精读](/HomepageX/blog/sparse-feature-and-visual-recognition/superpoint/)互相补充。先从经典方法看清“什么叫好点”，再看学习方法究竟改变了哪里。
 
 > 主要来源：[Shi–Tomasi，Good Features to Track，CVPR 1994](https://users.cs.duke.edu/~tomasi/papers/shi/shiCvpr94.pdf)、[Lucas–Kanade，1981](https://www.ri.cmu.edu/pub_files/pub3/lucas_bruce_d_1981_2/lucas_bruce_d_1981_2.pdf)、[Lowe，SIFT，IJCV 2004 作者稿](https://www.cs.ubc.ca/~lowe/papers/ijcv04.pdf)。下文的离散矩阵形式为方便实现而重写。
 
