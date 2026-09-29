@@ -1,0 +1,724 @@
+{
+  "boxer": {
+    "article": "boxernet",
+    "title": "Boxer: Robust Lifting of Open-World 2D Bounding Boxes to 3D",
+    "version": "2604.05212v1",
+    "authors": "Daniel DeTone, Tianwei Shen, Fan Zhang, Lingni Ma, Julian Straub, Richard Newcombe, Jakob Engel",
+    "url": "https://arxiv.org/pdf/2604.05212v1",
+    "project": "https://facebookresearch.github.io/boxer/",
+    "sha256": "59b3469283815e2acad644241bb61e4e49638d88679c1eef0f78805554c91168",
+    "figures": [
+      {
+        "id": "1",
+        "page": 1,
+        "box": [
+          0.085,
+          0.225,
+          0.92,
+          0.443
+        ],
+        "caption": "静态场景中小物体与长尾类别的三维框。看不同视角是否落在同一个实体上。"
+      },
+      {
+        "id": "2",
+        "page": 5,
+        "box": [
+          0.077,
+          0.045,
+          0.93,
+          0.272
+        ],
+        "caption": "Boxer 完整系统：二维检测、单帧提升、跨视角融合分别承担不同职责。"
+      },
+      {
+        "id": "3",
+        "page": 7,
+        "box": [
+          0.077,
+          0.055,
+          0.93,
+          0.312
+        ],
+        "caption": "BoxerNet：图像、射线与可选深度按 patch 编码，二维框作为独立查询。"
+      },
+      {
+        "id": "4",
+        "page": 12,
+        "box": [
+          0.075,
+          0.051,
+          0.93,
+          0.49
+        ],
+        "caption": "逐帧三维 IoU 的定性比较；黄色表示与真值重叠更好，须同时区分二维框来源。"
+      },
+      {
+        "id": "5",
+        "page": 13,
+        "box": [
+          0.075,
+          0.055,
+          0.93,
+          0.426
+        ],
+        "caption": "把逐帧框叠到统一世界坐标中；更集中的伪热图表示跨帧估计更一致。"
+      },
+      {
+        "id": "6",
+        "page": 17,
+        "box": [
+          0.2,
+          0.318,
+          0.76,
+          0.662
+        ],
+        "caption": "CA-1M、IoU 0.25 下的 PR 曲线：二维与三维置信度平均改善排序。"
+      },
+      {
+        "id": "7",
+        "page": 18,
+        "box": [
+          0.075,
+          0.145,
+          0.93,
+          0.732
+        ],
+        "caption": "四类增强：光度、相机、深度点与二维框；最后一行比较投影框和 SAM 收紧框。"
+      },
+      {
+        "id": "8",
+        "page": 21,
+        "box": [
+          0.078,
+          0.055,
+          0.93,
+          0.284
+        ],
+        "caption": "ScanNet 的既有闭集标注与 Boxer 开放集伪标注；覆盖变多不等于新增人工真值。"
+      },
+      {
+        "id": "9",
+        "page": 22,
+        "box": [
+          0.135,
+          0.208,
+          0.86,
+          0.705
+        ],
+        "caption": "SAM3 与 SAM3D 的 ADT 样例；同时观察二维投影与三维、俯视视角。"
+      },
+      {
+        "id": "10",
+        "page": 23,
+        "box": [
+          0.077,
+          0.244,
+          0.93,
+          0.448
+        ],
+        "caption": "按物体体积分桶的 PR 曲线；小物体解释了较大部分性能差距。"
+      }
+    ],
+    "label": "Boxer"
+  },
+  "lamp": {
+    "article": "lamp",
+    "title": "LAMP: Localization Aware Multi-camera People Tracking in Metric 3D World",
+    "version": "2605.05390v1",
+    "authors": "Nan Yang, Julian Straub, Fan Zhang, Richard Newcombe, Jakob Engel, Lingni Ma",
+    "url": "https://arxiv.org/pdf/2605.05390v1",
+    "project": "https://facebookresearch.github.io/LAMP/",
+    "sha256": "c6e4d01aee90b081d48fc6636b90662358b0788557d4df4af15a9a54bda5017e",
+    "figures": [
+      {
+        "id": "1",
+        "page": 1,
+        "box": [
+          0.094,
+          0.275,
+          0.91,
+          0.5
+        ],
+        "caption": "相机接力下的长时轨迹与多人的广视场覆盖。"
+      },
+      {
+        "id": "2",
+        "page": 3,
+        "box": [
+          0.092,
+          0.085,
+          0.91,
+          0.224
+        ],
+        "caption": "先检测与关联，再把射线变换到局部世界坐标，最后拟合人体运动。"
+      },
+      {
+        "id": "3",
+        "page": 4,
+        "box": [
+          0.515,
+          0.092,
+          0.91,
+          0.276
+        ],
+        "caption": "同一人跨四个单色相机被观察，世界射线维持统一的运动表示。"
+      },
+      {
+        "id": "4",
+        "page": 5,
+        "box": [
+          0.515,
+          0.087,
+          0.91,
+          0.27
+        ],
+        "caption": "重叠窗口对同一时刻给出多个预测；平均能稳定输出，也会引入等待。"
+      },
+      {
+        "id": "5",
+        "page": 6,
+        "box": [
+          0.092,
+          0.092,
+          0.91,
+          0.326
+        ],
+        "caption": "Nymeria 上的世界坐标顶点误差；深紫较低，黄色较高。"
+      },
+      {
+        "id": "6",
+        "page": 6,
+        "box": [
+          0.092,
+          0.38,
+          0.91,
+          0.478
+        ],
+        "caption": "一、二、四相机的跟踪覆盖率分布及样例；关注质量向完整覆盖一侧移动。"
+      },
+      {
+        "id": "7",
+        "page": 7,
+        "box": [
+          0.515,
+          0.324,
+          0.91,
+          0.48
+        ],
+        "caption": "EMDB 根轨迹误差；滑板序列保留了 LAMP 的不利结果。"
+      },
+      {
+        "id": "8",
+        "page": 14,
+        "box": [
+          0.092,
+          0.165,
+          0.91,
+          0.301
+        ],
+        "caption": "Aria Gen 2 实时多人演示；这里的演示人体模型使用 MHR。"
+      },
+      {
+        "id": "9",
+        "page": 15,
+        "box": [
+          0.092,
+          0.09,
+          0.91,
+          0.349
+        ],
+        "caption": "Nymeria 补充比较：单目、窗口平均与多视角的差异。"
+      },
+      {
+        "id": "10",
+        "page": 15,
+        "box": [
+          0.092,
+          0.403,
+          0.91,
+          0.751
+        ],
+        "caption": "EMDB 单目零样本结果；图中人体颜色表示世界顶点误差。"
+      },
+      {
+        "id": "11",
+        "page": 16,
+        "box": [
+          0.09,
+          0.245,
+          0.288,
+          0.342
+        ],
+        "caption": "RTX 4090 上随 tracklet 数增长的分模块运行时间。",
+        "scale": 10
+      },
+      {
+        "id": "12",
+        "page": 16,
+        "box": [
+          0.291,
+          0.245,
+          0.492,
+          0.342
+        ],
+        "caption": "等待帧数、世界关节误差与抖动之间的权衡。",
+        "scale": 10
+      }
+    ],
+    "label": "LAMP"
+  },
+  "hmd2": {
+    "article": "hmd2",
+    "title": "HMD²: Environment-aware Motion Generation from Single Egocentric Head-Mounted Device",
+    "version": "2409.13426v2",
+    "authors": "Vladimir Guzov, Yifeng Jiang, Fangzhou Hong, Gerard Pons-Moll, Richard Newcombe, C. Karen Liu, Yuting Ye, Lingni Ma",
+    "url": "https://arxiv.org/pdf/2409.13426v2",
+    "project": "https://hmdsquared.github.io/",
+    "sha256": "51ba153f4c6f5c1eb733c5fd86cbc94595015940b4aa391bda6434120902a9f5",
+    "figures": [
+      {
+        "id": "1",
+        "page": 1,
+        "box": [
+          0.079,
+          0.267,
+          0.897,
+          0.591
+        ],
+        "caption": "外向相机只看到环境和少量身体，系统生成与头部及场景相容的全身动作。"
+      },
+      {
+        "id": "2",
+        "page": 4,
+        "box": [
+          0.079,
+          0.088,
+          0.898,
+          0.4
+        ],
+        "caption": "头部运动、CLIP 图像特征和局部点云特征共同条件化动作扩散。"
+      },
+      {
+        "id": "3",
+        "page": 4,
+        "box": [
+          0.079,
+          0.463,
+          0.473,
+          0.537
+        ],
+        "caption": "连续第一人称图像中，手臂只间歇出现，完整身体并不可见。"
+      },
+      {
+        "id": "4",
+        "page": 5,
+        "box": [
+          0.079,
+          0.09,
+          0.473,
+          0.262
+        ],
+        "caption": "每次反向扩散都用上一窗口覆盖重叠区，保持长序列衔接。"
+      },
+      {
+        "id": "5",
+        "page": 6,
+        "box": [
+          0.079,
+          0.09,
+          0.898,
+          0.377
+        ],
+        "caption": "跪坐转换和抬手动作的定性比较；观察回归均值、条件缺失与低延迟的影响。"
+      },
+      {
+        "id": "6",
+        "page": 7,
+        "box": [
+          0.502,
+          0.092,
+          0.898,
+          0.342
+        ],
+        "caption": "相同头部条件下手臂和腿的多种合理解。"
+      },
+      {
+        "id": "7",
+        "page": 8,
+        "box": [
+          0.079,
+          0.232,
+          0.473,
+          0.561
+        ],
+        "caption": "去掉点云或图像条件后，坐姿与手部运动出现不同错误。"
+      },
+      {
+        "id": "8",
+        "page": 13,
+        "box": [
+          0.079,
+          0.09,
+          0.898,
+          0.412
+        ],
+        "caption": "相同输入的四次采样：可见部分应服从观测，不可见部分保留变化。"
+      },
+      {
+        "id": "9",
+        "page": 14,
+        "box": [
+          0.075,
+          0.09,
+          0.9,
+          0.337
+        ],
+        "caption": "按动作场景排序的关节误差，展示平均值掩盖的困难尾部。"
+      }
+    ],
+    "label": "HMD²"
+  },
+  "egoforce": {
+    "article": "egoforce",
+    "title": "EgoForce: Forearm-Guided Camera-Space 3D Hand Pose from a Monocular Egocentric Camera",
+    "version": "2605.12498v1",
+    "authors": "Christen Millerdurai, Shaoxiang Wang, Yaxu Xie, Vladislav Golyanik, Didier Stricker, Alain Pagani",
+    "url": "https://arxiv.org/pdf/2605.12498v1",
+    "project": "https://dfki-av.github.io/EgoForce/",
+    "sha256": "ac4929bb472a28be0ce4d444f9028a1d6e65f89918961b064668878eac759360",
+    "figures": [
+      {
+        "id": "1",
+        "page": 1,
+        "box": [
+          0.08,
+          0.274,
+          0.922,
+          0.552
+        ],
+        "caption": "单目输入恢复相机坐标中的手和前臂，同时适配多种镜头。"
+      },
+      {
+        "id": "2",
+        "page": 3,
+        "box": [
+          0.08,
+          0.09,
+          0.922,
+          0.356
+        ],
+        "caption": "HALO 分别编码手和前臂，结合 CIT，再由射线求解器恢复整体平移。"
+      },
+      {
+        "id": "3",
+        "page": 5,
+        "box": [
+          0.08,
+          0.093,
+          0.487,
+          0.39
+        ],
+        "caption": "射线求解器把二维关节、置信权重与根相对三维结构组合为相机空间位置。"
+      },
+      {
+        "id": "4",
+        "page": 6,
+        "box": [
+          0.516,
+          0.169,
+          0.921,
+          0.376
+        ],
+        "caption": "按可见手关节比例分组的前臂收益；位置与加速度误差改善并不相同。"
+      },
+      {
+        "id": "5",
+        "page": 7,
+        "box": [
+          0.08,
+          0.283,
+          0.487,
+          0.535
+        ],
+        "caption": "二维看起来对齐仍可能存在深度误差，侧视图能揭示这种歧义。"
+      },
+      {
+        "id": "6",
+        "page": 8,
+        "box": [
+          0.08,
+          0.268,
+          0.487,
+          0.657
+        ],
+        "caption": "物体遮挡手时，前臂输入改善手腕朝向和三维手姿。"
+      },
+      {
+        "id": "7",
+        "page": 8,
+        "box": [
+          0.516,
+          0.09,
+          0.921,
+          0.345
+        ],
+        "caption": "前臂不可见时的条件先验；补全的是合理姿态。"
+      },
+      {
+        "id": "8",
+        "page": 9,
+        "box": [
+          0.08,
+          0.09,
+          0.922,
+          0.757
+        ],
+        "caption": "ARCTIC、H2O、HOT3D 多视角定性对照，灰色为真值。"
+      },
+      {
+        "id": "9",
+        "page": 10,
+        "box": [
+          0.08,
+          0.09,
+          0.922,
+          0.848
+        ],
+        "caption": "多个数据集的手网格重投影；投影质量需结合三维指标判断。"
+      },
+      {
+        "id": "10",
+        "page": 13,
+        "box": [
+          0.08,
+          0.199,
+          0.922,
+          0.779
+        ],
+        "caption": "不同光学模型下的手和前臂联合重投影。"
+      },
+      {
+        "id": "11",
+        "page": 14,
+        "box": [
+          0.08,
+          0.09,
+          0.487,
+          0.233
+        ],
+        "caption": "原始鱼眼裁块、透视校正与局部去畸变的比较。"
+      },
+      {
+        "id": "12",
+        "page": 14,
+        "box": [
+          0.08,
+          0.344,
+          0.487,
+          0.544
+        ],
+        "caption": "加入裁块内参条件后，空间位置与朝向更符合观测。"
+      },
+      {
+        "id": "13",
+        "page": 14,
+        "box": [
+          0.516,
+          0.09,
+          0.922,
+          0.282
+        ],
+        "caption": "深度提升、DGP 与 RSS 的比较；重点看侧面深度错位。"
+      },
+      {
+        "id": "14",
+        "page": 16,
+        "box": [
+          0.08,
+          0.093,
+          0.487,
+          0.266
+        ],
+        "caption": "FARM 接到 MANO 腕部的前后对照，并沿肘方向施加小偏移。"
+      },
+      {
+        "id": "15",
+        "page": 17,
+        "box": [
+          0.516,
+          0.09,
+          0.922,
+          0.25
+        ],
+        "caption": "CIT 广播到 patch token，通过拼接、MLP 和残差进行融合。"
+      },
+      {
+        "id": "16",
+        "page": 20,
+        "box": [
+          0.08,
+          0.09,
+          0.922,
+          0.257
+        ],
+        "caption": "HOT3D 相机坐标轨迹；尤其比较深度轴和起止点。"
+      },
+      {
+        "id": "17",
+        "page": 20,
+        "box": [
+          0.08,
+          0.287,
+          0.922,
+          0.43
+        ],
+        "caption": "HO3D 与无标定野外视频的定性结果，后者使用估计的内参。"
+      },
+      {
+        "id": "18",
+        "page": 21,
+        "box": [
+          0.08,
+          0.093,
+          0.488,
+          0.545
+        ],
+        "caption": "标定扰动实验；中等误差下的改善不构成部署时选择内参的依据。"
+      },
+      {
+        "id": "19",
+        "page": 22,
+        "box": [
+          0.08,
+          0.09,
+          0.922,
+          0.434
+        ],
+        "caption": "与 UmeTrack 的单视图比较；裁块生成协议必须与指标一起阅读。"
+      }
+    ],
+    "label": "EgoForce"
+  },
+  "photoreal": {
+    "article": "photoreal-egocentric-reconstruction",
+    "title": "Photoreal Scene Reconstruction from an Egocentric Device",
+    "version": "2506.04444v1",
+    "authors": "Zhaoyang Lv, Maurizio Monge, Ka Chen, Yufeng Zhu, Michael Goesele, Jakob Engel, Zhao Dong, Richard Newcombe",
+    "url": "https://arxiv.org/pdf/2506.04444v1",
+    "project": "https://www.projectaria.com/photoreal-reconstruction/",
+    "sha256": "a759fa539037863c37f0a25f14bf96af30736bc47a437c4c1ef52e3e1b0c3132",
+    "figures": [
+      {
+        "id": "1",
+        "page": 1,
+        "box": [
+          0.08,
+          0.282,
+          0.922,
+          0.537
+        ],
+        "caption": "暗且含噪的留出图像、普通重建、本文重建及提高渲染增益后的对照。"
+      },
+      {
+        "id": "2",
+        "page": 3,
+        "box": [
+          0.516,
+          0.09,
+          0.922,
+          0.28
+        ],
+        "caption": "Aria 传感器布局；RGB、SLAM 相机和 IMU 的角色不同。"
+      },
+      {
+        "id": "3",
+        "page": 4,
+        "box": [
+          0.08,
+          0.09,
+          0.487,
+          0.289
+        ],
+        "caption": "VIO、闭环 SLAM 与 VIBA；逐行曝光要求高频轨迹与准确时间标定。"
+      },
+      {
+        "id": "4",
+        "page": 5,
+        "box": [
+          0.08,
+          0.09,
+          0.487,
+          0.25
+        ],
+        "caption": "读出期间的重投影运动及其时间分布，说明一帧一个位姿可能差很多像素。"
+      },
+      {
+        "id": "5",
+        "page": 8,
+        "box": [
+          0.08,
+          0.09,
+          0.922,
+          0.28
+        ],
+        "caption": "Quest 3 场景中使用与不使用 VIBA 的细节差异。"
+      },
+      {
+        "id": "6",
+        "page": 9,
+        "box": [
+          0.08,
+          0.09,
+          0.922,
+          0.866
+        ],
+        "caption": "与 Splatfacto、3DGS-on-move 的跨场景视觉比较。"
+      },
+      {
+        "id": "7",
+        "page": 10,
+        "box": [
+          0.08,
+          0.09,
+          0.922,
+          0.866
+        ],
+        "caption": "VIBA、运动采样和场景 gamma 的定性消融；关注文字、细杆与暗部。"
+      },
+      {
+        "id": "8",
+        "page": 13,
+        "box": [
+          0.08,
+          0.09,
+          0.922,
+          0.47
+        ],
+        "caption": "多种室内外场景的半稠密点云与 RGB 视角。"
+      },
+      {
+        "id": "9",
+        "page": 13,
+        "box": [
+          0.08,
+          0.529,
+          0.488,
+          0.687
+        ],
+        "caption": "校正后的源行号图；相同输出行不再对应相同的曝光时刻。"
+      },
+      {
+        "id": "10",
+        "page": 14,
+        "box": [
+          0.08,
+          0.09,
+          0.922,
+          0.729
+        ],
+        "caption": "DTC 上 3D-GS 与 2D-GS 的颜色、深度和法线重建。"
+      }
+    ],
+    "label": "Photoreal Reconstruction"
+  }
+}

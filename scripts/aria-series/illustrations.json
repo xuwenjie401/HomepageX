@@ -1,0 +1,122 @@
+{
+  "boxer-depth": {
+    "article": "boxernet",
+    "width": 1100,
+    "height": 500,
+    "caption": "按相似三角形绘制的尺度歧义。物体尺寸与深度同时加倍，图像高度不变；这是教学几何，不是检测输出。"
+  },
+  "boxer-patches": {
+    "article": "boxernet",
+    "width": 1100,
+    "height": 500,
+    "caption": "四个有效像素深度的普通中位数为 2.05 m，均值为 3.50 m。论文描述中位数，所核查公开代码的稀疏点分支实际取均值；此图比较两种聚合的行为。"
+  },
+  "boxer-loss": {
+    "article": "boxernet",
+    "width": 1100,
+    "height": 500,
+    "caption": "直接计算 D=4 时的损失曲线。最优 log-variance 为 log 4≈1.386；蓝线为加权几何误差，灰线为不确定性惩罚，红线为总和。"
+  },
+  "boxer-fusion": {
+    "article": "boxernet",
+    "width": 1100,
+    "height": 500,
+    "caption": "俯视教学示意。左侧同一静态物体可融合，右侧红框是不同时间观测的置信加权结果，不对应这三个观测时刻中的任何一个；采样位置和权重保存在脚本中。"
+  },
+  "lamp-world": {
+    "article": "lamp",
+    "width": 1100,
+    "height": 500,
+    "caption": "一维度量示例：观察者前进 0.5 m，静止目标的相机坐标从 2 m 变为 1.5 m，世界坐标保持 2 m。"
+  },
+  "lamp-rays": {
+    "article": "lamp",
+    "width": 1100,
+    "height": 500,
+    "caption": "三种二维截面的教学几何。世界射线仍不能消除小基线深度不确定性，也不能让不同时刻的移动关节自动成为同一点。"
+  },
+  "lamp-loss": {
+    "article": "lamp",
+    "width": 1100,
+    "height": 500,
+    "caption": "教学轨迹只在中间一帧偏移 0.1 m，却改变了两个时间间隔的增量。论文的 velocity loss 比较离散差分，不能直接省略采样间隔后称为 m/s。"
+  },
+  "lamp-latency": {
+    "article": "lamp",
+    "width": 1100,
+    "height": 500,
+    "caption": "以 30 Hz、120 帧窗口示意滑窗平均的未来依赖。图中只画四个稀疏窗口以便阅读；实际窗口步长与实时输出策略另行决定。"
+  },
+  "hmd2-ambiguity": {
+    "article": "hmd2",
+    "width": 1100,
+    "height": 500,
+    "caption": "两个人工骨架共享头部位置，分别呈坐姿与蹲姿。环境和语义可减少歧义，但无法证明不可见肢体只有一个真实解。"
+  },
+  "hmd2-voxel": {
+    "article": "hmd2",
+    "width": 1100,
+    "height": 500,
+    "caption": "按人工稀疏点计算最近距离并在 0.1 m 截断，颜色只用于展示该数值。左侧为 2 m 立方体的示意投影，右侧为其中一个教学切片。"
+  },
+  "hmd2-diffusion": {
+    "article": "hmd2",
+    "width": 1100,
+    "height": 500,
+    "caption": "使用固定随机种子绘制概念曲线；标量例按正文的前向加噪公式计算。真实模型对整段关节旋转序列生成，训练预测干净动作。"
+  },
+  "hmd2-window": {
+    "article": "hmd2",
+    "width": 1100,
+    "height": 500,
+    "caption": "按真实帧数比例绘制 240 帧窗口。蓝色是重叠历史，金色是新增块；右侧数字是新增块时长，首帧最大前视间隔为 (h−1)/60。"
+  },
+  "egoforce-scale": {
+    "article": "egoforce",
+    "width": 1100,
+    "height": 500,
+    "caption": "人工手骨架的三维截面作精确二倍相似变换：尺寸与深度同时加倍，投影射线保持一致。并非模型预测或真实用户手型。"
+  },
+  "egoforce-crop": {
+    "article": "egoforce",
+    "width": 1100,
+    "height": 500,
+    "caption": "针孔数值例：原焦距 800、主点 320，裁块起点 100、宽度 400，缩至 224 后焦距为 448、主点为 123.2。图中骨架只是几何示意。"
+  },
+  "egoforce-rays": {
+    "article": "egoforce",
+    "width": 1100,
+    "height": 500,
+    "caption": "用向量投影精确画出点到无限直线的垂直残差。RSS 同时求解所有关节共享的平移；正向深度不是这个无约束闭式解自动施加的条件。"
+  },
+  "egoforce-conditioning": {
+    "article": "egoforce",
+    "width": 1100,
+    "height": 500,
+    "caption": "二维对称射线的法矩阵，半夹角 30 度时深度特征值为 0.5，5 度时约 0.015。红色等高线按同一误差阈值计算，展示小夹角病态。"
+  },
+  "photoreal-timing": {
+    "article": "photoreal-egocentric-reconstruction",
+    "width": 1100,
+    "height": 500,
+    "caption": "以 16 ms 读出、100°/s 转动和 1200 px 焦距计算跨行位移约 33.5 px。示意图夸大斜率便于阅读；实际位移随场景点位置与相机模型变化。"
+  },
+  "photoreal-exposure": {
+    "article": "photoreal-egocentric-reconstruction",
+    "width": 1100,
+    "height": 500,
+    "caption": "采用指数为 1/2.2 的教学 gamma 响应，积分后编码为约 0.743，先编码再平均为约 0.616。色块按计算值绘制。"
+  },
+  "photoreal-rowmap": {
+    "article": "photoreal-egocentric-reconstruction",
+    "width": 1100,
+    "height": 500,
+    "caption": "以确定的教学径向映射逐格计算原始行号；白色等时线由数值求根得到。映射系数 0.35 保存在脚本中，不代表 Aria 标定。"
+  },
+  "photoreal-sampling": {
+    "article": "photoreal-egocentric-reconstruction",
+    "width": 1100,
+    "height": 500,
+    "caption": "匀速教学例，用不同数量的曝光时刻采样表达快慢运动的区别；图中的 2 与 9 是示意采样数，不是论文每帧固定配置。"
+  }
+}

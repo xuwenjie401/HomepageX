@@ -1,0 +1,53 @@
+{
+  "boxer": {
+    "repo": "facebookresearch/boxer",
+    "sha": "1f86542dc342a4b1d474c87c97c5d1d6566d9148",
+    "articles": [
+      "boxernet"
+    ],
+    "files": [
+      "boxernet/boxernet.py",
+      "utils/fuse_3d_boxes.py"
+    ],
+    "notes": "论文描述 patch 中位深度，所核查稀疏点路径实际计算有效像素均值；源码中存在未被该路径调用的 masked_median。倍角 yaw 平均与宽深交换按执行代码核对。主文与附录的参数量出现 25M 与 71M 两种表述，正文未选取其中一个作为确定值。"
+  },
+  "lamp": {
+    "repo": "facebookresearch/LAMP",
+    "sha": "db3e4bf9992874a85946b92e9c8933bba396bc44",
+    "articles": [
+      "lamp"
+    ],
+    "files": [
+      "lamp/models/model.py",
+      "lamp/models/model_utils.py",
+      "lamp/models/lifter.py",
+      "lamp/tracking/smoothing.py",
+      "README.md"
+    ],
+    "notes": "论文的 120 帧评测设置与当前 LifterSettings 默认 20 帧分开说明；发布模型附带可选地面条件，并将关键点可见性二值化。未重跑论文指标。"
+  },
+  "egoforce": {
+    "repo": "dfki-av/EgoForce",
+    "sha": "480ffb358516d0d7f971ec9da99b7bb07635731e",
+    "articles": [
+      "egoforce"
+    ],
+    "files": [
+      "core/rss.py",
+      "models/halo.py"
+    ],
+    "notes": "核查像素到原生相机射线的转换、投影矩阵与加阻尼线性求解。代码还包含 robust 求解选项，正文闭式推导对应基本加权最小二乘，不宣称复现所有可选配置。"
+  },
+  "photoreal": {
+    "repo": "facebookresearch/egocentric_splats",
+    "sha": "516dfe23d1c7dec54cea1696ff840f3790cfb95b",
+    "articles": [
+      "photoreal-egocentric-reconstruction"
+    ],
+    "files": [
+      "scene/cameras.py",
+      "model/vanilla_gsplat.py"
+    ],
+    "notes": "论文的时间采样描述与当前代码默认上限不同：滚动快门上限 8，曝光内上限 1。正文区分物理积分模型、可用分支与默认配置；未将注释中的 16 当作执行值。"
+  }
+}
