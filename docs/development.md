@@ -24,7 +24,7 @@ npm run preview # 本地预览构建结果
 - `src/pages/about.astro`：个人简介。
 - `src/styles/global.css`：颜色与排版。
 
-当前姓名根据 GitHub 用户名暂设为 Xuwenjie，简介是通用占位内容。两篇文章均标记为“示例文章”，可以直接删除或替换。
+当前姓名根据 GitHub 用户名暂设为 Xuwenjie，简介是通用占位内容。初始的两篇示例文章已移除，文章内容在 `src/content/blog/` 维护。
 
 ## 写文章
 

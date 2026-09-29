@@ -1,6 +1,6 @@
 # 3D Perception and Project Aria 制作记录
 
-核查日期：2026-09-29。五篇中文精读沿用现有科研博客的页面、分级目录和 MathJax/STIX2 排版，新增独立专题入口。文章已在本地完成；本次未提交、推送或发布。
+核查日期：2026-09-29。五篇中文精读沿用现有科研博客的页面、分级目录和 MathJax/STIX2 排版，新增独立专题入口。专栏已通过提交 `3fd1ed0` 推送至 `main`，[GitHub Pages 发布成功](https://github.com/xuwenjie401/HomepageX/actions/runs/36556600820)，并已核对[正式专题页](https://xuwenjie401.github.io/HomepageX/blog/3d-perception-and-project-aria/)的五篇文章链接。
 
 ## 内容与图像覆盖
 
@@ -46,7 +46,7 @@ npm run preview
 ## 已执行的验证
 
 - `npm run check`：24 个 Astro 文件，0 errors / warnings / hints。
-- `npm run build`：25 个页面成功生成；同时检查实际文章正文，避免仅凭构建退出码判断成功。
+- `npm run build`：专栏首次构建生成 25 个页面；随后删除两篇初始示例文章，构建生成 23 个页面，并确认旧路由与列表链接均移除。同时检查实际文章正文，避免仅凭构建退出码判断成功。
 - [validate.py](../scripts/aria-series/validate.py)：80 张图的覆盖、真实尺寸、alt、大图链接；122 个二级／三级标题；330 处数学渲染节点；无重复锚点、无数学错误节点、无悬空本站文章链接。
 - 原图逐张联系表检查，并放大裁切边界和密集图。修正了标题、坐标刻度、底部标签和侧视面板截断；图注没有混入相邻正文。
 - 20 张自制 SVG 经 Sharp 栅格化目视检查；另用 Chromium 检查所有顶层文本／数学组的边界，均在画布内。
