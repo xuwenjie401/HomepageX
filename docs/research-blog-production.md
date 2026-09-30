@@ -136,6 +136,14 @@ Python 普通字符串里的 `\t` 会成为制表符，因此 `\to` 可能被送
 
 ## 复用数学与绘图流程
 
+### 混排数学标签时重复生成 XML 属性
+
+数据库系列的 SVG 源标签已经包含 `xml:space="preserve"`，复用数学后处理时又在普通文字片段上追加同一属性，导致 Sharp 报 `Attribute xml:space redefined`。只有纯公式标签时不会经过该文字分支，因此此前少量公式并未暴露问题。
+
+做法：保留原属性之前，先去掉将由输出流程重新生成的 `x`、`text-anchor` 与 `xml:space`，保证每个属性只出现一次。实际实现见 [数据库图内数学排版](../scripts/database-series/typeset.mjs)。修改源脚本后重新生成 SVG；不要仅修生成文件。
+
+验证：同时检查纯公式与“中文 + 公式”混排，解析 XML 并实际栅格化。页面截图与 `getBoundingClientRect()` 字边界检查互相补充；边界无越界仍不能证明图内标签之间没有重叠。
+
 [数学渲染器](../scripts/lib/math.mjs)可供新的正文和绘图脚本复用。[图内数学后处理](../scripts/typeset-figure-math.mjs)目前**固定处理 `public/media/superpoint/`**，并只识别简单 `<text>` 中的 `$…$` 标签，不是任意 SVG 的通用转换器。
 
 用于新文章时，先将目标目录做成明确参数或编写相应调用，再验证；不要直接运行后误以为新目录也已处理。当前 SuperPoint 重生成命令见 [素材记录](superpoint-assets.md)。顺序始终是：源脚本绘图 → 数学排版 → 栅格化目视检查 → 页面检查。

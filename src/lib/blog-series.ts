@@ -23,7 +23,14 @@ export const ariaPerceptionSeries = {
   order: ['boxernet', 'lamp', 'hmd2', 'egoforce', 'photoreal-egocentric-reconstruction'],
 };
 
-export const blogSeries = [sparseFeatureSeries, ariaPerceptionSeries];
+export const databaseSeries = {
+  slug: 'modern-databases',
+  title: '现代数据库：从数据组织到系统设计',
+  description: '面向有工程背景的数据库初学者。从文件、关系模型与索引出发，逐步理解空间、图、时间和向量查询，最后设计一个复杂空间信息系统。',
+  order: ['01-foundations', '02-relational', '03-indexes', '04-spatial', '05-graph', '06-temporal', '07-vector', '08-multi-model', '09-system-design'],
+};
+
+export const blogSeries = [sparseFeatureSeries, ariaPerceptionSeries, databaseSeries];
 
 export const getPostSeries = (id: string) =>
   blogSeries.find(series => id.startsWith(`${series.slug}/`));

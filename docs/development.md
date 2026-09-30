@@ -54,6 +54,8 @@ draft: false
 
 新增的 `3D Perception and Project Aria` 五篇精读位于 `src/content/blog/3d-perception-and-project-aria/`，使用相同的专题注册和独立入口。素材与脚本见 [制作记录](aria-series-production.md)。
 
+`现代数据库：从数据组织到系统设计` 九篇教程位于 `src/content/blog/modern-databases/`，按 `01`–`09` 从基础讲到复杂空间信息系统。专题入口为 `/HomepageX/blog/modern-databases/`；48 张原创 SVG、来源、计算假设与验证命令见 [数据库系列素材记录](modern-databases-assets.md)。
+
 博客首页按专题收纳这些文章；首页搜索仍可找到子目录内文章。专题页搜索仅作用于当前专题。移动文章时同步更新正文交叉引用、素材记录、制作脚本和产物检查路径。媒体继续使用 `public/media/<文章名>/`，不依赖正文所在目录。
 
 ## 图片与小视频

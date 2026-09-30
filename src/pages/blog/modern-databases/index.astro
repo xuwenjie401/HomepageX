@@ -1,0 +1,19 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import PostArchive from '../../../components/PostArchive.astro';
+import { databaseSeries as series } from '../../../lib/blog-series';
+import { getPosts } from '../../../lib/posts';
+import { withBase } from '../../../config';
+const posts = (await getPosts())
+  .filter(post => post.id.startsWith(`${series.slug}/`))
+  .sort((a, b) => series.order.indexOf(a.id.split('/').pop()!) - series.order.indexOf(b.id.split('/').pop()!));
+---
+<Layout title={series.title} description={series.description}>
+  <header class="page-heading series-heading">
+    <a class="text-link back-link" href={withBase('blog/')}>← 所有文章</a>
+    <h1>{series.title}</h1>
+    <p>{series.description}</p>
+    <p class="series-intro">按阅读顺序排列 · 基础 → 关系 → 索引 → 空间 → 图 → 时间 → 向量 → 多模型 → 系统设计</p>
+  </header>
+  <PostArchive posts={posts} />
+</Layout>

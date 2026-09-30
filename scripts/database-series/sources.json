@@ -1,0 +1,322 @@
+[
+  {
+    "url": "https://www.postgresql.org/docs/18/tutorial-concepts.html",
+    "label": "PostgreSQL 概念入门",
+    "chapters": [
+      "01-foundations"
+    ],
+    "accessed": "2026-09-29",
+    "version": "PostgreSQL 18"
+  },
+  {
+    "url": "https://rocksdb.org/docs/getting-started.html",
+    "label": "RocksDB 入门",
+    "chapters": [
+      "01-foundations"
+    ],
+    "accessed": "2026-09-29",
+    "version": "Official live documentation; accessed date recorded"
+  },
+  {
+    "url": "https://www.postgresql.org/docs/18/tutorial-transactions.html",
+    "label": "事务教程",
+    "chapters": [
+      "01-foundations"
+    ],
+    "accessed": "2026-09-29",
+    "version": "PostgreSQL 18"
+  },
+  {
+    "url": "https://www.postgresql.org/docs/18/transaction-iso.html",
+    "label": "隔离级别",
+    "chapters": [
+      "01-foundations"
+    ],
+    "accessed": "2026-09-29",
+    "version": "PostgreSQL 18"
+  },
+  {
+    "url": "https://www.postgresql.org/docs/18/wal-intro.html",
+    "label": "WAL 原理",
+    "chapters": [
+      "01-foundations"
+    ],
+    "accessed": "2026-09-29",
+    "version": "PostgreSQL 18"
+  },
+  {
+    "url": "https://research.ibm.com/publications/a-relational-model-of-data-for-large-shared-data-banks",
+    "label": "Codd 的 1970 年论文",
+    "chapters": [
+      "02-relational"
+    ],
+    "accessed": "2026-09-29",
+    "version": "Codd 1970, IBM Research record"
+  },
+  {
+    "url": "https://www.postgresql.org/docs/18/ddl-constraints.html",
+    "label": "约束文档",
+    "chapters": [
+      "02-relational"
+    ],
+    "accessed": "2026-09-29",
+    "version": "PostgreSQL 18"
+  },
+  {
+    "url": "https://www.postgresql.org/docs/18/using-explain.html",
+    "label": "EXPLAIN 文档",
+    "chapters": [
+      "02-relational"
+    ],
+    "accessed": "2026-09-29",
+    "version": "PostgreSQL 18"
+  },
+  {
+    "url": "https://www.sqlite.org/optoverview.html",
+    "label": "SQLite 优化器说明",
+    "chapters": [
+      "02-relational"
+    ],
+    "accessed": "2026-09-29",
+    "version": "Official live documentation; accessed date recorded"
+  },
+  {
+    "url": "https://www.postgresql.org/docs/18/btree.html",
+    "label": "PostgreSQL B-tree",
+    "chapters": [
+      "03-indexes"
+    ],
+    "accessed": "2026-09-29",
+    "version": "PostgreSQL 18"
+  },
+  {
+    "url": "https://www.postgresql.org/docs/18/indexes-multicolumn.html",
+    "label": "多列索引文档",
+    "chapters": [
+      "03-indexes"
+    ],
+    "accessed": "2026-09-29",
+    "version": "PostgreSQL 18"
+  },
+  {
+    "url": "https://www.postgresql.org/docs/18/indexes-types.html",
+    "label": "PostgreSQL 索引类型说明",
+    "chapters": [
+      "03-indexes"
+    ],
+    "accessed": "2026-09-29",
+    "version": "PostgreSQL 18"
+  },
+  {
+    "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/data-warehouse-optimizations-techniques.html",
+    "label": "Oracle 数据仓库索引文档",
+    "chapters": [
+      "03-indexes"
+    ],
+    "accessed": "2026-09-29",
+    "version": "Oracle Database 19c"
+  },
+  {
+    "url": "https://www.postgresql.org/docs/18/indexes-bitmap-scans.html",
+    "label": "索引组合",
+    "chapters": [
+      "03-indexes"
+    ],
+    "accessed": "2026-09-29",
+    "version": "PostgreSQL 18"
+  },
+  {
+    "url": "https://nlp.stanford.edu/IR-book/html/htmledition/a-first-take-at-building-an-inverted-index-1.html",
+    "label": "Stanford 信息检索教材",
+    "chapters": [
+      "03-indexes"
+    ],
+    "accessed": "2026-09-29",
+    "version": "Official live documentation; accessed date recorded"
+  },
+  {
+    "url": "https://www.postgresql.org/docs/18/gin.html",
+    "label": "GIN 文档",
+    "chapters": [
+      "03-indexes"
+    ],
+    "accessed": "2026-09-29",
+    "version": "PostgreSQL 18"
+  },
+  {
+    "url": "https://postgis.net/docs/using_postgis_dbmanagement.html",
+    "label": "PostGIS 数据模型",
+    "chapters": [
+      "04-spatial",
+      "09-system-design"
+    ],
+    "accessed": "2026-09-29",
+    "version": "Official live documentation; accessed date recorded"
+  },
+  {
+    "url": "https://postgis.net/workshops/postgis-intro/indexing.html",
+    "label": "PostGIS 空间索引教程",
+    "chapters": [
+      "04-spatial"
+    ],
+    "accessed": "2026-09-29",
+    "version": "Official live documentation; accessed date recorded"
+  },
+  {
+    "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.KDTree.html",
+    "label": "SciPy KDTree 文档",
+    "chapters": [
+      "04-spatial",
+      "07-vector"
+    ],
+    "accessed": "2026-09-29",
+    "version": "Official live documentation; accessed date recorded"
+  },
+  {
+    "url": "https://redis.io/docs/latest/commands/geoadd/",
+    "label": "Redis GEOADD 文档",
+    "chapters": [
+      "04-spatial"
+    ],
+    "accessed": "2026-09-29",
+    "version": "Official live documentation; accessed date recorded"
+  },
+  {
+    "url": "https://postgis.net/docs/ST_3DDWithin.html",
+    "label": "ST_3DDWithin",
+    "chapters": [
+      "04-spatial",
+      "09-system-design"
+    ],
+    "accessed": "2026-09-29",
+    "version": "Official live documentation; accessed date recorded"
+  },
+  {
+    "url": "https://postgis.net/docs/geometry_distance_knn.html",
+    "label": "二维 KNN 操作符",
+    "chapters": [
+      "04-spatial"
+    ],
+    "accessed": "2026-09-29",
+    "version": "Official live documentation; accessed date recorded"
+  },
+  {
+    "url": "https://neo4j.com/docs/getting-started/appendix/graphdb-concepts/",
+    "label": "Neo4j 图概念",
+    "chapters": [
+      "05-graph"
+    ],
+    "accessed": "2026-09-29",
+    "version": "Official live documentation; accessed date recorded"
+  },
+  {
+    "url": "https://www.postgresql.org/docs/18/queries-with.html",
+    "label": "WITH 文档",
+    "chapters": [
+      "05-graph"
+    ],
+    "accessed": "2026-09-29",
+    "version": "PostgreSQL 18"
+  },
+  {
+    "url": "https://www.w3.org/TR/rdf11-concepts/",
+    "label": "RDF 1.1 概念规范",
+    "chapters": [
+      "05-graph"
+    ],
+    "accessed": "2026-09-29",
+    "version": "RDF 1.1"
+  },
+  {
+    "url": "https://www.postgresql.org/docs/18/rangetypes.html",
+    "label": "a,b)$。设备 10 点进入维修区、12 点转回仓库，则 12 点恰好只属于后一个状态，不会同时落入两个相邻版本。\n\n<!-- figure:intervals:start -->\n<figure>\n  <a href=\"/HomepageX/media/modern-databases/intervals.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"/HomepageX/media/modern-databases/intervals.svg\" alt=\"左闭右开状态区间在 12 点相接却不重叠，而请求区间 11 到 13 与两个状态均相交。\" width=\"1000\" height=\"500\" loading=\"lazy\" /></a>\n  <figcaption>自制图 2 · 左闭右开状态区间在 12 点相接却不重叠，而请求区间 11 到 13 与两个状态均相交。 点击可查看矢量大图。</figcaption>\n</figure>\n<!-- figure:intervals:end -->\n\n查询某时刻 $t$ 的状态，需要：\n\n$$\na\\le t<b.\n$$\n\n查询状态区间与请求区间 $[c,d)$ 是否重叠，需要：\n\n$$\na<d\\quad\\land\\quad c<b.\n$$\n\n例如 `[10,12)` 与 `[12,14)` 不重叠；`[10,13)` 与 `[12,14)` 重叠。`BETWEEN` 通常两端都包含，用它代替半开区间判断，会在边界上重复计数。\n\n### 2.2 版本表需要约束，而不只是多存几行\n\n一种单有效时间模型是 `object_state(object_id, version, valid_from, valid_to, location, status)`。对每个对象，应明确是否要求时间连续，以及是否允许版本重叠。状态缺测时应表达未知或空档，不要伪造连续轨迹。\n\nPostgreSQL 可以使用 `tstzrange` 保存区间，以排斥约束禁止同一对象出现重叠的状态：\n\n```sql\nCREATE EXTENSION IF NOT EXISTS btree_gist;\nCREATE TABLE object_state (\n  object_id BIGINT NOT NULL,\n  version BIGINT NOT NULL,\n  valid_period TSTZRANGE NOT NULL,\n  status TEXT NOT NULL,\n  PRIMARY KEY (object_id, version),\n  CHECK (NOT isempty(valid_period)),\n  EXCLUDE USING gist (object_id WITH =, valid_period WITH &&)\n);\n```\n\n写入端还必须统一使用 `[)` 边界并处理开端、末端与连续性要求。这里的约束防重叠，不保证无空档。查询可以使用 `valid_period @> :time` 或 `valid_period && :window`。范围索引和排斥约束见 [PostgreSQL 范围类型",
+    "chapters": [
+      "06-temporal"
+    ],
+    "accessed": "2026-09-29",
+    "version": "PostgreSQL 18"
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/sql/relational-databases/tables/temporal/overview?view=sql-server-ver17",
+    "label": "10,11)`，维修区 `[11,∞)`，系统有效期均从 14 点开始。这些修改应在同一事务中完成。\n\n概念查询为：\n\n```sql\nSELECT location\nFROM object_state_bitemporal\nWHERE object_id = :id\n  AND valid_from <= :valid_at AND :valid_at < valid_to\n  AND system_from <= :known_at AND :known_at < system_to;\n```\n\n本例用有明确排序的无穷远表示开放末端；若采用 `NULL`，应显式处理，不能把上述比较原样照搬。系统时间通常应由权威服务或数据库管理，不能让不可信客户端随意回填。\n\n双时间表的唯一性也更复杂：同一对象不能在两条时间维度上同时重叠，但允许两个系统认知版本覆盖同一业务时段。不能直接复制前面单时间表的“有效时间永不重叠”约束。SQL Server 的系统版本表主要自动维护系统时间历史；业务有效时间需要按应用语义另行设计。参见[官方时间表概述",
+    "chapters": [
+      "06-temporal"
+    ],
+    "accessed": "2026-09-29",
+    "version": "Official live documentation; accessed date recorded"
+  },
+  {
+    "url": "https://www.postgresql.org/docs/18/datatype-datetime.html",
+    "label": "10,12)` 在仓库，`[12,14)` 在维修区，14 点后未知。问 12 点：维修区；问 14 点：未知；问与 `[11,13)` 重叠的状态：两条。再加入迟到更正时，应进一步问“按哪一时刻的知识”。\n\n时间戳应明确时区与精度。PostgreSQL `timestamptz` 表达时间点，并按会话时区显示，不保留最初输入的时区名称；若业务需要当地日历规则，应额外保留地区时区。具体时间类型约定见 [PostgreSQL 时间类型文档",
+    "chapters": [
+      "06-temporal"
+    ],
+    "accessed": "2026-09-29",
+    "version": "PostgreSQL 18"
+  },
+  {
+    "url": "https://arxiv.org/abs/1603.09320v4",
+    "label": "Malkov 与 Yashunin 的 HNSW 论文 v4",
+    "chapters": [
+      "07-vector"
+    ],
+    "accessed": "2026-09-29",
+    "version": "HNSW arXiv v4 (2018-08-14)"
+  },
+  {
+    "url": "https://github.com/facebookresearch/faiss/wiki/Faiss-indexes",
+    "label": "FAISS 索引文档",
+    "chapters": [
+      "07-vector"
+    ],
+    "accessed": "2026-09-29",
+    "version": "Official live documentation; accessed date recorded"
+  },
+  {
+    "url": "https://milvus.io/docs/overview.md",
+    "label": "Milvus 文档",
+    "chapters": [
+      "07-vector",
+      "09-system-design"
+    ],
+    "accessed": "2026-09-29",
+    "version": "Official live documentation; accessed date recorded"
+  },
+  {
+    "url": "https://github.com/pgvector/pgvector",
+    "label": "pgvector 项目说明",
+    "chapters": [
+      "07-vector",
+      "09-system-design"
+    ],
+    "accessed": "2026-09-29",
+    "version": "Official live documentation; accessed date recorded"
+  },
+  {
+    "url": "https://milvus.io/docs/filtered-search.md",
+    "label": "Milvus 过滤搜索",
+    "chapters": [
+      "07-vector"
+    ],
+    "accessed": "2026-09-29",
+    "version": "Official live documentation; accessed date recorded"
+  },
+  {
+    "url": "https://debezium.io/documentation/reference/stable/transformations/outbox-event-router.html",
+    "label": "Debezium Outbox Event Router",
+    "chapters": [
+      "08-multi-model"
+    ],
+    "accessed": "2026-09-29",
+    "version": "Official live documentation; accessed date recorded"
+  },
+  {
+    "url": "https://www.postgresql.org/docs/18/logicaldecoding-explanation.html",
+    "label": "PostgreSQL 逻辑解码说明",
+    "chapters": [
+      "08-multi-model"
+    ],
+    "accessed": "2026-09-29",
+    "version": "PostgreSQL 18"
+  }
+]
