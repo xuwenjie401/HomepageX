@@ -13,6 +13,11 @@ tags: [论文精读, 局部特征, 光流, 计算机视觉]
 
 > 主要来源：[Shi–Tomasi，Good Features to Track，CVPR 1994](https://users.cs.duke.edu/~tomasi/papers/shi/shiCvpr94.pdf)、[Lucas–Kanade，1981](https://www.ri.cmu.edu/pub_files/pub3/lucas_bruce_d_1981_2/lucas_bruce_d_1981_2.pdf)、[Lowe，SIFT，IJCV 2004 作者稿](https://www.cs.ubc.ca/~lowe/papers/ijcv04.pdf)。下文的离散矩阵形式为方便实现而重写。
 
+## 训练资源、卡时与数据量
+
+GFTT、KLT 和 SIFT 是手工设计的检测、跟踪与描述算法，没有神经网络预训练，也没有训练 GPU-hours 或训练集规模。论文中的立体图像、相机序列和数据库只是评测输入；复现时应记录图像分辨率、窗口/金字塔层数、候选点数和数据库大小，而不是套用深度模型的训练资源口径。
+
+
 ## 1. 不妨先写出“找对了”的标准
 
 ### 1.1 一个点没有足够的信息，一小块图像才有

@@ -15,6 +15,15 @@ tags: [论文精读, 计算机视觉, 局部特征, 自监督学习]
 
 > 论文信息：Daniel DeTone、Tomasz Malisiewicz、Andrew Rabinovich，*SuperPoint: Self-Supervised Interest Point Detection and Description*，CVPR Workshops 2018。本文以 [arXiv v4 原文及附录](https://arxiv.org/abs/1712.07629v4)为主，结合[作者发布的推理实现](https://github.com/magicleap/SuperPointPretrainedNetwork)。
 
+## 训练资源、卡时与数据量
+
+| 项目 | 原论文 v4 的训练账本 |
+| --- | --- |
+| 数据量 | MagicPoint 的 Synthetic Shapes 在线生成；Homographic Adaptation 使用 MS-COCO 2014 train split 的 80,000 张图像，伪标签阶段每张图使用 100 次单应变换。合成样本按需生成，不是固定文件数。 |
+| 训练阶段 | MagicPoint 训练 200k iterations；随后进行真实图像伪标签生成，再做检测与描述联合训练。论文给出 batch size 32、输入 $240\times320$；部署时只需一次前向，不会重复 100 次变换。 |
+| 硬件与卡时 | v4 论文没有披露训练 GPU 型号或墙钟时间/GPU-hours；Titan X 上 70 FPS 是推理速度，不能反推卡时。 |
+
+
 ## 1. 出发点：我们需要的不是“看起来很特别”的点
 
 先想想哪些位置适合建立对应关系。

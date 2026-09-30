@@ -11,6 +11,15 @@ LET-NET 的思路很具体：**保留轻量的局部优化器，学习它要比�
 
 > LET-NET 以 [Breaking of brightness consistency in optical flow with a lightweight CNN network，arXiv:2310.15655v1](https://arxiv.org/abs/2310.15655v1) 为准；LET-NET2 以[作者仓库](https://github.com/linyicheng1/LET-NET2/tree/4713802d256ecf3bb463837e80b9d3d0ccba5a1a)为准。后者按代码解析，不假定存在另一篇同名论文。这里的阅读日期是 2026 年 9 月 26 日。
 
+## 训练资源、卡时与数据量
+
+| 项目 | 当前固定版本能确认的内容 |
+| --- | --- |
+| 训练数据 | LET-NET 使用 MegaDepth 的相机与深度建立重投影监督；LET-NET2 的训练代码用 TartanAir 的深度和相对位姿生成稀疏运动真值。两者的完整图像对/帧数没有在论文或固定代码说明中汇总。 |
+| 训练计算 | LET-NET 训练时额外使用深描述分支，推理时移除；LET-NET2 还把有限次 LK/LM 求解放进反向图，计算量不能按部署时的浅网络估计。 |
+| 硬件与卡时 | 固定论文与代码没有披露统一 GPU 型号、训练墙钟时间或 GPU-hours；本文也未运行完整训练，不把演示视频当作资源统计。 |
+
+
 ## 1. LK 的问题究竟出在哪里
 
 ### 1.1 正确位置也可能有很大的灰度误差

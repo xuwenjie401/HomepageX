@@ -12,6 +12,14 @@ draft: false
 
 本文精读 Christen Millerdurai 等的 *EgoForce: Forearm-Guided Camera-Space 3D Hand Pose from a Monocular Egocentric Camera*，SIGGRAPH 2026，固定采用 [arXiv v1 的 23 页主文及附录](https://arxiv.org/abs/2605.12498v1)，并参考[官方实现](https://github.com/dfki-av/EgoForce)。它是 [3D Perception and Project Aria 专栏](/HomepageX/blog/3d-perception-and-project-aria/)的第四篇。
 
+## 训练资源、卡时与数据量
+
+| 项目 | 论文可确认的规模 |
+| --- | --- |
+| 训练数据 | Re:InterHand、HandCO、H2O、ARCTIC、HO3D、HOT3D 合计约 367 万张 RGB 图像；不同数据集的 MANO、前臂 FARM、二维关键点和深度标签并不完整。 |
+| 训练资源 | 多数据集联合训练，并按标签可用性掩码损失；batch size 为 27、训练 113 个 epoch，使用 5 张 NVIDIA H200，约 4 天（约 480 H200-hours）。 |
+| 推理与训练区分 | RTX 3090 上约 14 FPS、网络前向约 24.2 ms 是两手完整链路/推理报告，不能当作训练资源。 |
+
 <!-- aria-figure: egoforce-1 -->
 <figure>
   <a href="/HomepageX/media/egoforce/egoforce-1.webp" target="_blank" rel="noopener"><img src="/HomepageX/media/egoforce/egoforce-1.webp" width="1702" height="727" alt="EgoForce 原论文 Figure 1：单目输入恢复相机坐标中的手和前臂，同时适配多种镜头。" loading="lazy" /></a>

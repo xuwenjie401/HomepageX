@@ -12,6 +12,14 @@ draft: false
 
 本文精读 Zhaoyang Lv 等的 *Photoreal Scene Reconstruction from an Egocentric Device*，SIGGRAPH 2025，固定使用 [arXiv v1](https://arxiv.org/abs/2506.04444v1)及附录。它就是本专栏所讨论的第一人称照片级重建工作，[官方代码名为 egocentric_splats](https://github.com/facebookresearch/egocentric_splats)。
 
+## 训练资源、卡时与数据量
+
+| 项目 | 这篇工作的资源口径 |
+| --- | --- |
+| 是否预训练 | 没有跨场景神经网络预训练；每段采集轨迹按场景优化 Gaussian 参数、颜色和相机/成像模型。 |
+| 图像量 | 原图约 $2880\times2880$，校正到 $2400\times2400$；每第八张图留作验证，其余帧参与该场景优化。 |
+| 计算量 | 默认 30K 次迭代，前 7.5K 次后启用滚动快门补偿；全部模型在单张 A6000 或 A100、$2400\times2400$ 分辨率上训练。论文没有给出墙钟时间；显存不足时改为逐次渲染只是调度方式，不等于减少总优化工作。 |
+
 <!-- aria-figure: photoreal-1 -->
 <figure>
   <a href="/HomepageX/media/photoreal-egocentric-reconstruction/photoreal-1.webp" target="_blank" rel="noopener"><img src="/HomepageX/media/photoreal-egocentric-reconstruction/photoreal-1.webp" width="1702" height="667" alt="Photoreal Reconstruction 原论文 Figure 1：暗且含噪的留出图像、普通重建、本文重建及提高渲染增益后的对照。" loading="lazy" /></a>

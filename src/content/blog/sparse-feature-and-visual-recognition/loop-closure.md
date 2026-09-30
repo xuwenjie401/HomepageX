@@ -13,6 +13,10 @@ tags: [SLAM, 回环检测, 因子图, 束调整, 代码精读]
 
 > 论文版本与代码固定于文末。公式采用本文统一坐标约定；代码变量名可能使用相反变换方向。数值小例子与自制图是可复算教学示例，不是重跑论文的轨迹结果。
 
+## 训练资源、卡时与数据量
+
+这篇文章讨论的 ORB-SLAM2/3、VINS-Fusion、OKVIS/OKVIS2/OKVIS2-X 都是运行时建图与优化系统，没有一个统一的神经网络预训练阶段。因此没有可填的训练 GPU-hours 或训练图像量；数据量应按具体评测序列的帧数、关键帧数、观测数和地图点数记录。文中公式与小例子是可复算示意，不是重新训练或重跑基准所得。
+
 <!-- vision-figure: loop-overview -->
 <figure>
   <a href="/HomepageX/media/loop-closure/loop-overview.svg" target="_blank" rel="noopener"><img src="/HomepageX/media/loop-closure/loop-overview.svg" width="1100" height="470" alt="自制图 1：外观相似只产生候选；几何对应确认后才能添加约束，并把校正传播到地图。" loading="lazy" /></a>

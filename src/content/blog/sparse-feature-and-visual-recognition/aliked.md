@@ -11,6 +11,15 @@ ALIKED 把这个问题拆成两部分：**检测在哪里落点；描述这个�
 
 > 本文采用 [ALIKED: A Lighter Keypoint and Descriptor Extraction Network via Deformable Transformation，arXiv:2304.03608v2](https://arxiv.org/abs/2304.03608v2)，对照[作者实现](https://github.com/Shiaoming/ALIKED/tree/683d7c65197395c0b3f01ebe76e1084a27e73a65)。ALIKED 与 ALIKE 是相关但不同的方法；下面特别区分继承的检测模块和新增的描述模块。
 
+## 训练资源、卡时与数据量
+
+| 项目 | 论文与固定代码版本给出的信息 |
+| --- | --- |
+| 训练数据 | MegaDepth 135 个场景、每场景约 10k 对的透视图像对（训练时排除 IMW2020 验证/测试场景），加上 Oxford、Paris、Aachen 等数据上的合成单应与风格变化图像对；论文没有把混合后的最终采样总数单独汇总。 |
+| 训练配置 | $800\times800$ 输入，batch size 为 2，梯度累积 6 批；每次先取 400 个检测点，再随机取 400 个点并做 NMS。 |
+| 硬件与卡时 | v2 论文和固定代码没有披露 GPU 型号、训练墙钟时间或 GPU-hours；这里的 5 像素是对应监督门限，不是训练成本。 |
+
+
 ## 1. 密集特征图，不一定要配密集描述子图
 
 ### 1.1 一次图像前向里，哪些计算真的被用到了

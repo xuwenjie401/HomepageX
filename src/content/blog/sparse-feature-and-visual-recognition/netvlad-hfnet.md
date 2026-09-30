@@ -11,6 +11,15 @@ HF-Net 把这种先粗后细的过程变成可计算的定位管线。理解它�
 
 > 来源：[NetVLAD，arXiv:1511.07247v3](https://arxiv.org/abs/1511.07247v3)；[HF-Net，arXiv:1812.03506v2](https://arxiv.org/abs/1812.03506v2)及[作者代码](https://github.com/ethz-asl/hfnet)。本文的图号以这些固定版本为准，HF-Net 不同版本的架构图编号有变化。
 
+## 训练资源、卡时与数据量
+
+| 项目 | 论文与代码能确认的内容 |
+| --- | --- |
+| NetVLAD 数据 | 主要使用 Google Street View Time Machine 的同地点跨时间图像，并在 Pitts30k、Tokyo 24/7 等地点识别基准上评估；不同表的训练、验证和测试协议不能合并计数。 |
+| HF-Net 数据 | 训练使用 Google Landmarks 185k 图像与 Berkeley Deep Drive 夜间/黎明序列 37k 图像，共约 222k；Aachen、RobotCar、CMU 主要是评测域。 |
+| 硬件与卡时 | HF-Net 训练 85k iterations、batch size 32；论文未披露墙钟时间/GPU-hours。NetVLAD 的固定版本也未给出可核对的卡时；文中运行时间图是推理链路，不是训练成本。 |
+
+
 ## 1. 地点检索与六自由度定位，输出根本不同
 
 地点检索输入查询图 $I_q$，返回数据库图片的排序；六自由度定位输入图像及几何地图，输出旋转 $R$ 和平移 $\mathbf t$。最近数据库图的位置可以作为粗略地点提示，但它与当前相机之间可能相差数米、朝向也不同。

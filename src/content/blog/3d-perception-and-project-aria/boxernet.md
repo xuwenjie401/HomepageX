@@ -12,6 +12,14 @@ draft: false
 
 本文固定阅读 Daniel DeTone 等的 [arXiv v1 原文与附录](https://arxiv.org/abs/2604.05212v1)，并参照[作者项目与推理代码](https://facebookresearch.github.io/boxer/)。这是 [3D Perception and Project Aria 专栏](/HomepageX/blog/3d-perception-and-project-aria/)的第一篇；它承接上一专栏的[视觉特征表示](/HomepageX/blog/sparse-feature-and-visual-recognition/dinov2-dinov3/)，把问题从“像什么”推进到“在世界哪里”。
 
+## 训练资源、卡时与数据量
+
+| 项目 | 论文可确认的规模 |
+| --- | --- |
+| 训练数据 | 内部 Aria/Quest 数据，加上 NymeriaPlus、CA-1M、ScanNet、SUN-RGBD 等公开来源；作者以约 122 万个独立三维框计数，特意不把同一物体的重复帧观测再乘进去。 |
+| 训练资源 | 图像、深度/点云、相机标定和三维框共同进入训练；作者报告使用 16 张 H100、约两周训练。按墙钟时间粗算约 $16\times14\times24=5376$ H100-hours，论文没有说明这是否包含失败实验与消融。 |
+| 复现边界 | RTX 4090 上约 20 ms 是 $960\times960$、bfloat16 条件下的 Boxernet 提升前向，不是训练卡时，也不包含二维检测、SLAM、点云生成和全局融合。 |
+
 <!-- aria-figure: boxer-1 -->
 <figure>
   <a href="/HomepageX/media/boxernet/boxer-1.webp" target="_blank" rel="noopener"><img src="/HomepageX/media/boxernet/boxer-1.webp" width="1141" height="444" alt="Boxer 原论文 Figure 1：静态场景中小物体与长尾类别的三维框。看不同视角是否落在同一个实体上。" loading="lazy" /></a>

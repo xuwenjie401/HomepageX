@@ -12,6 +12,14 @@ draft: false
 
 本文讲解 Nan Yang 等的 *LAMP: Localization Aware Multi-camera People Tracking in Metric 3D World*，CVPR 2026，固定使用 [arXiv v1 与附录](https://arxiv.org/abs/2605.05390v1)。这里的 LAMP 不是同名的语言辅助姿态估计或机器人操作方法。本文属于 [3D Perception and Project Aria 专栏](/HomepageX/blog/3d-perception-and-project-aria/)。
 
+## 训练资源、卡时与数据量
+
+| 项目 | 论文可确认的内容 |
+| --- | --- |
+| 训练数据 | Nymeria 提供同步 Aria 观测、定位与 Xsens/SMPL 动作；训练还用真值三维关节投影到虚拟相机生成 Gen 2 配置样本。论文正文没有汇总最终帧数或小时数。 |
+| 训练配置 | 三个 Transformer 编解码块、内部维度 512、四秒窗口；30 Hz 时每个窗口为 120 帧。噪声投影、缺失观测和干净片段混合属于数据构造成本。 |
+| 硬件与卡时 | 训练 200 个 epoch，使用 4 个节点的 NVIDIA H100，约 19 小时；论文没有给出每节点 GPU 数，不能把它换算成精确 GPU-hours。RTX 4090 上约 12.5 Hz 是十个 tracklet 的完整推理链路，不是训练卡时。 |
+
 <!-- aria-figure: lamp-1 -->
 <figure>
   <a href="/HomepageX/media/lamp/lamp-1.webp" target="_blank" rel="noopener"><img src="/HomepageX/media/lamp/lamp-1.webp" width="1649" height="589" alt="LAMP 原论文 Figure 1：相机接力下的长时轨迹与多人的广视场覆盖。" loading="lazy" /></a>

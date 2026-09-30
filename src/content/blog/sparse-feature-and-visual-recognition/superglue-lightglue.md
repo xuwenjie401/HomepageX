@@ -11,6 +11,15 @@ tags: [论文精读, 特征匹配, Transformer, 几何视觉]
 
 > 来源：[SuperGlue，CVPR 2020](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sarlin_SuperGlue_Learning_Feature_Matching_With_Graph_Neural_Networks_CVPR_2020_paper.pdf)及[作者实现](https://github.com/magicleap/SuperGluePretrainedNetwork)；[LightGlue，ICCV 2023，arXiv v1 含附录](https://arxiv.org/abs/2306.13643v1)及[作者实现](https://github.com/cvg/LightGlue)。
 
+## 训练资源、卡时与数据量
+
+| 方法 | 论文与固定代码能确认的内容 |
+| --- | --- |
+| SuperGlue | 使用 ScanNet 室内图像对和 MegaDepth 室外图像对，以深度、位姿、内参产生匹配监督；论文没有在正文汇总总图像对数。 |
+| LightGlue | 先用 Oxford-Paris 1M distractors 的 170k 图像（150k/10k/10k）做单应预训练，再用 MegaDepth 368/5/24 个场景微调；单应阶段 5M pairs、约 2 GPU-days，MegaDepth 阶段 2 RTX 3090 约 2 天。 |
+| 硬件与卡时 | SuperGlue 论文没有披露完整训练卡时；LightGlue 的图 5 报告 5M pairs 约 2 GPU-days，论文实现细节还给出 2 张 RTX 3090、batch size 32 的 MegaDepth 微调。推理速度不能替代训练账单。 |
+
+
 ## 1. 先把输出定义正确：有些点就不该有伙伴
 
 图 A 有 $M$ 个点，图 B 有 $N$ 个点。输入包括位置 $\mathbf p_i$、描述子 $\mathbf d_i\in\mathbb R^D$，SuperGlue 还把检测分数送入位置编码。输出不是新的图像，也不是最终相机位姿，而是对应关系的软分配矩阵 $P\in[0,1]^{M\times N}$。

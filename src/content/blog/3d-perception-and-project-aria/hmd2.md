@@ -12,6 +12,14 @@ draft: false
 
 本文固定阅读 Vladimir Guzov、Yifeng Jiang 等的 *HMD²: Environment-aware Motion Generation from Single Egocentric Head-Mounted Device*，[arXiv v2](https://arxiv.org/abs/2409.13426v2)，3DV 2025，并覆盖附录。名字可理解为从 HMD 进行 Human Motion Diffusion；论文的重点是有环境条件的动作生成。
 
+## 训练资源、卡时与数据量
+
+| 项目 | 论文可确认的规模 |
+| --- | --- |
+| 训练数据 | Nymeria 过滤后约 202 小时训练、3 小时验证、56 小时测试；测试人物与地点不与训练重叠，测试共 224 段。同步 Xsens 动作、头部轨迹、RGB 与环境点云承担不同条件。 |
+| 训练资源 | 动作扩散模型以 240 帧（4 秒）窗口训练 20 个 epoch，使用 4 张 GPU、约 3.5 天（约 336 GPU-hours）；点云编码器另训 10 个 epoch。CLIP 与点云特征还带来预计算/编码成本。 |
+| 推理与训练区分 | A100 上超过 70 FPS（只计低延迟条件特征时）及把 CLIP/点云计入后的约 61 FPS 是推理吞吐，不是训练成本。 |
+
 <!-- aria-figure: hmd2-1 -->
 <figure>
   <a href="/HomepageX/media/hmd2/hmd2-1.webp" target="_blank" rel="noopener"><img src="/HomepageX/media/hmd2/hmd2-1.webp" width="1653" height="848" alt="HMD² 原论文 Figure 1：外向相机只看到环境和少量身体，系统生成与头部及场景相容的全身动作。" loading="lazy" /></a>

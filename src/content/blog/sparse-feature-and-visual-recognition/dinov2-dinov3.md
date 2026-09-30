@@ -11,6 +11,15 @@ tags: [论文精读, 基础模型, 自监督学习, DINO]
 
 > 固定来源：[DINOv2，arXiv:2304.07193v2，TMLR 2024](https://arxiv.org/abs/2304.07193v2)、[DINOv3，arXiv:2508.10104v1，2025 技术报告](https://arxiv.org/abs/2508.10104v1)，以及 [DINOv2](https://github.com/facebookresearch/dinov2)、[DINOv3](https://github.com/facebookresearch/dinov3)作者代码。下面区分初始 DINO 的教学解释、v2/v3 的实际配方和后训练阶段。
 
+## 训练资源、卡时与数据量
+
+| 模型 | 数据量与资源边界 |
+| --- | --- |
+| DINOv2 | 主体预训练使用策划后的 LVD-142M，约 1.42 亿张图像；ViT-g 训练 625k iterations，原文估算 22,016 A100-hours（A100-40GB）。公开仓库的 32×A100、约 1 天等是缩小参考运行，不是这笔完整账单。 |
+| DINOv3 | 技术报告使用约 16.89 亿张图像、最大 7B 参数骨干；ViT-7B 训练 1M steps，原文表 20 报告 61,440 H100-hours（H100-SXM5）。仓库中 32×H100、约 14 小时的 ImageNet-1k ViT-L 是缩小参考运行。 |
+| 口径 | 后训练、蒸馏、领域适配和下游线性探测应单独计费；论文中的迭代数或高分辨率阶段不是 GPU-hours 本身。 |
+
+
 ## 1. 先认识网络交出来的对象
 
 图像被切成边长 $p$ 的 patch，经线性投影变成 token。若输入为 $H\times W$，patch token 数为 $N=(H/p)(W/p)$。ViT 通过自注意力让它们交换上下文，并包含用于全局表示的 CLS token；带 registers 的变体另有寄存 token，供内部计算使用。
